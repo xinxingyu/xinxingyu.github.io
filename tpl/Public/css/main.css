@@ -1,0 +1,326 @@
+@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td,section,canvas {
+    padding: 0;
+    margin: 0;
+}
+li{ list-style: none;}
+
+html,body {
+    font-size: 22px;
+    color: #000;
+    font-family: 'Microsoft YaHei', Arial;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    -webkit-touch-callout:none; /* 禁用长触弹出的下载图片菜单 */
+    -webkit-user-select:none; /* 禁用长触选择文字等功能 */
+}
+
+.hide{ display: none;}
+.wrapper{width: 100%; height: 100%; position: relative;}
+.loading{ position: absolute; top: 50%; left: 50%; margin:-62px 0 0 -207px; width: 414px; text-align: center;}
+.loadingicon{ background: url("../images/loading.png") no-repeat; width: 133px; height: 29px; margin-bottom: 15px;     display: inline-block;}
+.loadingtxt{text-align: center; background: url("../images/loading_border.png") no-repeat; width: 417px; height: 42px; padding: 13px; box-sizing: border-box;}
+.progress{ background: #fbdc00; height: 17px; width: 50px;}
+
+.main{ width: 100%; height: 100%;position: relative; overflow: hidden;}
+.page{ width: 100%; height: 100%;  position: relative; }
+.page>div{ position: absolute; overflow: hidden; width: 100%; height: 100%; background-repeat: no-repeat; background-position: center center;}
+
+.page .page1{background-image: url("../images/p1.jpg"); background-position: center center; background-size: cover;}
+.page1>div{ position: absolute; left: 50%;}
+.page1_1{ margin: 116px 0 0 -336px}
+.page1_2{ margin: 409px 0 0 -277px}
+.page1_3{ bottom: 140px; margin: 0 0 0 -94px;}
+.page1_4{ bottom: 66px; margin: 0 0 0 -166px;}
+
+.page .questions{background-image: url("../images/p1.jpg"); background-position: center center; background-size: cover;}
+.questions>div{ position: absolute; left: 50%;}
+.question{
+	margin: 75px 0 0 -350px;
+	width: 642px;
+	height: 109px;
+	background: url('../images/question_bg.png') no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+.question-text{font-size: 32px; color: #333; padding: 40px 0 0 44px;}
+/** 图片类型问题 **/
+.answer-img{ width: 666px; height: 464px; margin: 215px 0 0 -333px;}
+.answer-img .answer-img-item{display: inline-block; margin-right: 2px; position: relative;}
+.answer-img .answer-img-mask{
+    width: 326px;
+    height: 225px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.7);
+}
+.answer-img .answer-img-yes{
+	position: absolute;
+	top: 50%;
+    left: 50%;
+	width: 101px;
+	height: 71px;
+	background: url('../images/yes.png') no-repeat;
+	background-position: center center;
+	background-size: cover;
+	margin: -50px 0 0 -35px;
+}
+.answer-img .answer-img-no{
+	position: absolute;
+	top: 50%;
+    left: 50%;
+	width: 97px;
+	height: 77px;
+	background: url('../images/no.png') no-repeat;
+	background-position: center center;
+	background-size: cover;
+    margin: -48px 0 0 -38px;
+}
+.clock{
+	background: url('../images/clock.png') no-repeat;
+	background-position: center center;
+	background-size: cover;
+	width: 155px;
+	height: 100px;
+	text-align: center;
+	bottom: 100px; margin-left: -77px;
+	-webkit-animation: breath 1s infinite ease-in-out;
+	animation: breath 1s infinite ease-in-out;
+}
+.clock>img{
+	position: relative;
+	top: 39px;
+}
+.tips{bottom: 48px;margin-left: -167px;}
+.textbg{
+	width: 612px;
+	height: 355px;
+	background: #ebebeb;
+	margin: 215px 0 0 -304px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+/** 文字类型问题 **/
+.answer-text{
+	width: 620px;
+	height: 194px;
+	margin: 618px 0 0 -314px;
+}
+.answer-text-item{
+	width: 295px;
+	height: 82px;
+	display: inline-block;
+    position: relative;
+}
+.answer-text-item:nth-of-type(odd){
+	margin-right: 30px;
+}
+.answer-text-item>img{
+	z-index: 99;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.answer-text-item .answer-text-bg{
+	position: absolute;
+    top: 5px;
+    left: 64px;
+	width: 238px;
+	height: 78px;
+	text-align: center;
+	line-height: 78px;
+	background: url('../images/choice_bg.png') no-repeat;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.answer-text-item .answer-text-mask{
+	position: absolute;
+	top: 10px;
+	left: 68px;
+	width: 228px;
+	height: 68px;
+	background: rgba(0,0,0,.7);
+}
+.answer-text-item .answer-text-yes{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 64px;
+	height: 33px;
+	background: url('../images/yes.png') no-repeat;
+	background-position: center center;
+	background-size: cover;
+    margin: -16px 0 0 11px;
+}
+.answer-text-item .answer-text-no{
+	position: absolute;
+	top: 50%;
+    left: 50%;
+	width: 64px;
+	height: 33px;
+	background: url('../images/no.png') no-repeat;
+	background-position: center center;
+	background-size: cover;
+	margin: -16px 0 0 11px;
+}
+
+.page .page12{background-image: url("../images/p1.jpg"); background-position: center center; background-size: cover;}
+.page12>div{ position: absolute; left: 50%;}
+.page12_1{
+	width: 750px;
+    height: 817px;
+    overflow: hidden;
+    bottom: 416px;
+	left: 0!important;
+}
+.page12_1 .page12_content{
+	position: absolute;
+	bottom: -620px;
+	left: 0px;
+}
+.page12_1 .page12-result{
+	position: absolute;
+	top: 265px;
+	left: 50%;
+	width: 600px;
+    height: 536px;
+    margin-left: -300px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.page12_1 .page12-tips{
+	position: absolute;
+    top: 152px;
+    left: 50%;
+    margin-left: -160px;
+}
+.page12_2{
+	width: 750px;
+	height: 518px;
+	background: url('../images/p12_2.png') no-repeat;
+	background-position: center center;
+	background-size: cover;
+	bottom: 0px;
+	margin-left: -375px;
+}
+.btn-share{
+	display: inline-block;
+	position: absolute;
+	top: 170px;
+	left: 41px;
+	width: 341px;
+	height: 147px;
+	background: url('../images/btn_share.png') no-repeat;
+	background-position: center center;
+}
+.btn-replay{
+	display: inline-block;
+	position: absolute;
+	top: 170px;
+	right: 34px;
+	width: 340px;
+	height: 147px;
+	background: url('../images/btn_replay.png') no-repeat;
+	background-position: center center;
+}
+.btn-surprise{
+	position: absolute;
+	left: 50%;
+	bottom: 60px;
+	margin-left: -332px;
+	width: 665px;
+	height: 152px;
+	background: url('../images/btn_surprise.png') no-repeat;
+	background-position: center center;
+}
+
+
+/*分享浮层*/
+.sharemask{ width: 100%; height: 100%; background: rgba(0,0,0,0.7); position: absolute; left: 0; top: 0;}
+.sharemask img{ display: block; position: absolute; right: 28px; top: 45px;}
+/*surprise*/
+.surpriseMask{ width: 100%; height: 100%; background: rgba(0,0,0,0.7); position: absolute; left: 0; top: 0;}
+.surpriseMask img{ display: block; position: absolute; right: 28px; top: 45px;}
+.surpriseMask .jump{
+	width: 400px;
+    height: 200px;
+    z-index: 100;
+    display: inline-block;
+    position: absolute;
+    top: 550px;
+    left: 100px;
+}
+/*音乐按钮*/
+.musicicon{ background: url("../images/musicicon.png") no-repeat; width: 42px; height: 43px; position: absolute; top: 20px; right: 20px;}
+/*按钮旋转*/
+.musicrotate{-webkit-animation: xuanzhuan 5s infinite linear; animation: xuanzhuan 5s infinite linear;}
+@keyframes xuanzhuan {
+    0% { transform: rotate(0deg)}
+    100% { transform: rotate(360deg)}
+}
+@-webkit-keyframes xuanzhuan {
+    0% { -webkit-transform: rotate(0deg)}
+    100% { -webkit-transform: rotate(360deg)}
+}
+/*按钮旋转*/
+
+/*向上箭头*/
+.guideTop {
+    width: 88px;
+    height: 88px;
+    background: url(../images/guide.png) no-repeat;
+    position: absolute;
+    bottom:0px;
+    left: 50%;
+    margin-left: -44px;
+    animation: guideTop 1.5s infinite;
+    -webkit-animation: guideTop 1.5s infinite
+}
+@keyframes guideTop {
+    0% {
+        transform: translateY(0px);
+        opacity: 0
+    }
+
+    60% {
+        transform: translateY(-10px);
+        opacity: 1
+    }
+
+    100% {
+        transform: translateY(-20px);
+        opacity: 0
+    }
+}
+@-webkit-keyframes guideTop {
+    0% {
+        -webkit-transform: translateY(0px);
+        opacity: 0
+    }
+
+    60% {
+        -webkit-transform: translateY(-10px);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: translateY(-20px);
+        opacity: 0
+    }
+}
+@keyframes breath {
+    from { transform: scale(1); }
+    50%  { transform: scale(0.8);}
+    to   { transform: scale(1); }
+}
+
+@-webkit-keyframes breath {
+	from { -webkit-transform: scale(1); }
+	50%  { -webkit-transform: scale(0.8);}
+	to   { -webkit-transform: scale(1); }
+}
+/*向上箭头*/
