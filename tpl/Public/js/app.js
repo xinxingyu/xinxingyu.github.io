@@ -176,13 +176,11 @@ $(function(){
 			handleShowForImg: function(e, dom){
 				// console.log(!this.answer[index].isAnswer);
 				// return !this.answer[index].isAnswer
-				alert(e)
 				alert(e.path[1].className)
 				$(e.path[1]).find('.mask').show();
 				$(e.path[1]).find(dom).show();
 			},
 			handleShowForText: function(e, dom){
-				alert(e)
 
 				var dt = e.path[2];
 				if(dt.className == 'answer-text'){
