@@ -104,9 +104,6 @@ $(function(){
 			initAnimation: function(){
 				var _this = this;
 
-				// $('.page>div').each(function(i){
-				// 	_this.motionObj["page"+(i+1)] = new TimelineMax();
-				// })
 				for(var i = 0; i < 20; i++){
 					this.motionObj["page"+(i+1)] = new TimelineMax();
 				}
@@ -142,10 +139,13 @@ $(function(){
 			},
 			closeEye: function(){
 				var _this = this;
-				$('.page1_3>img').attr('src', this.loadingPath + 'p1_3_close.png');
+				$('.page1_3').fadeOut(function(){
+					$('.page1_3>img').attr('src', _this.loadingPath + 'p1_3_close.png');
+					$('.page1_3').fadeIn()
+				});
 				setTimeout(function(){
 					_this.pageswitch()
-				},200)
+				},1000)
 
 			},
 			choic: function(item, qt, index, key, e, type){
@@ -159,19 +159,9 @@ $(function(){
 				this.answer[index].isAnswer = true
 
 				if(item.key == qt.isTrue){
-					// if(type == 'img'){
-					// 	this.handleShowForImg(e, '.yes')
-					// }else{
-					// 	this.handleShowForText(e, '.yes')
-					// }
 					this.handleShow(dom, '.yes')
 					this.answer[index].isTrue = true
 				}else{
-					// if(type == 'img'){
-					// 	this.handleShowForImg(e, '.no')
-					// }else{
-					// 	this.handleShowForText(e, '.no')
-					// }
 					this.handleShow(dom, '.no')
 					this.answer[index].isTrue = false
 				}
@@ -186,8 +176,6 @@ $(function(){
 				$(dom).find(cdom).show();
 			},
 			handleShowForImg: function(e, dom){
-				// console.log(!this.answer[index].isAnswer);
-				// return !this.answer[index].isAnswer
 				$(e.path[1]).find('.mask').show();
 				$(e.path[1]).find(dom).show();
 			},
