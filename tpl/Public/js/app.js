@@ -138,7 +138,6 @@ $(function(){
 				if(this.answer[index].isAnswer){
 					return
 				}
-				alert('没回答过题目')
 				this.answer[index].isAnswer = true
 
 				if(item.key == qt.isTrue){
@@ -165,12 +164,12 @@ $(function(){
 			handleShowForImg: function(e, dom){
 				// console.log(!this.answer[index].isAnswer);
 				// return !this.answer[index].isAnswer
-				alert(e.path[1].className)
+				alert(JSON.stringify(e.path[1]))
 				$(e.path[1]).find('.mask').show();
 				$(e.path[1]).find(dom).show();
 			},
 			handleShowForText: function(e, dom){
-
+				console.log(JSON.stringify(e.path[2]));
 				var dt = e.path[2];
 				if(dt.className == 'answer-text'){
 					dt = e.path[1]
