@@ -58,7 +58,7 @@ $(function(){
 						{src:this.loadingPath+'loading.png'},
 						{src:this.loadingPath+'loading_border.png'},
 						{src:this.loadingPath+'p1.jpg'},
-						{src:this.loadingPath+'sound.mp3'},
+						// {src:this.loadingPath+'sound.mp3'},
 						{src:this.loadingPath+'p1_1.png'},
 						{src:this.loadingPath+'p1_2.png'},
 						{src:this.loadingPath+'p1_4.png'},

@@ -89,8 +89,8 @@
 <script>
     // JavaScript Document
     var wxData = {
-        "imgUrl":"http://h5.trando.com.cn/cysdgsj/Tpl/Public/images/share.jpg",
-        "link":"http://h5.trando.com.cn/cysdgsj/",
+        "imgUrl":"",
+        "link":"",
         "title":"",
         "desc":""
     };
@@ -112,11 +112,6 @@
         });
     }
     function shareFn(){
-        /*
-         if(/Android (\d+\.\d+)/.test(navigator.userAgent)){
-         setShare();
-         }else{
-         */
         wx.config({
             appId: '{$signPackage.appId}',
             timestamp: '{$signPackage.timestamp}',
@@ -171,7 +166,7 @@
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
             success: function () {
                 // 用户确认分享后执行的回调函数
-                window.location.href = "http://mp.weixin.qq.com/s?__biz=MzA5NjQ4MDkxOQ==&mid=208327002&idx=1&sn=98bf42c8e66d0d757e8b7e814fc329ee#rd";
+                window.location.href = "";
             },
             cancel: function () {
                 // 用户取消分享后执行的回调函数
@@ -184,7 +179,7 @@
             link: wxData['link'],
             imgUrl: wxData['imgUrl'],
             success: function (res) {
-                window.location.href = "http://mp.weixin.qq.com/s?__biz=MzA5NjQ4MDkxOQ==&mid=208327002&idx=1&sn=98bf42c8e66d0d757e8b7e814fc329ee#rd";
+                window.location.href = "";
             },
             cancel: function (res) {
             }
@@ -192,10 +187,8 @@
 
 
     });
-
-    //  }
     }
-    shareFn();
+    // shareFn();
 </script>
 </body>
 </html>
