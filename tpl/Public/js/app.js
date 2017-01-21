@@ -9,7 +9,7 @@ $(function(){
     console.log("出错行号：" , lineNumber);
     console.log("出错列号：" , columnNumber);
     console.log("错误详情：" , errorObj);
-  } 
+  }
 	var vue = new Vue({
 		el: '#wrapper',
 		data: {
@@ -168,6 +168,7 @@ $(function(){
 				}, 200);
 			},
 			handleShowForImg: function(e, dom){
+				alert(e)
 				// console.log(!this.answer[index].isAnswer);
 				// return !this.answer[index].isAnswer
 				alert(JSON.stringify(e.path[1]))
@@ -175,6 +176,8 @@ $(function(){
 				$(e.path[1]).find(dom).show();
 			},
 			handleShowForText: function(e, dom){
+				alert(e)
+				
 				console.log(JSON.stringify(e.path[2]));
 				var dt = e.path[2];
 				if(dt.className == 'answer-text'){
