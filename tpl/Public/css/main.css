@@ -34,7 +34,7 @@ html,body {
 .page1_1{ margin: 116px 0 0 -336px}
 .page1_2{ margin: 409px 0 0 -277px}
 .page1_3{ bottom: 140px; margin: 0 0 0 -94px;text-decoration: none;outline:0;}
-
+.ct{text-decoration: none;outline:0;}
 .ct:link,.ct:visited,.ct:hover,.ct.ctactive,.ct:focus{
 	text-decoration:none;
 	outline:0;

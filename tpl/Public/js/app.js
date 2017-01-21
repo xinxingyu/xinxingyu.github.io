@@ -73,6 +73,7 @@ $(function(){
 						{src:this.loadingPath+'D.png'},
 						{src:this.loadingPath+'clock.png'},
 						{src:this.loadingPath+'musicicon.png'},
+						{src:this.loadingPath+'musicicon_close.png'},
 						{src:this.loadingPath+'B.png'},
 						{src:this.loadingPath+'tips.png'},
 						{src:this.loadingPath+'result1.png'},
