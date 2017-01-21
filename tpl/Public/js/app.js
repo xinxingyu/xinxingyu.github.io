@@ -25,9 +25,9 @@ $(function(){
 		methods: {
 			init: function(){
 			    //阻止屏幕滑动
-			    $('html,body').on(touchmove,function(e){
-			        e.preventDefault()
-			    })
+			    // $('html,body').on(touchmove,function(e){
+			    //     e.preventDefault()
+			    // })
 				this.initLoading();
 				this.initAnimation();
 			},
@@ -125,8 +125,8 @@ $(function(){
 
 			},
 			choic: function(item, qt, index, e, type){
-				e.stopPropagation();
-				e.preventDefault();
+				// e.stopPropagation();
+				// e.preventDefault();
 
 				var _this = this;
 				if(this.answer[index].isAnswer){
