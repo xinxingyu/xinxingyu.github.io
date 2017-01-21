@@ -50,6 +50,7 @@ $(function(){
 						{src:this.loadingPath+'p1_3_open.png'},
 						{src:this.loadingPath+'yes.png'},
 						{src:this.loadingPath+'no.png'},
+						{src:this.loadingPath+'choice_bg.png'},
 						{src:this.loadingPath+'A.png'},
 						{src:this.loadingPath+'B.png'},
 						{src:this.loadingPath+'C.png'},
@@ -72,7 +73,6 @@ $(function(){
 				function handleOverallComplete(event){
 				   $('.loading').remove();
 				   $('.main').fadeIn(function(){
-					    // _this.motionObj['page'+1].play();
 						_this.pageswitch()
 				   });
 
