@@ -189,6 +189,9 @@ html,body {
 	position: absolute;
 	bottom: -620px;
 	left: 0px;
+	width: 750px;
+	height: 817px;
+	background-image: url("../images/p12_1.png"); background-position: center center; background-size: cover;
 }
 .page12_1 .page12-result{
 	position: absolute;
