@@ -257,7 +257,7 @@ html,body {
     left: 100px;
 }
 /*音乐按钮*/
-.musicicon{ background: url("../images/musicicon.png") no-repeat; width: 42px; height: 43px; position: absolute; top: 20px; right: 20px;}
+.musicicon{ background: url("../images/musicicon.png") no-repeat; width: 64px; height: 60px; position: absolute; top: 20px; right: 20px;}
 /*按钮旋转*/
 .musicrotate{-webkit-animation: xuanzhuan 5s infinite linear; animation: xuanzhuan 5s infinite linear;}
 @keyframes xuanzhuan {
