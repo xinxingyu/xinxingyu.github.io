@@ -33,7 +33,7 @@
 				<template v-if="qt.type == 1">
 					<div class="question"><p class="question-text">{{(index+1)+'、'+qt.question}}</p></div>
 					<div class="answer-img">
-						<div class="answer-img-item answer-item" v-for="(item, key) in qt.answer" @click="choic(item, qt, index, $event, 'img')">
+						<div class="answer-img-item answer-item" :id="''+index+key" v-for="(item, key) in qt.answer" @click="choic(item, qt, index, key, $event, 'img')">
 							<img :src="item.value">
 							<div class="hide answer-img-mask mask"></div>
 							<div class="hide answer-img-yes yes"></div>
@@ -47,7 +47,7 @@
 					<div class="question"><p class="question-text">{{(index+1)+'、'+qt.question}}</p></div>
 					<div class="textbg" :style="{ backgroundImage: regbackground(qt.questionImg) }"></div>
 					<div class="answer-text">
-						<div class="answer-text-item answer-item" v-for="(item, key) in qt.answer" @click="choic(item, qt, index, $event, 'text')">
+						<div class="answer-text-item answer-item" :id="''+index+key" v-for="(item, key) in qt.answer" @click="choic(item, qt, index, key, $event, 'text')">
 							<img :src="'../Public/images/'+item.key+'.png'">
 							<div class="answer-text-bg"><p>{{item.value}}</p></div>
 							<div class="hide answer-text-mask mask"></div>

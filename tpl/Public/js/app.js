@@ -137,9 +137,11 @@ $(function(){
 				},200)
 
 			},
-			choic: function(item, qt, index, e, type){
+			choic: function(item, qt, index, key, e, type){
 				// e.stopPropagation();
 				// e.preventDefault();
+				console.log($('#'+index+key));
+				var dom = $('#'+index+key);
 				var _this = this;
 				if(this.answer[index].isAnswer){
 					return
@@ -147,18 +149,20 @@ $(function(){
 				this.answer[index].isAnswer = true
 
 				if(item.key == qt.isTrue){
-					if(type == 'img'){
-						this.handleShowForImg(e, '.yes')
-					}else{
-						this.handleShowForText(e, '.yes')
-					}
+					// if(type == 'img'){
+					// 	this.handleShowForImg(e, '.yes')
+					// }else{
+					// 	this.handleShowForText(e, '.yes')
+					// }
+					this.handleShow(dom, '.yes')
 					this.answer[index].isTrue = true
 				}else{
-					if(type == 'img'){
-						this.handleShowForImg(e, '.no')
-					}else{
-						this.handleShowForText(e, '.no')
-					}
+					// if(type == 'img'){
+					// 	this.handleShowForImg(e, '.no')
+					// }else{
+					// 	this.handleShowForText(e, '.no')
+					// }
+					this.handleShow(dom, '.no')
 					this.answer[index].isTrue = false
 				}
 
@@ -167,23 +171,21 @@ $(function(){
 					_this.pageswitch()
 				}, 200);
 			},
+			handleShow: function(dom, cdom){
+				$(dom).find('.mask').show();
+				$(dom).find(cdom).show();
+			},
 			handleShowForImg: function(e, dom){
-				alert(e)
 				// console.log(!this.answer[index].isAnswer);
 				// return !this.answer[index].isAnswer
-				alert(JSON.stringify(e.path[1]))
 				$(e.path[1]).find('.mask').show();
 				$(e.path[1]).find(dom).show();
 			},
 			handleShowForText: function(e, dom){
-				alert(e)
-				
-				console.log(JSON.stringify(e.path[2]));
 				var dt = e.path[2];
 				if(dt.className == 'answer-text'){
 					dt = e.path[1]
 				}
-				alert(dt.className)
 				$(dt).find('.mask').show();
 				$(dt).find(dom).show();
 			},
