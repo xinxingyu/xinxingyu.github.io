@@ -236,6 +236,7 @@ $(function(){
 					$(item).hide()
 				})
 				$('.musicicon').fadeIn();
+				this.replayMusic()
 				this.pageswitch()
 			},
 			jump: function(){
@@ -268,6 +269,10 @@ $(function(){
 			},
 			pauseMusic: function(){
 				this.audio.pause()
+			},
+			replayMusic: function(){
+				this.audio.currentTime = 0;
+				this.audio.play()
 			}
 		}
 	});
