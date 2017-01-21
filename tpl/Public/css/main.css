@@ -33,10 +33,12 @@ html,body {
 .page1>div{ position: absolute; left: 50%;}
 .page1_1{ margin: 116px 0 0 -336px}
 .page1_2{ margin: 409px 0 0 -277px}
-.page1_3{ bottom: 140px; margin: 0 0 0 -94px;text-decoration: none;}
+.page1_3{ bottom: 140px; margin: 0 0 0 -94px;text-decoration: none;outline:0;}
+
 .ct:link,.ct:visited,.ct:hover,.ct.ctactive,.ct:focus{
 	text-decoration:none;
 	outline:0;
+	background: transparent;
 }
 .page1_4{ bottom: 66px; margin: 0 0 0 -166px;}
 
@@ -92,8 +94,8 @@ html,body {
 	height: 100px;
 	text-align: center;
 	bottom: 100px; margin-left: -77px;
-	-webkit-animation: breath 1s infinite ease-in-out;
-	animation: breath 1s infinite ease-in-out;
+	/*-webkit-animation: breath 1s infinite ease-in-out;*/
+	/*animation: breath 1s infinite ease-in-out;*/
 }
 .clock>img{
 	position: relative;

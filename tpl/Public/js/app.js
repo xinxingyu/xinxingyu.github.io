@@ -133,7 +133,6 @@ $(function(){
 			},
 			closeEye: function(){
 				var _this = this;
-				alert(2)
 				$('.page1_3>img').attr('src', this.loadingPath + 'p1_3_close.png');
 				setTimeout(function(){
 					_this.pageswitch()
@@ -141,9 +140,8 @@ $(function(){
 
 			},
 			choic: function(item, qt, index, key, e, type){
-				// e.stopPropagation();
-				// e.preventDefault();
-				console.log($('#'+index+key));
+				e.stopPropagation();
+				e.preventDefault();
 				var dom = $('#'+index+key);
 				var _this = this;
 				if(this.answer[index].isAnswer){
@@ -205,6 +203,7 @@ $(function(){
 
 				this.timer = setInterval(function(){
 					_this.time --;
+					TweenMax.fromTo('.clock', .3, { scale: 1.2, ease:Linear.easeOut},{ scale: 1, ease:Linear.easeOut})
 					if(_this.time == 1){
 						_this.clearCountDown();
 						setTimeout(function(){
