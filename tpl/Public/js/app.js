@@ -16,14 +16,6 @@ $(function(){
 			timer: '',
 			time: 5,
 		},
-		watch: {
-			// answer: {
-	        // 	handle: function (value) {
-			// 		console.log(value);
-			// 	},
-	        // 	deep: true
-	    	// }
-		},
 		created: function(){
 			this.initAnswer()
 		},
@@ -150,7 +142,6 @@ $(function(){
 				this.answer[index].isAnswer = true
 
 				if(item.key == qt.isTrue){
-					alert('正确')
 					if(type == 'img'){
 						this.handleShowForImg(e, '.yes')
 					}else{
@@ -158,8 +149,6 @@ $(function(){
 					}
 					this.answer[index].isTrue = true
 				}else{
-					alert('错误')
-
 					if(type == 'img'){
 						this.handleShowForImg(e, '.no')
 					}else{

@@ -49,7 +49,7 @@ html,body {
 .question-text{font-size: 32px; color: #333; padding: 40px 0 0 44px;}
 /** 图片类型问题 **/
 .answer-img{ width: 666px; height: 464px; margin: 215px 0 0 -333px;}
-.answer-img .answer-img-item{display: inline-block; margin-right: 2px; position: relative;}
+.answer-img .answer-img-item{display: inline-block; margin-right: 2px; position: relative;outline: none;border: none;}
 .answer-img .answer-img-mask{
     width: 326px;
     height: 225px;
@@ -111,6 +111,8 @@ html,body {
 	margin: 618px 0 0 -314px;
 }
 .answer-text-item{
+	outline: none;
+	border: none;
 	width: 295px;
 	height: 82px;
 	display: inline-block;
