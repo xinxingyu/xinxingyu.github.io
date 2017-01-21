@@ -33,7 +33,11 @@ html,body {
 .page1>div{ position: absolute; left: 50%;}
 .page1_1{ margin: 116px 0 0 -336px}
 .page1_2{ margin: 409px 0 0 -277px}
-.page1_3{ bottom: 140px; margin: 0 0 0 -94px;}
+.page1_3{ bottom: 140px; margin: 0 0 0 -94px;text-decoration: none;}
+.ct:link,.ct:visited,.ct:hover,.ct.ctactive,.ct:focus{
+	text-decoration:none;
+	outline:0;
+}
 .page1_4{ bottom: 66px; margin: 0 0 0 -166px;}
 
 .page .questions{background-image: url("../images/p1.jpg"); background-position: center center; background-size: cover;}
