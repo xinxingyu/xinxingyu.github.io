@@ -21,6 +21,7 @@ $(function(){
 			score: 0, //final score
 			timer: '',
 			time: 5,
+			audio: ''
 		},
 		created: function(){
 			this.initAnswer()
@@ -34,6 +35,7 @@ $(function(){
 			    $('html,body').on(touchmove,function(e){
 			        e.preventDefault()
 			    })
+				this.audio = $('#media')[0];
 				this.initLoading();
 				this.initAnimation();
 			},
@@ -88,6 +90,7 @@ $(function(){
 				   $('.main').fadeIn(function(){
 						_this.pageswitch()
 						$('.musicicon').fadeIn();
+						_this.playMusic();
 				   });
 
 				}
@@ -110,11 +113,14 @@ $(function(){
 		        this.motionObj['page'+1].add(TweenMax.fromTo('.page1_2', 0.1, {yoyo: true, repeat: -1, rotation: 5 ,ease:Linear.easeNone}, {yoyo: true, repeat: -1, rotation: -5 ,ease:Linear.easeNonet}));
 		        this.motionObj['page'+1].pause();
 				for(var j = 2; j < 12; j++){
-					this.motionObj['page'+j].add(TweenMax.from('.page'+j, .5, { alpha: 0, scale:.2, ease:Bounce.easeOut}));
+					this.motionObj['page'+j].add(TweenMax.from('.page'+j, .3, { alpha: 0, scale:.2, ease:Linear.easeOut}));
 			        this.motionObj['page'+j].pause();
 				}
 				this.motionObj['page'+12].add(TweenMax.from('.page12', .3, {alpha: 0, scale:.2, ease:Linear.easeOut}));
 		        this.motionObj['page'+12].add(TweenMax.to('.page12_content', 1.2, { delay: .3, y: -620 ,ease:Bounce.easeOut}));
+		        this.motionObj['page'+12].add(TweenMax.from('.page12-result', .3, {alpha: 0, ease:Linear.easeNone}));
+		        this.motionObj['page'+12].add(TweenMax.to('.page12-result', .3, {scale: 1.2,ease:Linear.easeNone}));
+		        this.motionObj['page'+12].add(TweenMax.to('.page12-result', .3, {scale: 1,ease:Linear.easeNone}));
 		        this.motionObj['page'+12].pause();
 			},
 			pageswitch: function(){
@@ -125,6 +131,7 @@ $(function(){
 					this.countDown()
 				}else if(this.currentPageNum == 12){
 					$('.musicicon').fadeOut();
+					this.pauseMusic();
 					this.getResult();
 				}
 
@@ -256,7 +263,21 @@ $(function(){
 						this.score++;
 					}
 				}
-				console.log('最终得分：'+this.score);
+			},
+			operateMusic: function(){
+				if(!this.audio.paused){
+					$('.musicicon').css({'background': 'url("'+this.loadingPath+'musicicon_close.png")'})
+					this.pauseMusic()
+			   	}else{
+					$('.musicicon').css({'background': 'url("'+this.loadingPath+'musicicon.png")'})
+					this.playMusic()
+				}
+			},
+			playMusic: function(){
+				this.audio.play()
+			},
+			pauseMusic: function(){
+				this.audio.pause()
 			}
 		}
 	});

@@ -74,7 +74,7 @@
 				</div>
 			</div>
 	    </div>
-		<div class="musicicon musicrotate hide"></div>
+		<div class="musicicon musicrotate hide" @click="operateMusic"></div>
 	    <div class="sharemask hide" @click="hideShare">
 	        <img src="../Public/images/share.png">
 	    </div>
@@ -82,6 +82,7 @@
 			<div class="jump" @click="jump()"></div>
 	        <img src="../Public/images/surpriseMask.jpg">
 	    </div>
+		<audio style="display:none;" id="media" loop src="../Public/images/sound.mp3"></audio>
 	</div>
 </div>
 
