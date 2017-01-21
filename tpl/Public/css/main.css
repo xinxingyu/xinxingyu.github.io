@@ -46,7 +46,7 @@ html,body {
 	background-position: center center;
 	background-size: cover;
 }
-.question-text{font-size: 32px; color: #333; padding: 40px 0 0 44px;}
+.question-text{font-size: 32px; color: #333; padding: 34px 0 0 44px;}
 /** 图片类型问题 **/
 .answer-img{ width: 666px; height: 464px; margin: 215px 0 0 -333px;}
 .answer-img .answer-img-item{display: inline-block; margin-right: 2px; position: relative;outline: none;border: none;}

@@ -56,6 +56,9 @@ $(function(){
 						{src:this.loadingPath+'loading.png'},
 						{src:this.loadingPath+'loading_border.png'},
 						{src:this.loadingPath+'p1.jpg'},
+						{src:this.loadingPath+'p1_1.png'},
+						{src:this.loadingPath+'p1_2.png'},
+						{src:this.loadingPath+'p1_4.png'},
 						{src:this.loadingPath+'p1_3_close.png'},
 						{src:this.loadingPath+'p1_3_open.png'},
 						{src:this.loadingPath+'yes.png'},
@@ -77,7 +80,7 @@ $(function(){
 					];
 
 				function handleOverallProgress(event){
-					var length = (Math.ceil(event.loaded) * 390) + 'px';
+					var length = Math.ceil(event.loaded*100) * 3.9 + 'px';
 					$('.progress').css('width', length);
 				}
 				function handleOverallComplete(event){
