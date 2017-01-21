@@ -43,8 +43,24 @@ $(function(){
 				var _this = this,
 					loader = new createjs.LoadQueue(false),
 					manifest = [
-						{src:this.loadingPath+'logo.png'},
-						{src:this.loadingPath+'p1.jpg'}
+						{src:this.loadingPath+'loading.png'},
+						{src:this.loadingPath+'loading_border.png'},
+						{src:this.loadingPath+'p1.jpg'},
+						{src:this.loadingPath+'yes.png'},
+						{src:this.loadingPath+'no.png'},
+						{src:this.loadingPath+'A.png'},
+						{src:this.loadingPath+'B.png'},
+						{src:this.loadingPath+'C.png'},
+						{src:this.loadingPath+'D.png'},
+						{src:this.loadingPath+'clock.png'},
+						{src:this.loadingPath+'musicicon.png'},
+						{src:this.loadingPath+'B.png'},
+						{src:this.loadingPath+'tips.png'},
+						{src:this.loadingPath+'result1.png'},
+						{src:this.loadingPath+'result2.png'},
+						{src:this.loadingPath+'result3.png'},
+						{src:this.loadingPath+'result4.png'},
+						{src:this.loadingPath+'result5.png'}
 					];
 
 				function handleOverallProgress(event){
