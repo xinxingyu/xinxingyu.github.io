@@ -46,6 +46,8 @@ $(function(){
 						{src:this.loadingPath+'loading.png'},
 						{src:this.loadingPath+'loading_border.png'},
 						{src:this.loadingPath+'p1.jpg'},
+						{src:this.loadingPath+'p1_3_close.png'},
+						{src:this.loadingPath+'p1_3_open.png'},
 						{src:this.loadingPath+'yes.png'},
 						{src:this.loadingPath+'no.png'},
 						{src:this.loadingPath+'A.png'},
@@ -127,7 +129,7 @@ $(function(){
 			choic: function(item, qt, index, e, type){
 				// e.stopPropagation();
 				// e.preventDefault();
-
+				alert('点我')
 				var _this = this;
 				if(this.answer[index].isAnswer){
 					return
