@@ -146,10 +146,11 @@ $(function(){
 				if(this.answer[index].isAnswer){
 					return
 				}
-
+				alert('没回答过题目')
 				this.answer[index].isAnswer = true
 
 				if(item.key == qt.isTrue){
+					alert('正确')
 					if(type == 'img'){
 						this.handleShowForImg(e, '.yes')
 					}else{
@@ -157,6 +158,8 @@ $(function(){
 					}
 					this.answer[index].isTrue = true
 				}else{
+					alert('错误')
+
 					if(type == 'img'){
 						this.handleShowForImg(e, '.no')
 					}else{
