@@ -16,6 +16,14 @@ $(function(){
 			timer: '',
 			time: 5,
 		},
+		watch: {
+			// answer: {
+	        // 	handle: function (value) {
+			// 		console.log(value);
+			// 	},
+	        // 	deep: true
+	    	// }
+		},
 		created: function(){
 			this.initAnswer()
 		},
@@ -25,9 +33,9 @@ $(function(){
 		methods: {
 			init: function(){
 			    //阻止屏幕滑动
-			    // $('html,body').on(touchmove,function(e){
-			    //     e.preventDefault()
-			    // })
+			    $('html,body').on(touchmove,function(e){
+			        e.preventDefault()
+			    })
 				this.initLoading();
 				this.initAnimation();
 			},
@@ -37,6 +45,10 @@ $(function(){
 						isTrue: false,
 						isAnswer: false
 					}
+					// this.answer.push(1)
+					// this.answer[i] = {};
+					// this.$set(this.answer[i], 'isTrue', false)
+					// this.$set(this.answer[i], 'isAnswer', false)
 				}
 			},
 			initLoading: function(){
@@ -161,11 +173,14 @@ $(function(){
 			handleShowForImg: function(e, dom){
 				// console.log(!this.answer[index].isAnswer);
 				// return !this.answer[index].isAnswer
+				alert(e.path[1])
 				alert(e.path[1].className)
 				$(e.path[1]).find('.mask').show();
 				$(e.path[1]).find(dom).show();
 			},
 			handleShowForText: function(e, dom){
+				alert(e.path[2])
+				
 				var dt = e.path[2];
 				if(dt.className == 'answer-text'){
 					dt = e.path[1]
