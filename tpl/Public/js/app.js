@@ -74,6 +74,7 @@ $(function(){
 				   $('.loading').remove();
 				   $('.main').fadeIn(function(){
 						_this.pageswitch()
+						$('.musicicon').fadeIn();
 				   });
 
 				}
@@ -110,7 +111,7 @@ $(function(){
 					this.time = 5;
 					this.countDown()
 				}else if(this.currentPageNum == 12){
-					console.log('最后了');
+					$('.musicicon').fadeOut();
 					this.getResult();
 				}
 
@@ -129,7 +130,6 @@ $(function(){
 			choic: function(item, qt, index, e, type){
 				// e.stopPropagation();
 				// e.preventDefault();
-				alert('点我')
 				var _this = this;
 				if(this.answer[index].isAnswer){
 					return
@@ -161,6 +161,7 @@ $(function(){
 			handleShowForImg: function(e, dom){
 				// console.log(!this.answer[index].isAnswer);
 				// return !this.answer[index].isAnswer
+				alert(e.path[1].className)
 				$(e.path[1]).find('.mask').show();
 				$(e.path[1]).find(dom).show();
 			},
@@ -169,6 +170,7 @@ $(function(){
 				if(dt.className == 'answer-text'){
 					dt = e.path[1]
 				}
+				alert(dt.className)
 				$(dt).find('.mask').show();
 				$(dt).find(dom).show();
 			},
@@ -219,6 +221,7 @@ $(function(){
 				$('.page .no').each(function(i, item){
 					$(item).hide()
 				})
+				$('.musicicon').fadeIn();
 				this.pageswitch()
 			},
 			jump: function(){
