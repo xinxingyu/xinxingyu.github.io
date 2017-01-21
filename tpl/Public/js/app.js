@@ -113,8 +113,8 @@ $(function(){
 					this.motionObj['page'+j].add(TweenMax.from('.page'+j, .5, { alpha: 0, scale:.2, ease:Bounce.easeOut}));
 			        this.motionObj['page'+j].pause();
 				}
-				this.motionObj['page'+12].add(TweenMax.from('.page12', .8, {alpha: 0, scale:.2, ease:Bounce.easeOut}));
-		        this.motionObj['page'+12].add(TweenMax.to('.page12_content', 1.2, { y: -620 ,ease:Bounce.easeOut}));
+				this.motionObj['page'+12].add(TweenMax.from('.page12', .3, {alpha: 0, scale:.2, ease:Linear.easeOut}));
+		        this.motionObj['page'+12].add(TweenMax.to('.page12_content', 1.2, { delay: .3, y: -620 ,ease:Bounce.easeOut}));
 		        this.motionObj['page'+12].pause();
 			},
 			pageswitch: function(){
