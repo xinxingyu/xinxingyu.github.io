@@ -3,13 +3,7 @@ $(function(){
 	var touchstart = mobile ? "touchstart" : "mousedown";
 	var touchend = mobile ? "touchend" : "mouseup";
 	var touchmove = mobile ? "touchmove" : "mousemove";
-	window.onerror = function(errorMessage, scriptURI, lineNumber,columnNumber,errorObj) {
-    console.log("错误信息：" , errorMessage);
-    console.log("出错文件：" , scriptURI);
-    console.log("出错行号：" , lineNumber);
-    console.log("出错列号：" , columnNumber);
-    console.log("错误详情：" , errorObj);
-  }
+
 	var vue = new Vue({
 		el: '#wrapper',
 		data: {
@@ -192,7 +186,11 @@ $(function(){
 				return 'url('+ url+')';
 			},
 			resultBackground(url){
-				var name = 'result' + Math.floor(parseInt(this.score)/2) + '.png';
+				var name,
+					_score = Math.floor(parseInt(this.score)/2)
+				_score = (_score>5 || _score<0) ? 1:_score
+				name = 'result' + _score + '.png';
+
 				return 'url('+ this.loadingPath+name+')';
 			},
 			//倒计时
@@ -205,6 +203,7 @@ $(function(){
 					if(_this.time == 1){
 						_this.clearCountDown();
 						setTimeout(function(){
+							_this.clearCountDown();
 							_this.pageswitch();
 						}, 1000)
 					}

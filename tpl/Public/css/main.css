@@ -255,7 +255,7 @@ html,body {
 .sharemask img{ display: block; position: absolute; right: 28px; top: 45px;}
 /*surprise*/
 .surpriseMask{ width: 100%; height: 100%; background: rgba(0,0,0,0.7); position: absolute; left: 0; top: 0;}
-.surpriseMask img{ display: block; position: absolute; right: 28px; top: 45px;}
+.surpriseMask img{ display: block; position: absolute; top: 45px; left: 50%; margin-left: -315px;}
 .surpriseMask .jump{
 	width: 400px;
     height: 200px;
