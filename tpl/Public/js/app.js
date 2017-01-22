@@ -250,10 +250,10 @@ $(function(){
 			},
 			resultBackground: function(url){
 				var name,
-					_score = Math.floor(parseInt(this.score)/2)
+					_score = Math.ceil(parseInt(this.score)/2)
+
 				_score = (_score>5 || _score<0) ? 1:_score
 				name = 'result' + _score + '.png';
-
 				return 'url('+ this.loadingPath+name+')';
 			},
 			//倒计时
@@ -320,6 +320,7 @@ $(function(){
 						this.score++;
 					}
 				}
+				// console.log('最终得分：'+this.score);
 			},
 			operateMusic: function(){
 				if(!this.audio.paused){
