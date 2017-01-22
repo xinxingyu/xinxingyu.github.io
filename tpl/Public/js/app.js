@@ -237,10 +237,10 @@ $(function(){
 				$(dt).find('.mask').show();
 				$(dt).find(dom).show();
 			},
-			regbackground(url){
+			regbackground: function(url){
 				return 'url('+ url+')';
 			},
-			resultBackground(url){
+			resultBackground: function(url){
 				var name,
 					_score = Math.floor(parseInt(this.score)/2)
 				_score = (_score>5 || _score<0) ? 1:_score
@@ -298,7 +298,7 @@ $(function(){
 				this.pageswitch()
 			},
 			jump: function(){
-				window.location.href='www.baidu.com';
+				window.location.href='http://www.dokeycn.com';
 			},
 			showSurprise: function(){
 				$('.surpriseMask').fadeIn()
