@@ -14,7 +14,7 @@ $(function(){
 			answer: [],
 			score: 0, //final score
 			timer: '',
-			time: 5,
+			time: 8,
 			audio: ''
 		},
 		created: function(){
@@ -176,7 +176,7 @@ $(function(){
 				this.currentPageNum ++;
 				//begin count down
 				if(this.currentPageNum>1 && this.currentPageNum<12){
-					this.time = 5;
+					this.time = 8;
 					this.countDown()
 				}else if(this.currentPageNum == 12){
 					$('.musicicon').fadeOut();
@@ -256,10 +256,13 @@ $(function(){
 					_this.time --;
 					TweenMax.fromTo('.clock', .3, { scale: 1.2, ease:Linear.easeOut},{ scale: 1, ease:Linear.easeOut})
 					if(_this.time == 1){
+						var current = _this.currentPageNum-2
 						_this.clearCountDown();
 						setTimeout(function(){
-							_this.clearCountDown();
-							_this.pageswitch();
+							if(!_this.answer[current].isAnswer){
+								_this.clearCountDown();
+								_this.pageswitch();
+							}
 						}, 1000)
 					}
 				}, 1000)
