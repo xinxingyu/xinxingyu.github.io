@@ -64,6 +64,9 @@ html,body {
     left: 0;
     background: rgba(0,0,0,.7);
 }
+.answer-img-item>img{
+	border: 1px solid #e5e5e5;
+}
 .answer-img .answer-img-yes{
 	position: absolute;
 	top: 50%;
