@@ -331,7 +331,7 @@ $(function(){
 				}
 			},
 			playMusic: function(){
-				this.audio.play()
+				// this.audio.play()
 			},
 			pauseMusic: function(){
 				this.audio.pause()
