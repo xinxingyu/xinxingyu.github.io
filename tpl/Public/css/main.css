@@ -55,10 +55,15 @@ html,body {
 .question-text{font-size: 32px; color: #333; padding: 34px 0 0 44px;}
 /** 图片类型问题 **/
 .answer-img{ width: 666px; height: 464px; margin: 215px 0 0 -333px;}
-.answer-img .answer-img-item{display: inline-block; margin-right: 2px; position: relative;outline: none;border: none;}
+.answer-img .answer-img-item{display: inline-block; margin-bottom: 15px; position: relative;outline: none;border: none;}
+.answer-img-item:nth-of-type(odd){
+	margin-right: 20px;
+}
 .answer-img .answer-img-mask{
-    width: 326px;
-    height: 225px;
+    /*width: 326px;
+    height: 225px;*/
+	width: 320px;
+	height: 221px;
     position: absolute;
     top: 0;
     left: 0;
@@ -66,6 +71,8 @@ html,body {
 }
 .answer-img-item>img{
 	border: 1px solid #e5e5e5;
+	width: 320px;
+	height: 221px;
 }
 .answer-img .answer-img-yes{
 	position: absolute;
