@@ -264,16 +264,33 @@ html,body {
 .sharemask{ width: 100%; height: 100%; background: rgba(0,0,0,0.7); position: absolute; left: 0; top: 0;}
 .sharemask img{ display: block; position: absolute; right: 28px; top: 45px;}
 /*surprise*/
-.surpriseMask{ width: 100%; height: 100%; background: rgba(0,0,0,0.7); position: absolute; left: 0; top: 0;}
-.surpriseMask img{ display: block; position: absolute; top: 45px; left: 50%; margin-left: -315px;}
+.surpriseMask{ width: 100%; height: 100%; background: #bd0000; position: absolute; left: 0; top: 0;}
+.surpriseMask img{
+	display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -375px;
+    margin-top: -607px;
+}
 .surpriseMask .jump{
-	width: 400px;
+	width: 380px;
     height: 200px;
     z-index: 100;
     display: inline-block;
     position: absolute;
-    top: 550px;
-    left: 100px;
+    /*top: 550px;*/
+    top: 0px;
+    left: 0px;
+}
+.surpriseMask .jump2{
+	width: 375px;
+    height: 200px;
+    z-index: 100;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }
 /*音乐按钮*/
 .musicicon{ background: url("../images/musicicon.png") no-repeat; width: 64px; height: 60px; position: absolute; top: 20px; right: 20px;}

@@ -308,6 +308,9 @@ $(function(){
 			jump: function(){
 				window.location.href='http://www.dokeycn.com';
 			},
+			jump2: function(){
+				window.location.href='http://www.cuojue001.com';
+			},
 			showSurprise: function(){
 				$('.surpriseMask').fadeIn()
 			},
@@ -315,11 +318,21 @@ $(function(){
 				$('.surpriseMask').fadeOut()
 			},
 			getResult: function(){
+				var resultName = ['你该修修零件了！', '你该修修零件了！', '你快赶上二娃了', '奔跑吧，眼屎君！', '你目光如炬，快把我燃烧了！', 'GOD！请将简历发到此邮箱！hr@clokeycn.com'];
+
 				for(var i = 0; i < this.answer.length; i++){
 					if(this.answer[i].isTrue){
 						this.score++;
 					}
 				}
+
+				var _score = Math.ceil(parseInt(this.score)/2);
+				_score = (_score>5 || _score<0) ? 1:_score;
+
+				setShareFn({
+					desc: '测试结果：“'+resultName[_score] + "”道及、错觉给您拜年了！",
+					imgUrl: 'http://dokeycn.com/wap/Public/images/shareResult' + _score + '.jpg'
+				})
 				// console.log('最终得分：'+this.score);
 			},
 			operateMusic: function(){

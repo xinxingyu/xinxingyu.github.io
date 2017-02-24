@@ -72,12 +72,14 @@
 	    </div>
 	    <div class="surpriseMask hide" @click="hideSurprise()">
 			<div class="jump" @click="jump()"></div>
-	        <img src="../Public/images/surpriseMask.jpg">
+			<div class="jump2" @click="jump2()"></div>
+	        <img src="../Public/images/daoji.jpg">
 	    </div>
 		<audio style="display:none;" id="media" loop src="../Public/images/bgmusic.mp3"></audio>
 	</div>
 </div>
 <script type="text/javascript" src="../Public/js/setviewport.js"></script>
+<script type="text/javascript" src="../Public/js/jweixin-1.0.0.js"></script>
 <script type="text/javascript" src="../Public/js/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="../Public/js/wxshare.js"></script>
 <script type="text/javascript" src="../Public/js/vue.min.js"></script>
@@ -85,110 +87,5 @@
 <script type="text/javascript" src="../Public/js/preloadjs-0.6.0.min.js"></script>
 <script type="text/javascript" src="../Public/js/TweenMax.min.js"></script>
 <script type="text/javascript" src="../Public/js/app.js"></script>
-<script type="text/javascript" src="../Public/js/jweixin-1.0.0.js"></script>
-<script>
-    // JavaScript Document
-    var wxData = {
-        "imgUrl":"",
-        "link":"",
-        "title":"",
-        "desc":""
-    };
-    function setShare(){
-        WeixinApi.ready(function(Api) {
-            // 分享的回调
-            var wxCallbacks = {
-                // 收藏操作是否触发回调，默认是开启的
-                favorite : false,
-                // 分享成功
-                confirm : function(resp) {
-                    //window.location.href = "";
-                }
-            };
-            // 用户点开右上角popup菜单后，点击分享给好友，会执行下面这个代码
-            Api.shareToFriend(wxData, wxCallbacks);
-            // 点击分享到朋友圈，会执行下面这个代码
-            Api.shareToTimeline(wxData, wxCallbacks);
-        });
-    }
-    function shareFn(){
-        wx.config({
-            appId: '{$signPackage.appId}',
-            timestamp: '{$signPackage.timestamp}',
-            nonceStr: '{$signPackage.nonceStr}',
-            signature: '{$signPackage.signature}',
-            jsApiList: [
-            // 所有要调用的 API 都要加到这个列表中
-            'checkJsApi',
-            'onMenuShareTimeline',
-            'onMenuShareAppMessage',
-            'onMenuShareQQ',
-            'onMenuShareWeibo',
-            'hideMenuItems',
-            'showMenuItems',
-            'hideAllNonBaseMenuItem',
-            'showAllNonBaseMenuItem',
-            'translateVoice',
-            'startRecord',
-            'stopRecord',
-            'onRecordEnd',
-            'playVoice',
-            'pauseVoice',
-            'openCard'
-        ]
-    });
-    wx.ready(function () {
-        wx.hideAllNonBaseMenuItem({
-            success: function () {
-                //alert('已隐藏所有非基本菜单项');
-            }
-        });
-        wx.showMenuItems({
-            menuList: [
-                'menuItem:favorite',
-                'menuItem:share:appMessage',
-                'menuItem:share:timeline' // 分享到朋友圈
-            ],
-            success: function (res) {
-                //alert('已显示“阅读模式”，“分享到朋友圈”，“复制链接”等按钮');
-            },
-            fail: function (res) {
-                //alert(JSON.stringify(res));
-            }
-        });
-
-        wx.onMenuShareAppMessage({
-            title: wxData['title'], // 分享标题
-            desc: wxData['desc'], // 分享描述
-            link: wxData['link'], // 分享链接
-            imgUrl: wxData['imgUrl'], // 分享图标
-            type: 'link', // 分享类型,music、video或link，不填默认为link
-            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
-            success: function () {
-                // 用户确认分享后执行的回调函数
-                window.location.href = "";
-            },
-            cancel: function () {
-                // 用户取消分享后执行的回调函数
-            }
-        });
-
-
-        wx.onMenuShareTimeline({
-            title: wxData['desc'],
-            link: wxData['link'],
-            imgUrl: wxData['imgUrl'],
-            success: function (res) {
-                window.location.href = "";
-            },
-            cancel: function (res) {
-            }
-        });
-
-
-    });
-    }
-    // shareFn();
-</script>
 </body>
 </html>
