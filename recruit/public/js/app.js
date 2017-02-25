@@ -3,7 +3,7 @@
  */
 $(function(){
 	var XXY = function(){
-		this.loadingPath = '../public/images/';
+		this.loadingPath = '../public/images/index/';
 		this.motionObj = new TimelineMax();
 		this.pe = $(window).width()/3700;
 
