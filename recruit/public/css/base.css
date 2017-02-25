@@ -19,3 +19,19 @@ html,body {
 	position: relative;
 }
 img{width: 100%;}
+
+.company{
+	color: #999999;
+	font-size: 13px;
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	transform: translate(-50%,0);
+	-webkit-transform: translate(-50%,0);
+	-o-transform: translate(-50%,0);
+	-ms-transform: translate(-50%,0);
+	-moz-transform: translate(-50%,0);
+}
+.company-bottom{
+	top: 917px;
+}

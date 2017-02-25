@@ -128,3 +128,6 @@ li .content p{
 	background: url(../images/area/btn_return.png) no-repeat 50% 0;
 	z-index: 999;
 }
+.company-bottom{
+	top: 917px;
+}
