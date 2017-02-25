@@ -93,7 +93,7 @@ $(function(){
 			TweenMax.from('.book', .2, {delay:1.3, scale:.5, x:630*this.pe, y:-300*this.pe, ease:Linear.easeIn});
 			TweenMax.from('.operate', .5, {delay:1.5, scale:0,  ease:Bounce.easeOut});
 		},
-		computeViews(dom, opt){
+		computeViews: function(dom, opt){
 			if(opt.top!=undefined){
 				$(dom).css({width: this.pe*opt.width+'px', margin: this.pe*opt.top+'px'+' 0 0 '+this.pe*opt.left+'px'});
 			}else if(opt.bottom){
