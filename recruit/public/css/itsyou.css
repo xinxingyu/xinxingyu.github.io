@@ -45,6 +45,7 @@
 	z-index: 9;
 }
 .content2{
+	cursor: pointer;
 	position: absolute;
 	top: 358px;
 	left: 422px;
@@ -53,6 +54,7 @@
 	background: url(../images/itsyou/content2.png) no-repeat 50% 0;
 }
 .bt-look{
+	cursor: pointer;
 	position: absolute;
 	top: 770px;
 	left: 370px;
@@ -61,6 +63,7 @@
 	background: url(../images/itsyou/button1.png) no-repeat 50% 0;
 }
 .bt-go{
+	cursor: pointer;
 	position: absolute;
 	top: 749px;
 	left: 955px;

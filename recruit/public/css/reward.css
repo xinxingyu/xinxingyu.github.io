@@ -53,6 +53,7 @@
 	background: url(../images/reward/content2.png) no-repeat 50% 0;
 }
 .bt-look{
+	cursor: pointer;
 	position: absolute;
 	top: 770px;
 	left: 370px;
@@ -61,6 +62,7 @@
 	background: url(../images/reward/button1.png) no-repeat 50% 0;
 }
 .bt-go{
+	cursor: pointer;
 	position: absolute;
 	top: 749px;
 	left: 955px;

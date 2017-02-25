@@ -117,6 +117,7 @@ video{
 }
 
 .goback{
+	cursor: pointer;
 	width: 94px;
 	height: 94px;
 	background: url(../images/introduce/goback.png) no-repeat;
