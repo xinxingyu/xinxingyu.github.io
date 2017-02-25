@@ -60,11 +60,15 @@ $(function(){
 			function handleOverallProgress(event){}
 			function handleOverallComplete(event){
 			   $('.loading').remove();
-			   $('.main').fadeIn(function(){
-				   	_this.motionObj.restart();
-					_this.itemAnimation()
-					_this.item2Animation()
-			   });
+			   $('.main').show();
+			   _this.motionObj.restart();
+			   _this.itemAnimation()
+			   _this.item2Animation()
+			//    $('.main').fadeIn(function(){
+			// 	   	_this.motionObj.restart();
+			// 		_this.itemAnimation()
+			// 		_this.item2Animation()
+			//    });
 
 			}
 			loader.addEventListener("progress", handleOverallProgress);
@@ -119,7 +123,7 @@ $(function(){
 		},
 		bindEvent: function(){
 			$('.operate').on('click', function(){
-				alert(2)
+				location.href="itsyou.html"
 			})
 		}
 	}

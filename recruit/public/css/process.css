@@ -10,17 +10,17 @@
 	left: 0;
 }
 .c-bg .bg1{
-	background: url(../images/itsyou/bg_01.jpg) no-repeat 50% 0;
+	background: url(../images/process/bg_01.jpg) no-repeat 50% 0;
 	width: 100%;
 	height: 300px;
 }
 .c-bg .bg2{
-	background: url(../images/itsyou/bg_02.jpg) no-repeat 50% 0;
+	background: url(../images/process/bg_02.jpg) no-repeat 50% 0;
 	width: 100%;
 	height: 300px;
 }
 .c-bg .bg3{
-	background: url(../images/itsyou/bg_03.jpg) no-repeat 50% 0;
+	background: url(../images/process/bg_03.jpg) no-repeat 50% 0;
 	width: 100%;
 	height: 350px;
 }
@@ -31,26 +31,26 @@
 	position: absolute;
 	top: 35px;
 	left: 334px;
-	background: url(../images/itsyou/logo.jpg) no-repeat 50% 0;
+	background: url(../images/process/logo.jpg) no-repeat 50% 0;
 	width: 154px;
 	height: 34px;
 }
 .content1{
 	position: absolute;
-	top: 32px;
-	left: 330px;
-	width: 839px;
-	height: 416px;
-	background: url(../images/itsyou/content1.png) no-repeat 50% 0;
+	top: 55px;
+	left: 375px;
+	width: 948px;
+	height: 378px;
+	background: url(../images/process/content1.png) no-repeat 50% 0;
 	z-index: 9;
 }
 .content2{
 	position: absolute;
-	top: 358px;
-	left: 422px;
-	width: 1263px;
-	height: 405px;
-	background: url(../images/itsyou/content2.png) no-repeat 50% 0;
+	top: 356px;
+	left: 388px;
+	width: 1296px;
+	height: 396px;
+	background: url(../images/process/content2.png) no-repeat 50% 0;
 }
 .bt-look{
 	position: absolute;
@@ -58,7 +58,7 @@
 	left: 370px;
 	width: 460px;
 	height: 80px;
-	background: url(../images/itsyou/button1.png) no-repeat 50% 0;
+	background: url(../images/process/button1.png) no-repeat 50% 0;
 }
 .bt-go{
 	position: absolute;
@@ -66,7 +66,7 @@
 	left: 955px;
 	width: 514px;
 	height: 103px;
-	background: url(../images/itsyou/button2.png) no-repeat 50% 0;
+	background: url(../images/process/button2.png) no-repeat 50% 0;
 }
 .bt-itesyou{
 	cursor: pointer;
@@ -75,7 +75,7 @@
 	left: 1458px;
 	width: 145px;
 	height: 80px;
-	background: url(../images/itsyou/itsyou_act.png) no-repeat 50% 0;
+	background: url(../images/process/reward.png) no-repeat 50% 0;
 }
 .bt-reward{
 	cursor: pointer;
@@ -84,7 +84,7 @@
 	left: 1387px;
 	width: 145px;
 	height: 80px;
-	background: url(../images/itsyou/reward.png) no-repeat 50% 0;
+	background: url(../images/process/reward.png) no-repeat 50% 0;
 }
 .bt-process{
 	cursor: pointer;
@@ -93,7 +93,7 @@
 	left: 1458px;
 	width: 145px;
 	height: 80px;
-	background: url(../images/itsyou/process.png) no-repeat 50% 0;
+	background: url(../images/process/process_act.png) no-repeat 50% 0;
 }
 .bt-sao{
 	cursor: pointer;
@@ -102,7 +102,7 @@
 	left: 1480px;
 	width: 87px;
 	height: 79px;
-	background: url(../images/itsyou/sao.png) no-repeat 50% 0;
+	background: url(../images/process/sao.png) no-repeat 50% 0;
 }
 .bt-ma{
 	cursor: pointer;
@@ -112,5 +112,5 @@
 	left: 1418px;
 	width: 215px;
 	height: 213px;
-	background: url(../images/itsyou/ma.jpg) no-repeat 50% 0;
+	background: url(../images/process/ma.jpg) no-repeat 50% 0;
 }
