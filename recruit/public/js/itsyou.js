@@ -38,6 +38,18 @@ $(function(){
 			$('.content2').on('click', function(){
 				location.href="area.html"
 			})
+			/**
+			 * 看看历届大使的风采
+			 */
+			$('.bt-look').on('click', function(){
+				location.href="introduce.html"
+			})
+			/**
+			 * 走上人生巅峰，快来报名吧
+			 */
+			$('.bt-go').on('click', function(){
+				//TODO....
+			})
 		}
 	}
 

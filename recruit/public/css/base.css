@@ -18,7 +18,7 @@ html,body {
 .main{
 	position: relative;
 }
-img{width: 100%;}
+img{width: 100%; display: block;}
 
 .company{
 	color: #999999;

@@ -24,7 +24,7 @@ $(function(){
 			})
 			$('.bt-return').on('click', function(){
 				window.history.go(-1);
-			})
+			});
 			function clear(){
 				var domList = $('.main .panel').find('li');
 
@@ -35,7 +35,14 @@ $(function(){
 					$($(li).find('.title')[0]).attr('data-active', 0)
 
 				}
-			}
+			};
+
+			/**
+			 * 走上人生巅峰，快来报名吧
+			 */
+			$('.bt-go').on('click', function(){
+				//TODO....
+			});
 		}
 	}
 
