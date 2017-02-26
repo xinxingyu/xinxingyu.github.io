@@ -55,6 +55,37 @@
 	background: url(../images/itsyou/content1.png) no-repeat 50% 0;
 	z-index: 9;
 }
+.content1 .learnMore{
+	width: 472px;
+	height: 44px;
+	position: absolute;
+	top: 242px;
+	left: 180px;
+}
+.content1 .circle1{
+	position: absolute;
+	top: 234px;
+	left: 666px;
+	width: 30px;
+	height: 30px;
+	background: url(../images/itsyou/circle1.png) no-repeat 50% 0;
+	animation: circle 2s infinite;
+	-moz-animation: circle 2s infinite; /* Firefox */
+	-webkit-animation: circle 2s infinite; /* Safari and Chrome */
+	-o-animation: circle 2s infinite; /* Opera */
+}
+.content1 .circle2{
+	position: absolute;
+	top: 225px;
+	left: 656px;
+	width: 48px;
+	height: 48px;
+	background: url(../images/itsyou/circle2.png) no-repeat 50% 0;
+	animation: circle 2s infinite .3s;
+	-moz-animation: circle 2s infinite .3s; /* Firefox */
+	-webkit-animation: circle 2s infinite .3s; /* Safari and Chrome */
+	-o-animation: circle 2s infinite .3s; /* Opera */
+}
 .content2{
 	margin-top: -90px;
 	margin-left: 112px;
@@ -166,4 +197,31 @@
 	margin-top: 170px;
 	margin-left: 73px;
 	background: url(../images/itsyou/process.png) no-repeat 50% 0;
+}
+
+
+/** animations **/
+@keyframes circle
+{
+	from {opacity: 0;}
+	50% {opacity:1;}
+	to {opacity: 0;}
+}
+
+@-moz-keyframes circle /* Firefox */
+{
+from {top:0px;}
+to {top:200px;}
+}
+
+@-webkit-keyframes circle /* Safari 和 Chrome */
+{
+from {top:0px;}
+to {top:200px;}
+}
+
+@-o-keyframes circle /* Opera */
+{
+from {top:0px;}
+to {top:200px;}
 }
