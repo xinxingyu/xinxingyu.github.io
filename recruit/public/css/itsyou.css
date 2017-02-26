@@ -63,6 +63,7 @@
 	left: 180px;
 }
 .content1 .circle1{
+	opacity: 0;
 	position: absolute;
 	top: 234px;
 	left: 666px;
