@@ -4,22 +4,30 @@ html,body{
 }
 .container{
 	width: 100%;
-	min-width: 1920px;
+	min-width: 1200px;
 	position: relative;
 }
 
 .intro{
-
+	z-index: 99;
+    position: relative;
+	color: #FFF;
 }
 .intro-li{
-
+	position: relative;
+	border-bottom: 1px solid #b5031c;
+}
+.intro-li:hover{
+	background-color: #fedfb1;
+	color: #333;
 }
 /**
  * li  - head image
  */
 .intro-li .it-head{
 	overflow: hidden;
-	display: inline-block;
+	/*display: inline-block;*/
+	float: left;
 	width: 217px;
 	height: 217px;
 	border: 8px solid #ffa92d;
@@ -32,15 +40,14 @@ html,body{
  */
 .intro-li .li-container{
 	margin: 0 auto;
-	width: 1320px;
+	/*width: 1320px;*/
 	padding: 110px 80px 100px 80px;
 }
 .intro-li .it-content{
-	display: inline-block;
-	vertical-align: top;
-	width: 835px;
-	color: #FFF;
+	/*display: inline-block;*/
+	/*width: 835px;*/
 	margin-top: 30px;
+	vertical-align: top;
 }
 .intro-li .it-content .it-content-top .name{
     font-weight: bold;
@@ -66,12 +73,16 @@ html,body{
  * the second template
  */
 .row2{
-	background-color: #fedfb1;
+	/*background-color: #fedfb1;*/
 }
 .row2 .it-head, .row3 .it-head{
-	margin: 0 0 0 76px;
+	position: absolute;
+    top: 110px;
+    right: 0;
+    margin-right: 80px;
 }
 .row2 .it-content, .row3 .it-content{
+	margin-right: 293px;
 	color: #333;
 }
 .row3{
@@ -118,12 +129,13 @@ video{
 
 .goback{
 	cursor: pointer;
+	position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
 	width: 94px;
 	height: 94px;
 	background: url(../images/introduce/goback.png) no-repeat;
-	position: absolute;
-	top: 806px;
-	left: 310px
 }
 .cloud_bg1{
 	width: 122px;
