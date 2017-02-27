@@ -144,7 +144,6 @@ html,body {
 }
 .contentbox-container{
    width: 100%;
-   height: 100%;
    min-width: 1300px;
    position: relative;
    overflow-x: auto;
@@ -188,15 +187,6 @@ html,body {
 .reward .contentbox-container .bg3{
 	background: url(../images/reward/bg_03.jpg) no-repeat center top;
 }
-.process .contentbox-container .bg1{
-	background: url(../images/process/bg_01.jpg) no-repeat center top;
-}
-.process .contentbox-container .bg2{
-	background: url(../images/process/bg_02.jpg) no-repeat center top;
-}
-.process .contentbox-container .bg3{
-	background: url(../images/process/bg_03.jpg) no-repeat center top;
-}
 
 .contentbox-container-main{
  	position: relative;
@@ -204,9 +194,6 @@ html,body {
  	margin: 0 auto;
  	overflow: hidden;
  	padding-bottom: 100px;
-}
-.process .contentbox-container-main{
-	height: 846px;
 }
 .contentbox-container-main>div{
  	position: relative;
@@ -222,44 +209,29 @@ html,body {
  	width: 154px;
  	height: 34px;
 }
-/**
- * content one
- */
 .contentbox-container-main .content1{
- 	z-index: 9;
-}
-.itsyou .content1{
-	margin-top: 32px;
+ 	margin-top: 32px;
  	margin-left: 25px;
  	width: 839px;
  	height: 416px;
-	background: url(../images/itsyou/content1.png) no-repeat 50% 0;
+ 	background: url(../images/itsyou/content1.png) no-repeat 50% 0;
+ 	z-index: 9;
 }
-.reward .content1{
- 	width: 948px;
- 	height: 378px;
-	margin-top: 54px;
- 	margin-left: 69px;
-	background: url(../images/reward/content1.png) no-repeat 50% 0;
-}
-.itsyou .content1 .learnMore{
+.contentbox-container-main .content1 .learnMore{
  	width: 472px;
  	height: 44px;
  	position: absolute;
  	top: 242px;
  	left: 180px;
 }
-.reward .content1 .learnMore{
- 	width: 472px;
- 	height: 44px;
- 	position: absolute;
-	top: 200px;
-    left: 0;
-}
-/** circle animation for learn more **/
 .contentbox-container-main .content1 .circle1{
  	opacity: 0;
  	position: absolute;
+ 	top: 234px;
+ 	left: 666px;
+ 	width: 30px;
+ 	height: 30px;
+ 	background: url(../images/itsyou/circle1.png) no-repeat 50% 0;
  	animation: circle 2s infinite;
  	-moz-animation: circle 2s infinite; /* Firefox */
  	-webkit-animation: circle 2s infinite; /* Safari and Chrome */
@@ -267,75 +239,34 @@ html,body {
 }
 .contentbox-container-main .content1 .circle2{
  	position: absolute;
+ 	top: 225px;
+ 	left: 656px;
+ 	width: 48px;
+ 	height: 48px;
+ 	background: url(../images/itsyou/circle2.png) no-repeat 50% 0;
  	animation: circle 2s infinite .3s;
  	-moz-animation: circle 2s infinite .3s; /* Firefox */
  	-webkit-animation: circle 2s infinite .3s; /* Safari and Chrome */
  	-o-animation: circle 2s infinite .3s; /* Opera */
 }
-.itsyou .content1 .circle1{
- 	top: 234px;
- 	left: 666px;
- 	width: 30px;
- 	height: 30px;
- 	background: url(../images/itsyou/circle1.png) no-repeat 50% 0;
-}
-.itsyou .content1 .circle2{
-	top: 225px;
- 	left: 656px;
- 	width: 48px;
- 	height: 48px;
-	background: url(../images/itsyou/circle2.png) no-repeat 50% 0;
-}
-.reward .content1 .circle1{
-	top: 210px;
- 	left: 439px;
- 	width: 30px;
- 	height: 30px;
- 	background: url(../images/reward/circle1.png) no-repeat 50% 0;
-}
-.reward .content1 .circle2{
-	top: 202px;
- 	left: 431px;
- 	width: 46px;
- 	height: 46px;
-	background: url(../images/reward/circle2.png) no-repeat 50% 0;
-}
-/**
- * content 2
- */
-.itsyou .contentbox-container-main .content2{
- 	width: 827px;
-	margin-top: -90px;
+.contentbox-container-main .content2{
+ 	margin-top: -90px;
  	margin-left: 112px;
+ 	width: 827px;
  	height: 405px;
  	color: #7a3931;
  	font-size: 17px;
  	background: url(../images/itsyou/content2.png) no-repeat 50% 0;
-}
-.reward .contentbox-container-main .content2{
-	width: 882px;
-	height: 396px;
-	margin-top: -75px;
-	margin-left: 109px;
- 	color: #7a3931;
- 	font-size: 17px;
- 	background: url(../images/reward/content2.png) no-repeat 50% 0;
 }
 .contentbox-container-main .ct-left{
  	position: absolute;
  	top: 82px;
  	left: 160px;
 }
-.reward .ct-left{
-	left: 170px;
-}
 .contentbox-container-main .ct-right{
  	position: absolute;
  	top: 82px;
  	left: 460px;
-}
-.reward .ct-right{
-	left: 474px;
 }
 .contentbox-container-main .ct-item{
  	margin-bottom: 5px;
@@ -363,9 +294,6 @@ html,body {
  /** operate **/
 .contentbox-container-main .contentbox-operate{
  	margin-top: -16px;
-}
-.process .contentbox-operate{
-	margin-top: 748px;
 }
 .contentbox-container-main .contentbox-operate .bt-look{
  	display: inline-block;
@@ -430,20 +358,9 @@ html,body {
  	margin-top: 170px;
  	margin-left: 73px;
  	background: url(../images/itsyou/process.png) no-repeat 50% 0;
-}
-
- .company{
- 	color: #999999;
- 	font-size: 10px;
- 	position: absolute;
- 	bottom: 17px;
- 	left: 50%;
- 	transform: translate(-50%,0);
- 	-webkit-transform: translate(-50%,0);
- 	-o-transform: translate(-50%,0);
- 	-ms-transform: translate(-50%,0);
- 	-moz-transform: translate(-50%,0);
  }
+
+
  /** animations **/
  @keyframes circle
  {
