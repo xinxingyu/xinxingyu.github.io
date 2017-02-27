@@ -6,7 +6,10 @@ $(function(){
 		this.loadingPath = '../public/images/index/';
 		this.motionObj = new TimelineMax();
 		this.pe = $(window).width()/3700;
-
+		// swiper object
+		this.oSwiper = ''
+		this.cSwiper = ''
+		this.iSwiper = ''
 		this.init()
 	}
 	XXY.prototype = {
@@ -75,9 +78,11 @@ $(function(){
 			loader.loadManifest(manifest);
 		},
 		initSwiper: function(){
-			var oSwiper = new Swiper('#o-c',{
+			var _this = this;
+
+			this.oSwiper = new Swiper('#o-c',{
 				direction : 'vertical',
-				// mousewheelControl: true, //鼠标滚轮控制滑动
+				mousewheelControl: true, //鼠标滚轮控制滑动
 				onSetTransition: function(swiper){
 		            if(swiper.activeIndex==2){
 			            swiper.params.onlyExternal=true;
@@ -88,19 +93,10 @@ $(function(){
 			        }
 		        }
 			})
-			var cSwiper = new Swiper('#i-c-b1',{
+			this.cSwiper = new Swiper('#i-c-b1',{
 				// mousewheelControl: true,
-				onSetTransition: function(swiper){
-		            // if(swiper.activeIndex==2){
-			        //     swiper.params.onlyExternal=true;
-			        //     swiper.disableMousewheelControl();
-		        	// }else{
-			        //     swiper.params.onlyExternal=false;
-			        //     swiper.enableMousewheelControl();
-			        // }
-		        }
 			})
-			var iSwiper = new Swiper('#i-c1',{
+			this.iSwiper = new Swiper('#i-c1',{
 				scrollbar: '.swiper-scrollbar',
 		        direction: 'vertical',
 		        slidesPerView: 'auto',
@@ -111,7 +107,6 @@ $(function(){
 				onSetTransition: function(swiper,translate){
 					//translate 一直为0，不可直接用
 					nowTranslate = swiper.translate;
-					// console.log(nowTranslate);
 
 					if(typeof(beforeTranslate) == "undefined"){
 						beforeTranslate=0
@@ -119,14 +114,12 @@ $(function(){
 					slideHeight = swiper.slides[0].scrollHeight;
 					swiperHeight = swiper.height;
 
-					console.log(slideHeight);
-
 					if(nowTranslate>-2 && nowTranslate > beforeTranslate){
-						// oSwiper.slideTo(1);
+						_this.oSwiper.slideTo(1, 1000, false);
 					}
 					if(slideHeight-swiperHeight+nowTranslate<2 && nowTranslate < beforeTranslate){
 						//滚轮最底下
-						oSwiper.slideTo(2);
+						// _this.oSwiper.slideTo(2);
 					}
 
 					beforeTranslate=nowTranslate;
@@ -145,10 +138,10 @@ $(function(){
 
 		},
 		item2Animation: function(){
-			TweenMax.from('.tips1', .5, {delay:.8, scale:.5, x:1500*this.pe, ease:Bounce.easeOut, onStart: this.changeTyre()})
-			TweenMax.from('.tips2', .3, {delay:1.1, scale:.3, x:1060*this.pe, y:-10*this.pe, ease:Linear.easeNone});
-			TweenMax.from('.book', .2, {delay:1.3, scale:.5, x:630*this.pe, y:-300*this.pe, ease:Linear.easeIn});
-			TweenMax.from('.operate', .5, {delay:1.5, scale:0,  ease:Bounce.easeOut});
+			TweenMax.from('.book', .8, {delay:1, scale:0, x:-775*this.pe, y:560*this.pe, ease:Linear.easeOut});
+			TweenMax.from('.tips1', .5, {delay:1.2, scale:0, alpha: .4, x:-1000*this.pe, y:560*this.pe, ease:Bounce.easeOut, onStart: this.changeTyre()})
+			TweenMax.from('.tips2', .3, {delay:1.4, scale:0, alpha: .4, x:-1500*this.pe, y:100*this.pe, ease:Elastic.easeOut});
+			TweenMax.from('.operate', .5, {delay:1.8, x:1500*this.pe,  ease:Bounce.easeOut});
 		},
 		computeViews: function(dom, opt){
 			if(opt.top!=undefined){
@@ -179,8 +172,39 @@ $(function(){
 			}
 		},
 		bindEvent: function(){
+			var _this = this;
+
 			$('.operate').on('click', function(){
 				location.href="itsyou.html"
+			})
+			$('.bt-sao').hover(function(){
+				$('.bt-ma').show()
+			},function(){
+				$('.bt-ma').hide()
+			})
+			$('.logo').on('click', function(){
+				location.href = 'index.html'
+			})
+			/**
+			 * 看看历届大使的风采
+			 */
+			$('.bt-look').on('click', function(){
+				location.href="introduce.html"
+			})
+			/**
+			 * 走上人生巅峰，快来报名吧
+			 */
+			$('.bt-go').on('click', function(){
+				//TODO....
+			})
+			$('.bt-reward').on('click', function(){
+				_this.cSwiper.slideTo(1, 1000, false);
+			})
+			$('.bt-process').on('click', function(){
+				_this.cSwiper.slideTo(2, 1000, false);
+			})
+			$('.bt-itsyou').on('click', function(){
+				_this.cSwiper.slideTo(0, 1000, false);
 			})
 		}
 	}

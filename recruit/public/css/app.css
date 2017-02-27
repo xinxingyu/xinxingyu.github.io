@@ -208,9 +208,9 @@ html,body {
 .process .contentbox-container-main{
 	height: 846px;
 }
-.contentbox-container-main>div{
+.contentbox-container-main div{
  	position: relative;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .contentbox-container-main .logo{
  	z-index: 12;
@@ -218,9 +218,12 @@ html,body {
  	position: absolute!important;
  	top: 35px;
  	left: 24px;
- 	background: url(../images/itsyou/logo.jpg) no-repeat 50% 0;
+ 	background: url(../images/itsyou/logo.png) no-repeat 50% 0;
  	width: 154px;
  	height: 34px;
+}
+.contentbox-container-main .logo:hover{
+ 	background: url(../images/itsyou/logo_hover.png) no-repeat 50% 0;
 }
 /**
  * content one
@@ -375,6 +378,9 @@ html,body {
  	margin-left: 120px;
  	background: url(../images/itsyou/button1.png) no-repeat 50% 0;
 }
+.contentbox-container-main .contentbox-operate .bt-look:hover{
+ 	background: url(../images/itsyou/button1_hover.png) no-repeat 50% 0;
+}
 .contentbox-container-main .contentbox-operate .bt-go{
  	display: inline-block;
  	cursor: pointer;
@@ -382,6 +388,9 @@ html,body {
  	height: 103px;
  	margin-left: 63px;
  	background: url(../images/itsyou/button2.png) no-repeat 50% 0;
+}
+.contentbox-container-main .contentbox-operate .bt-go:hover{
+ 	background: url(../images/itsyou/button2_hover.png) no-repeat 50% 0;
 }
 .contentbox-container-main .contentbox-operate .bt-sao{
  	display: inline-block;
@@ -392,6 +401,7 @@ html,body {
  	background: url(../images/itsyou/sao.png) no-repeat 50% 0;
 }
 .contentbox-container-main .contentbox-operate .bt-ma{
+	z-index: 99999;
  	display: none;
  	cursor: pointer;
  	position: absolute;
@@ -411,19 +421,25 @@ html,body {
 .contentbox-container-main .contentbox-buttons>div{
  	cursor: pointer;
  }
-.contentbox-container-main .contentbox-buttons .bt-itesyou{
+.contentbox-container-main .contentbox-buttons .bt-itsyou{
  	width: 145px;
  	height: 80px;
  	margin-top: 125px;
  	margin-left: 75px;
- 	background: url(../images/itsyou/itsyou_act.png) no-repeat 50% 0;
+ 	background: url(../images/itsyou/itsyou.png) no-repeat 50% 0;
+}
+.itsyou .bt-itsyou{
+	background: url(../images/itsyou/itsyou_act.png) no-repeat 50% 0!important;
 }
 .contentbox-container-main .contentbox-buttons .bt-reward{
  	width: 145px;
  	height: 80px;
  	margin-top: 188px;
  	background: url(../images/itsyou/reward.png) no-repeat 50% 0;
- }
+}
+.reward .bt-reward{
+ 	background: url(../images/itsyou/reward_act.png) no-repeat 50% 0!important;
+}
 .contentbox-container-main .contentbox-buttons .bt-process{
  	width: 145px;
  	height: 80px;
@@ -431,8 +447,11 @@ html,body {
  	margin-left: 73px;
  	background: url(../images/itsyou/process.png) no-repeat 50% 0;
 }
+.process .bt-process{
+ 	background: url(../images/itsyou/process_act.png) no-repeat 50% 0!important;
+}
 
- .company{
+.company{
  	color: #999999;
  	font-size: 10px;
  	position: absolute;
