@@ -15,9 +15,16 @@ html,body {
     background: #FFFFFF;
     -webkit-touch-callout:none;
     -webkit-user-select:none;
-	min-width: 1200px;
+	/*min-width: 1200px;*/
 }
-.wrapper{width: 100%; height: 100%;}
+.wrapper{
+	width: 100%;
+	height: 100%;
+}
+
+/**
+ * LOADING .....
+ */
 .wrapper .loading{
 	width: 100%;
 	height: 100%;
@@ -59,6 +66,11 @@ html,body {
 	-webkit-animation: third_object 1s forwards, third_object_animate 1s infinite ease-in-out;
 	animation: third_object 1s forwards, third_object_animate 1s infinite ease-in-out;
 }
+
+
+/**
+ * the animation page for page1
+ */
 .main{
 	position: relative;
 }
@@ -81,6 +93,300 @@ html,body {
 .car .car_bg{width: 100%;}
 .tips1{z-index: 100;}
 .operate{z-index: 101; cursor: pointer;}
+
+
+/**
+ * swiper
+ */
+.swiper-container{
+	width: 100%;
+	height: 100%;
+}
+.swiper-wrapper{
+	width: 100%;
+	height: 100%;
+}
+.page1{
+	width: 100%;
+	height: 100%;
+}
+.page2{
+	width: 100%;
+	height: 100%;
+	background: #fda8bf;
+}
+.page2 .video-box{
+	margin: 0 auto;
+	width: 80%;
+	height: 80%;
+	border: 9px solid #cd0a25;
+	border-radius: 10px;
+}
+.page2 .video-box video{
+	width: 100%;
+	height: 100%;
+}
+
+/**
+ * swiper for page3
+ */
+.page3{
+	width: 100%;
+	height: 100%;
+}
+.page3-box{
+	width: 100%;
+	height: 100%;
+}
+.contentbox{
+	width: 100%;
+	height: 100%;
+}
+.contentbox-container{
+   width: 100%;
+   min-width: 1300px;
+   position: relative;
+   overflow-x: auto;
+}
+/**
+ * content box for three pages
+ */
+.contentbox-container .c-bg{
+ 	width: 100%;
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+}
+.contentbox-container .c-bg .bg1{
+	width: 100%;
+	height: 300px;
+}
+.contentbox-container .c-bg .bg2{
+ 	width: 100%;
+ 	height: 300px;
+}
+.contentbox-container .c-bg .bg3{
+ 	width: 100%;
+ 	height: 350px;
+}
+.itsyou .contentbox-container  .bg1{
+	background: url(../images/itsyou/bg_01.jpg) no-repeat center top;
+}
+.itsyou .contentbox-container .bg2{
+	background: url(../images/itsyou/bg_02.jpg) no-repeat center top;
+}
+.itsyou .contentbox-container .bg3{
+	background: url(../images/itsyou/bg_03.jpg) no-repeat center top;
+}
+.reward .contentbox-container .bg1{
+	background: url(../images/reward/bg_01.jpg) no-repeat center top;
+}
+.reward .contentbox-container .bg2{
+	background: url(../images/reward/bg_02.jpg) no-repeat center top;
+}
+.reward .contentbox-container .bg3{
+	background: url(../images/reward/bg_03.jpg) no-repeat center top;
+}
+
+.contentbox-container-main{
+ 	position: relative;
+ 	width: 1300px;
+ 	margin: 0 auto;
+ 	overflow: hidden;
+ 	padding-bottom: 100px;
+}
+.contentbox-container-main>div{
+ 	position: relative;
+    overflow: hidden;
+}
+.contentbox-container-main .logo{
+ 	z-index: 12;
+ 	cursor: pointer;
+ 	position: absolute!important;
+ 	top: 35px;
+ 	left: 24px;
+ 	background: url(../images/itsyou/logo.jpg) no-repeat 50% 0;
+ 	width: 154px;
+ 	height: 34px;
+}
+.contentbox-container-main .content1{
+ 	margin-top: 32px;
+ 	margin-left: 25px;
+ 	width: 839px;
+ 	height: 416px;
+ 	background: url(../images/itsyou/content1.png) no-repeat 50% 0;
+ 	z-index: 9;
+}
+.contentbox-container-main .content1 .learnMore{
+ 	width: 472px;
+ 	height: 44px;
+ 	position: absolute;
+ 	top: 242px;
+ 	left: 180px;
+}
+.contentbox-container-main .content1 .circle1{
+ 	opacity: 0;
+ 	position: absolute;
+ 	top: 234px;
+ 	left: 666px;
+ 	width: 30px;
+ 	height: 30px;
+ 	background: url(../images/itsyou/circle1.png) no-repeat 50% 0;
+ 	animation: circle 2s infinite;
+ 	-moz-animation: circle 2s infinite; /* Firefox */
+ 	-webkit-animation: circle 2s infinite; /* Safari and Chrome */
+ 	-o-animation: circle 2s infinite; /* Opera */
+}
+.contentbox-container-main .content1 .circle2{
+ 	position: absolute;
+ 	top: 225px;
+ 	left: 656px;
+ 	width: 48px;
+ 	height: 48px;
+ 	background: url(../images/itsyou/circle2.png) no-repeat 50% 0;
+ 	animation: circle 2s infinite .3s;
+ 	-moz-animation: circle 2s infinite .3s; /* Firefox */
+ 	-webkit-animation: circle 2s infinite .3s; /* Safari and Chrome */
+ 	-o-animation: circle 2s infinite .3s; /* Opera */
+}
+.contentbox-container-main .content2{
+ 	margin-top: -90px;
+ 	margin-left: 112px;
+ 	width: 827px;
+ 	height: 405px;
+ 	color: #7a3931;
+ 	font-size: 17px;
+ 	background: url(../images/itsyou/content2.png) no-repeat 50% 0;
+}
+.contentbox-container-main .ct-left{
+ 	position: absolute;
+ 	top: 82px;
+ 	left: 160px;
+}
+.contentbox-container-main .ct-right{
+ 	position: absolute;
+ 	top: 82px;
+ 	left: 460px;
+}
+.contentbox-container-main .ct-item{
+ 	margin-bottom: 5px;
+}
+.contentbox-container-main .ct-item a{
+ 	text-decoration: none;
+ 	color: #7a3931;
+}
+.contentbox-container-main .ct-item a:hover{
+ 	text-decoration: underline;
+}
+.contentbox-container-main .ct-item .ct-item-num{
+ 	display: inline-block;
+ 	width: 22px;
+ 	height: 22px;
+ 	margin-right: 22px;
+ 	background: #7a3931;
+ 	border-radius: 50%;
+ 	vertical-align: top;
+ 	color: #fdd154;
+ 	text-align: center;
+ 	line-height: 24px;
+}
+
+ /** operate **/
+.contentbox-container-main .contentbox-operate{
+ 	margin-top: -16px;
+}
+.contentbox-container-main .contentbox-operate .bt-look{
+ 	display: inline-block;
+ 	cursor: pointer;
+ 	width: 460px;
+ 	height: 80px;
+ 	margin-left: 120px;
+ 	background: url(../images/itsyou/button1.png) no-repeat 50% 0;
+}
+.contentbox-container-main .contentbox-operate .bt-go{
+ 	display: inline-block;
+ 	cursor: pointer;
+ 	width: 514px;
+ 	height: 103px;
+ 	margin-left: 63px;
+ 	background: url(../images/itsyou/button2.png) no-repeat 50% 0;
+}
+.contentbox-container-main .contentbox-operate .bt-sao{
+ 	display: inline-block;
+ 	cursor: pointer;
+ 	width: 87px;
+ 	height: 79px;
+ 	margin-left: 20px;
+ 	background: url(../images/itsyou/sao.png) no-repeat 50% 0;
+}
+.contentbox-container-main .contentbox-operate .bt-ma{
+ 	display: none;
+ 	cursor: pointer;
+ 	position: absolute;
+ 	top: -203px;
+ 	right: 0;
+ 	width: 215px;
+ 	height: 213px;
+ 	background: url(../images/itsyou/ma.jpg) no-repeat 50% 0;
+}
+/** buttons **/
+.contentbox-container-main .contentbox-buttons{
+ 	position: absolute!important;
+ 	top: 0;
+ 	right: 0;
+ 	width: 233px;
+}
+.contentbox-container-main .contentbox-buttons>div{
+ 	cursor: pointer;
+ }
+.contentbox-container-main .contentbox-buttons .bt-itesyou{
+ 	width: 145px;
+ 	height: 80px;
+ 	margin-top: 125px;
+ 	margin-left: 75px;
+ 	background: url(../images/itsyou/itsyou_act.png) no-repeat 50% 0;
+}
+.contentbox-container-main .contentbox-buttons .bt-reward{
+ 	width: 145px;
+ 	height: 80px;
+ 	margin-top: 188px;
+ 	background: url(../images/itsyou/reward.png) no-repeat 50% 0;
+ }
+.contentbox-container-main .contentbox-buttons .bt-process{
+ 	width: 145px;
+ 	height: 80px;
+ 	margin-top: 170px;
+ 	margin-left: 73px;
+ 	background: url(../images/itsyou/process.png) no-repeat 50% 0;
+ }
+
+
+ /** animations **/
+ @keyframes circle
+ {
+ 	from {opacity: 0;}
+ 	50% {opacity:1;}
+ 	to {opacity: 0;}
+ }
+
+ @-moz-keyframes circle /* Firefox */
+ {
+ from {top:0px;}
+ to {top:200px;}
+ }
+
+ @-webkit-keyframes circle /* Safari 和 Chrome */
+ {
+ from {top:0px;}
+ to {top:200px;}
+ }
+
+ @-o-keyframes circle /* Opera */
+ {
+ from {top:0px;}
+ to {top:200px;}
+ }
+
 
 /** loading animation **/
 @-webkit-keyframes second_object {

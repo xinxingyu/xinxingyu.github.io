@@ -61,20 +61,77 @@ $(function(){
 			function handleOverallComplete(event){
 			   $('.loading').remove();
 			   $('.main').show();
+			   /**
+			    * init swiper when main page is show
+			    */
+			   _this.initSwiper()
 			   _this.motionObj.restart();
 			   _this.itemAnimation()
 			   _this.item2Animation()
-			//    $('.main').fadeIn(function(){
-			// 	   	_this.motionObj.restart();
-			// 		_this.itemAnimation()
-			// 		_this.item2Animation()
-			//    });
-
 			}
 			loader.addEventListener("progress", handleOverallProgress);
 			loader.addEventListener("complete", handleOverallComplete);
 			loader.setMaxConnections(1);
 			loader.loadManifest(manifest);
+		},
+		initSwiper: function(){
+			var oSwiper = new Swiper('#o-c',{
+				direction : 'vertical',
+				// mousewheelControl: true, //鼠标滚轮控制滑动
+				onSetTransition: function(swiper){
+		            if(swiper.activeIndex==2){
+			            swiper.params.onlyExternal=true;
+			            swiper.disableMousewheelControl();
+		        	}else{
+			            swiper.params.onlyExternal=false;
+			            swiper.enableMousewheelControl();
+			        }
+		        }
+			})
+			var cSwiper = new Swiper('#i-c-b1',{
+				// mousewheelControl: true,
+				onSetTransition: function(swiper){
+		            // if(swiper.activeIndex==2){
+			        //     swiper.params.onlyExternal=true;
+			        //     swiper.disableMousewheelControl();
+		        	// }else{
+			        //     swiper.params.onlyExternal=false;
+			        //     swiper.enableMousewheelControl();
+			        // }
+		        }
+			})
+			var iSwiper = new Swiper('#i-c1',{
+				scrollbar: '.swiper-scrollbar',
+		        direction: 'vertical',
+		        slidesPerView: 'auto',
+				freeMode: true,
+				freeModeMomentum : false,
+				mousewheelControl: true,
+				mousewheelSensitivity : 0.5,
+				onSetTransition: function(swiper,translate){
+					//translate 一直为0，不可直接用
+					nowTranslate = swiper.translate;
+					// console.log(nowTranslate);
+
+					if(typeof(beforeTranslate) == "undefined"){
+						beforeTranslate=0
+					};
+					slideHeight = swiper.slides[0].scrollHeight;
+					swiperHeight = swiper.height;
+
+					console.log(slideHeight);
+
+					if(nowTranslate>-2 && nowTranslate > beforeTranslate){
+						// oSwiper.slideTo(1);
+					}
+					if(slideHeight-swiperHeight+nowTranslate<2 && nowTranslate < beforeTranslate){
+						//滚轮最底下
+						oSwiper.slideTo(2);
+					}
+
+					beforeTranslate=nowTranslate;
+	           	}
+			});
 		},
 		initAnimation: function(){
 			this.motionObj.add(TweenMax.from('.car', .5, {delay:.1,scale:.1, x:-400*this.pe, y:20*this.pe, ease:Linear.easeNone, onStart: this.changeTyre()}));
