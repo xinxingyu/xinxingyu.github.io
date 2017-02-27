@@ -1,6 +1,6 @@
 .container{
 	width: 100%;
-	min-width: 1920px;
+	min-width: 1200px;
 	position: relative;
 }
 .c-bg{
@@ -24,10 +24,18 @@
 	width: 100%;
 	height: 350px;
 }
+
+/** main pannel **/
+.main{
+	position: relative;
+	width: 1160px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-bottom: 190px;
+}
 ul{
-	position: absolute;
+	position: relative;
 	top: 62px;
-	left: 370px;
 }
 ul li{
 	position: relative;
@@ -44,11 +52,11 @@ ul li{
  	width: 139px;
  	height: 672px;
  	display: inline-block;
-     vertical-align: top;
+ 	vertical-align: top;
  	z-index: 99;
  }
 li .title-p{
-	text-align: center;
+		text-align: center;
     top: 283px;
     position: relative;
     width: 24px;
@@ -114,23 +122,20 @@ li .content p{
 }
 .bt-go{
 	cursor: pointer;
-	position: absolute;
-	top: 770px;
-	left: 650px;
+	position: relative;
+	top: 98px;
+    margin: 0 auto;
 	width: 517px;
 	height: 104px;
 	background: url(../images/area/button2.png) no-repeat 50% 0;
 }
 .bt-return{
 	cursor: pointer;
-	position: absolute;
-	top: 614px;
-	left: 310px;
+	position: fixed;
+	top: 20px;
+	left: 20px;
 	width: 98px;
 	height: 79px;
 	background: url(../images/area/btn_return.png) no-repeat 50% 0;
 	z-index: 999;
-}
-.company-bottom{
-	top: 917px;
 }

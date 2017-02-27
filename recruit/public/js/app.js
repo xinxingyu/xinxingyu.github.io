@@ -4,6 +4,7 @@
 $(function(){
 	var XXY = function(){
 		this.loadingPath = '../public/images/index/';
+		this.loadingPath2 = '../public/images/itsyou/';
 		this.motionObj = new TimelineMax();
 		this.pe = $(window).width()/3700;
 		// swiper object
@@ -57,7 +58,10 @@ $(function(){
 					{src:this.loadingPath+'tyre3_2.png'},
 					{src:this.loadingPath+'tips1.png'},
 					{src:this.loadingPath+'tips2.png'},
-					{src:this.loadingPath+'operate.png'}
+					{src:this.loadingPath+'operate.png'},
+					{src:this.loadingPath2+'logo_hover.png'},
+					{src:this.loadingPath2+'button1_hover.png'},
+					{src:this.loadingPath2+'button2_hover.png'}
 				];
 
 			function handleOverallProgress(event){}
@@ -82,6 +86,7 @@ $(function(){
 
 			this.oSwiper = new Swiper('#o-c',{
 				direction : 'vertical',
+				speed: 1000,
 				mousewheelControl: true, //鼠标滚轮控制滑动
 				onSetTransition: function(swiper){
 		            if(swiper.activeIndex==2){
@@ -175,7 +180,7 @@ $(function(){
 			var _this = this;
 
 			$('.operate').on('click', function(){
-				location.href="itsyou.html"
+				// location.href="itsyou.html"
 			})
 			$('.bt-sao').hover(function(){
 				$('.bt-ma').show()
