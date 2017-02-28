@@ -40,20 +40,6 @@ $(function(){
 			}
 
 			$('.car').css({width: this.pe*car.width+'px', height: this.pe*car.height+'px', margin: this.pe*car.top+'px'+' 0 0 -'+this.pe*car.left+'px'});
-
-			/**
-			 * set swiper height
-			 */
-			var sHeight1 = $(window).height();
-			var sHeight2 = $($('.contentbox-container-main')[0]).height();
-			var sHeight = sHeight1 > sHeight2 ? sHeight1 : sHeight2;
-			if($(window).width() <= 1450){
-				sHeight = sHeight*0.735 + 100;
-			}
-			console.log(sHeight);
-			$('#swiper3-box').css({height: sHeight+10+'px'})
-
-			// $('.contentbox-container .c-bg .bg').css({height: sHeight+'px'})
 		},
 		initLoading: function(){
 			var _this = this,

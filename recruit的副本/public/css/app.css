@@ -171,21 +171,7 @@ html,body {
     background-color: #fda8bf;
 }
 .process .c-bg{
-	height: 100%;
-    background-color: #dab05d;
-}
-.contentbox-container .c-bg .bg{
-	width: 100%;
-	height: 950px;
-}
-.itsyou .bg{
-	background: url(../images/itsyou/bg.jpg) no-repeat center top;
-}
-.reward .bg{
-	background: url(../images/reward/bg.jpg) no-repeat center top;
-}
-.process .bg{
-	background: url(../images/process/bg.jpg) no-repeat center top;
+    background-color: #fcf5d2;
 }
 .contentbox-container .c-bg .bg1{
 	width: 100%;

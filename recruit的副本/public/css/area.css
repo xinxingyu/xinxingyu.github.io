@@ -1,0 +1,141 @@
+.container{
+	width: 100%;
+	min-width: 1200px;
+	position: relative;
+}
+.c-bg{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.c-bg .bg1{
+	background: url(../images/area/bg_01.jpg) no-repeat 50% 0;
+	width: 100%;
+	height: 300px;
+}
+.c-bg .bg2{
+	background: url(../images/area/bg_02.jpg) no-repeat 50% 0;
+	width: 100%;
+	height: 300px;
+}
+.c-bg .bg3{
+	background: url(../images/area/bg_03.jpg) no-repeat 50% 0;
+	width: 100%;
+	height: 350px;
+}
+
+/** main pannel **/
+.main{
+	position: relative;
+	width: 1160px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-bottom: 190px;
+}
+ul{
+	position: relative;
+	top: 62px;
+}
+ul li{
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+}
+/**
+ * area - title
+ */
+ li .title{
+	cursor: pointer;
+ 	position: relative;
+ 	background: url(../images/area/item_bg.png) no-repeat 50% 0;
+ 	width: 139px;
+ 	height: 672px;
+ 	display: inline-block;
+ 	vertical-align: top;
+ 	z-index: 99;
+ }
+li .title-p{
+		text-align: center;
+    top: 283px;
+    position: relative;
+    width: 24px;
+    font-size: 24px;
+    left: 64px;
+    color: #FFF;
+}
+
+/**
+ * area - content
+ */
+li .content{
+	/*position: relative;*/
+	top: 36px;
+	left: -7px;
+	width: 300px;
+	height: 595px;
+	background: #e84e40;
+	text-align: center;
+	display: none;
+	position: absolute;
+	left: 138px;
+}
+
+li .content .content-panel{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+}
+li .content p{
+	color: #FFF;
+	font-size: 14px;
+	padding: 14px 0;
+
+}
+
+/** active status **/
+.active{
+	width: 421px;
+}
+.active .title-p{
+    font-size: 20px;
+	position: relative;
+    top: 308px;
+	left: 40px;
+	top: 280px;
+    width: 70px;
+	height: 70px;
+	line-height: 70px;
+	border: 1px solid #FFF;
+	border-radius: 50%;
+	background-color: #e84e40;
+	text-align: center;
+
+}
+.active .content{
+	display: inline-block;
+}
+.bt-go{
+	cursor: pointer;
+	position: relative;
+	top: 98px;
+    margin: 0 auto;
+	width: 517px;
+	height: 104px;
+	background: url(../images/area/button2.png) no-repeat 50% 0;
+}
+.bt-return{
+	cursor: pointer;
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	width: 98px;
+	height: 79px;
+	background: url(../images/area/btn_return.png) no-repeat 50% 0;
+	z-index: 999;
+}
