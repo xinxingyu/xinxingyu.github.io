@@ -164,6 +164,15 @@ html,body {
  	top: 0;
  	left: 0;
 }
+.itsyou .c-bg{
+    background-color: #97e5fa;
+}
+.reward .c-bg{
+    background-color: #fda8bf;
+}
+.process .c-bg{
+    background-color: #fcf5d2;
+}
 .contentbox-container .c-bg .bg1{
 	width: 100%;
 	height: 300px;
