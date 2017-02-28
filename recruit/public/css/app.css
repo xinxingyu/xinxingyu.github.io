@@ -351,11 +351,11 @@ html,body {
 }
 .contentbox-container-main .ct-item a{
  	text-decoration: none;
+	text-decoration: underline;
  	color: #7a3931;
 }
-.contentbox-container-main .ct-item a:hover{
- 	text-decoration: underline;
-}
+/*.contentbox-container-main .ct-item a:hover{
+}*/
 .contentbox-container-main .ct-item .ct-item-num{
  	display: inline-block;
  	width: 22px;
@@ -471,18 +471,19 @@ html,body {
  }
 
  .guide{
-    z-index: 99;
-    background: url('../images/index/guide.png') no-repeat;
-    background-size: cover;
-    width: 59px;
-    height: 47px;
-    bottom: 20px;
-    margin-left: -.125rem;
-    animation: guideTop 1s infinite;
-    -webkit-animation: guideTop 1s infinite;
-    position: absolute;
-    left: 50%;
-    margin: 0 0 0 -15px;
+	background: url(../images/index/guide.png) no-repeat;
+	background-size: contain;
+	width: 50px;
+	height: 32px;
+	bottom: 20px;
+	animation: guideTop 1s infinite;
+	-webkit-animation: guideTop 1s infinite;
+	-o-animation: guideTop 1s infinite;
+	-moz-animation: guideTop 1s infinite;
+	position: absolute;
+	left: 50%;
+	margin: 0 0 0 -25px;
+	z-index: 99999;
 }
 
  /** animations **/
@@ -493,23 +494,26 @@ html,body {
  	to {opacity: 0;}
  }
 
- @-moz-keyframes circle /* Firefox */
- {
- from {top:0px;}
- to {top:200px;}
- }
+@-moz-keyframes circle
+{
+	from {opacity: 0;}
+	50% {opacity:1;}
+	to {opacity: 0;}
+}
 
- @-webkit-keyframes circle /* Safari 和 Chrome */
- {
- from {top:0px;}
- to {top:200px;}
- }
+@-webkit-keyframes circle
+{
+	from {opacity: 0;}
+  	50% {opacity:1;}
+  	to {opacity: 0;}
+}
 
- @-o-keyframes circle /* Opera */
- {
- from {top:0px;}
- to {top:200px;}
- }
+@-o-keyframes circle
+{
+	from {opacity: 0;}
+   	50% {opacity:1;}
+   	to {opacity: 0;}
+}
 
 @keyframes guideTop {
      0% {

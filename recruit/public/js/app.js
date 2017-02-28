@@ -96,6 +96,11 @@ $(function(){
 			            swiper.params.onlyExternal=false;
 			            swiper.enableMousewheelControl();
 			        }
+					if(swiper.activeIndex==2){
+						$('.guide').hide();
+					}else{
+						$('.guide').show();
+					}
 		        }
 			})
 			this.cSwiper = new Swiper('#i-c-b1',{
