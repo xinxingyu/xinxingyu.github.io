@@ -463,6 +463,22 @@ html,body {
  	-ms-transform: translate(-50%,0);
  	-moz-transform: translate(-50%,0);
  }
+
+ .guide{
+    z-index: 99;
+    background: url('../images/index/guide.png') no-repeat;
+    background-size: cover;
+    width: 59px;
+    height: 47px;
+    bottom: 20px;
+    margin-left: -.125rem;
+    animation: guideTop 1s infinite;
+    -webkit-animation: guideTop 1s infinite;
+    position: absolute;
+    left: 50%;
+    margin: 0 0 0 -15px;
+}
+
  /** animations **/
  @keyframes circle
  {
@@ -489,7 +505,38 @@ html,body {
  to {top:200px;}
  }
 
+@keyframes guideTop {
+     0% {
+         transform: translateY(0px);
+         opacity: 0
+     }
 
+     60% {
+         transform: translateY(-6px);
+         opacity: 1
+     }
+
+     100% {
+         transform: translateY(-12px);
+         opacity: 0
+     }
+}
+@-webkit-keyframes guideTop {
+	0% {
+	 	-webkit-transform: translateY(0px);
+	 	opacity: 0
+	}
+
+	60% {
+	 	-webkit-transform: translateY(-6px);
+	 	opacity: 1
+	}
+
+	100% {
+ 		-webkit-transform: translateY(-12px);
+	 	opacity: 0
+	}
+}
 /** loading animation **/
 @-webkit-keyframes second_object {
 	100% { width: 100px; height:100px; left: 48px; top: 48px; }
