@@ -68,6 +68,7 @@ $(function(){
 			function handleOverallComplete(event){
 			   $('.loading').remove();
 			   $('.main').show();
+			   $('.guide').show();
 			   /**
 			    * init swiper when main page is show
 			    */
