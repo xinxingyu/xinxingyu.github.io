@@ -203,7 +203,7 @@ $(function(){
 							$('.car .tyre2').attr('src', _this.loadingPath+'tyre2_'+t+'.png')
 							$('.car .tyre3').attr('src', _this.loadingPath+'tyre3_'+t+'.png')
 						}
-					}, 170)
+					}, 120)
 			}
 		},
 		bindEvent: function(){
