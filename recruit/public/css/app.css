@@ -116,6 +116,12 @@ html,body {
 	background: #fda8bf;
 }
 .page2 .video-box{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
 	margin: 0 auto;
 	width: 80%;
 	height: 80%;
@@ -147,7 +153,7 @@ html,body {
    height: 100%;
    min-width: 1300px;
    position: relative;
-   overflow-x: auto;
+   overflow: hidden;
 }
 /**
  * content box for three pages
