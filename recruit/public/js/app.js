@@ -11,6 +11,7 @@ $(function(){
 		this.oSwiper = ''
 		this.cSwiper = ''
 		this.iSwiper = ''
+		this.current = 0; //current page index
 		this.init()
 	}
 	XXY.prototype = {
@@ -24,7 +25,7 @@ $(function(){
 			var car = {width: 1894, height: 1729, left: 1056, top: 30};
 			var views = {
 				tyre1:{width: 484, left: 685, top: 0},
-				tyre2: {width: 445, left: 1452, bottom: 263},
+				tyre2: {width: 445, left: 1450.5, bottom: 262.5},
 				tyre3: {width: 263, left: 456, bottom: 275},
 				smoke: {width: 2552, left: -1361, top: 280},
 				pen: {width: 433, left: -1763, top: 1175},
@@ -111,10 +112,17 @@ $(function(){
 			            swiper.params.onlyExternal=false;
 			            swiper.enableMousewheelControl();
 			        }
-					if(swiper.activeIndex==2){
-						$('.guide').hide();
-					}else{
+					_this.current = swiper.activeIndex;
+
+					if(swiper.activeIndex==0){
 						$('.guide').show();
+						$('.guide2').hide();
+					}else if(swiper.activeIndex==1){
+						$('.guide').show();
+						$('.guide2').show();
+					}else{
+						$('.guide').hide();
+						$('.guide2').show();
 					}
 		        }
 			})
@@ -183,15 +191,17 @@ $(function(){
 					_timer = setInterval(function(){
 						t++;
 						if(t>3){
-							clearInterval(_timer)
-							return;
+							// clearInterval(_timer)
+							t = 1
+							$('.tyre1, .tyre2, .tyre3').show()
 						}
+						// console.log(t);
 						if(t==3){
-							$('.tyre1, .tyre2, .tyre3').remove()
+							$('.tyre1, .tyre2, .tyre3').hide()
 						}else{
-							$('.car .tyre1').attr('src', _this.loadingPath+'tyre1_2.png')
-							$('.car .tyre2').attr('src', _this.loadingPath+'tyre2_2.png')
-							$('.car .tyre3').attr('src', _this.loadingPath+'tyre3_2.png')
+							$('.car .tyre1').attr('src', _this.loadingPath+'tyre1_'+t+'.png')
+							$('.car .tyre2').attr('src', _this.loadingPath+'tyre2_'+t+'.png')
+							$('.car .tyre3').attr('src', _this.loadingPath+'tyre3_'+t+'.png')
 						}
 					}, 170)
 			}
@@ -230,6 +240,14 @@ $(function(){
 			})
 			$('.bt-itsyou').on('click', function(){
 				_this.cSwiper.slideTo(0, 1000, false);
+			})
+			$('.guide').on('click', function(){
+				_this.current++;
+				_this.oSwiper.slideTo(_this.current, 1000, false);
+			})
+			$('.guide2').on('click', function(){
+				_this.current--;
+				_this.oSwiper.slideTo(_this.current, 1000, false);
 			})
 		}
 	}

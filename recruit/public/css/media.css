@@ -1,6 +1,7 @@
 @media screen and (max-width: 1450px) {
 	.contentbox-container-main{
 		transform: scale(0.735);
+		-webkit-transform: scale(0.735);
     	margin-top: -100px;
 		/*padding-bottom: 0;*/
 	}
