@@ -1,0 +1,37 @@
+@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td,section,canvas {
+    padding: 0;
+    margin: 0;
+}
+*{
+	box-sizing: border-box;
+}
+li{ list-style: none;}
+html,body {
+    font-size: 22px;
+    color: #000;
+    font-family: 'Microsoft YaHei', Arial;
+    width: 100%;
+    background: #FFFFFF;
+}
+.main{
+	position: relative;
+}
+img{width: 100%; display: block;}
+
+.company{
+	color: #999999;
+	font-size: 10px;
+	position: absolute;
+	bottom: 17px;
+	left: 50%;
+	transform: translate(-50%,0);
+	-webkit-transform: translate(-50%,0);
+	-o-transform: translate(-50%,0);
+	-ms-transform: translate(-50%,0);
+	-moz-transform: translate(-50%,0);
+}
+.company-bottom{
+	top: 917px;
+}

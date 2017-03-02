@@ -42,23 +42,19 @@ $(function(){
 
 			$('.car').css({width: this.pe*car.width+'px', height: this.pe*car.height+'px', margin: this.pe*car.top+'px'+' 0 0 -'+this.pe*car.left+'px'});
 
-			this.resizePage()
-		},
-		/**
-		 * set swiper views
-		 */
-		resizePage: function(){
+			/**
+			 * set swiper height
+			 */
 			var sHeight1 = $(window).height();
 			var sHeight2 = $($('.contentbox-container-main')[0]).height();
 			var sHeight = sHeight1 > sHeight2 ? sHeight1 : sHeight2;
-			if($(window).height() <= 700){
-				sHeight = sHeight*0.74 + 100;
+			if($(window).width() <= 1450){
+				sHeight = sHeight*0.735 + 100;
 			}
-			// $('#swiper3-box').css({height: sHeight+10+'px'})
-			$('#swiper3-box').css({height: $(window).height()})
-			$('.contentbox-container-main').css({zoom: $(window).height()/950})
-			$('.contentbox-container .c-bg .bg').css({height: $(window).height()})
-			$('.contentbox-container .bg-content').css({height: $(window).height()/950 * 424})
+			console.log(sHeight);
+			$('#swiper3-box').css({height: sHeight+10+'px'})
+
+			// $('.contentbox-container .c-bg .bg').css({height: sHeight+'px'})
 		},
 		initLoading: function(){
 			var _this = this,
@@ -222,9 +218,6 @@ $(function(){
 		bindEvent: function(){
 			var _this = this;
 
-			$(window).resize(function() {
-				_this.resizePage();
-			});
 			$('.operate').on('click', function(){
 				_this.current++;
 				_this.oSwiper.slideTo(_this.current, 1000, false);

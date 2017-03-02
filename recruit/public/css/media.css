@@ -1,7 +1,5 @@
-@media screen and (max-width: 1450px) {
+/*@media screen and (max-width: 1450px) {
 	.contentbox-container-main{
-		/*transform: scale(0.735);
-		-webkit-transform: scale(0.735);*/
 		zoom: 0.735;
 		margin-top: 20px;
 	    padding-bottom: 73.5px
@@ -10,41 +8,9 @@
 		height: 698px;
 		background-size: cover;
 	}
-	/*.contentbox-container-main{
-	 	width: 957px;
-	}*/
-	/*.contentbox-container .c-bg .bg1{
-		width: 100%;
-		height: 220px;
-		background-size: cover;
+}*/
+@media screen and (max-width: 1400px) {
+	.contentbox-container-main{
+	    padding-left: 0px;
 	}
-	.contentbox-container .c-bg .bg2{
-	 	width: 100%;
-	 	height: 220px;
-		background-size: cover;
-	}
-	.contentbox-container .c-bg .bg3{
-	 	width: 100%;
-	 	height: 257px;
-		background-size: cover;
-	}*/
-	/*.itsyou .content1{
-		width: 617px;
-		height: 306px;
-		background-size: contain;
-	}
-	.itsyou .contentbox-container-main .content2{
-	 	width: 608px;
-		height: 298px;
-		background-size: contain;
-	}
-	.reward .contentbox-container-main .content2{
-		width: 882px;
-		height: 396px;
-		margin-top: -75px;
-		margin-left: 109px;
-	 	color: #7a3931;
-	 	font-size: 17px;
-	 	background: url(../images/reward/content2.png) no-repeat 50% 0;
-	}*/
 }

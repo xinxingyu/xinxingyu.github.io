@@ -17,7 +17,6 @@ html,body {
     -webkit-user-select:none;
 	/*min-width: 1200px;*/
 }
-
 .wrapper{
 	width: 100%;
 	height: 100%;
@@ -183,12 +182,11 @@ html,body {
 }
 .process .c-bg{
 	height: 100%;
-    background-color: #fcf5d2;
+    background-color: #dab05d;
 }
 .contentbox-container .c-bg .bg{
 	width: 100%;
 	height: 950px;
-    background-size: 100% 100%;
 }
 .itsyou .bg{
 	background: url(../images/itsyou/bg.jpg) no-repeat center top;
@@ -197,7 +195,6 @@ html,body {
 	background: url(../images/reward/bg.jpg) no-repeat center top;
 }
 .process .bg{
-    background-size: contain!important;
 	background: url(../images/process/bg.jpg) no-repeat center top;
 }
 .contentbox-container .c-bg .bg1{
@@ -242,11 +239,10 @@ html,body {
 
 .contentbox-container-main{
  	position: relative;
- 	width: 1413px;
+ 	width: 1300px;
  	margin: 0 auto;
  	overflow: hidden;
  	padding-bottom: 100px;
-    padding-left: 143px;
 }
 .process .contentbox-container-main{
 	height: 846px;
@@ -287,13 +283,6 @@ html,body {
 	margin-top: 54px;
  	margin-left: 69px;
 	background: url(../images/reward/content1.png) no-repeat 50% 0;
-}
-.process .content1{
- 	width: 1033px;
- 	height: 802px;
-	margin-top: 66px;
- 	margin-left: 12px;
-	background: url(../images/process/content1.png) no-repeat 50% 0;
 }
 .itsyou .content1 .learnMore{
  	width: 472px;
@@ -420,12 +409,9 @@ html,body {
  /** operate **/
 .contentbox-container-main .contentbox-operate{
  	margin-top: -16px;
-    z-index: 1;
 }
 .process .contentbox-operate{
-	/*margin-top: 748px;*/
-    margin-top: -120px;
-    z-index: 999;
+	margin-top: 748px;
 }
 .contentbox-container-main .contentbox-operate .bt-look{
  	display: inline-block;
@@ -473,15 +459,7 @@ html,body {
  	position: absolute!important;
  	top: 0;
  	right: 0;
- 	/*width: 233px;*/
- 	width: 588px;
-    height: 838px;
-    background: url(../images/itsyou/bg_line.png) no-repeat 50% 0;
-    background-size: 100% 100%;
-}
-.process .contentbox-container-main .contentbox-buttons{
-    background: url(../images/process/bg_line.png) no-repeat 50% 0;
-    background-size: 100% 100%;
+ 	width: 233px;
 }
 .contentbox-container-main .contentbox-buttons>div{
  	cursor: pointer;
@@ -490,8 +468,7 @@ html,body {
  	width: 145px;
  	height: 80px;
  	margin-top: 125px;
- 	/*margin-left: 75px;*/
- 	margin-left: 280px;
+ 	margin-left: 75px;
  	background: url(../images/itsyou/itsyou.png) no-repeat 50% 0;
 }
 .contentbox-container-main .contentbox-buttons .bt-itsyou:hover{
@@ -504,7 +481,6 @@ html,body {
  	width: 145px;
  	height: 80px;
  	margin-top: 188px;
-    margin-left: 210px;
  	background: url(../images/itsyou/reward.png) no-repeat 50% 0;
 }
 .contentbox-container-main .contentbox-buttons .bt-reward:hover{
@@ -517,8 +493,7 @@ html,body {
  	width: 145px;
  	height: 80px;
  	margin-top: 170px;
- 	/*margin-left: 73px;*/
- 	margin-left: 280px;
+ 	margin-left: 73px;
  	background: url(../images/itsyou/process.png) no-repeat 50% 0;
 }
 .contentbox-container-main .contentbox-buttons .bt-process:hover{
@@ -527,32 +502,18 @@ html,body {
 .process .bt-process{
  	background: url(../images/itsyou/process_act.png) no-repeat 50% 0!important;
 }
-/**
- * USED TO PROCESS PAGE
- */
-.contentbox-container .bg-content{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 424px;
-    z-index: 99;
-    background: url(../images/process/content2.png) no-repeat center bottom;
-    background-size: contain;
-}
+
 .company{
  	color: #999999;
  	font-size: 10px;
  	position: absolute;
  	bottom: 17px;
- 	/*left: 50%;*/
-    width: 100%;
-    text-align: center;
- 	/*transform: translate(-50%,0);
+ 	left: 50%;
+ 	transform: translate(-50%,0);
  	-webkit-transform: translate(-50%,0);
  	-o-transform: translate(-50%,0);
  	-ms-transform: translate(-50%,0);
- 	-moz-transform: translate(-50%,0);*/
+ 	-moz-transform: translate(-50%,0);
  }
 
 .guide2{
