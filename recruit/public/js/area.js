@@ -41,7 +41,7 @@ $(function(){
 			 * 走上人生巅峰，快来报名吧
 			 */
 			$('.bt-go').on('click', function(){
-				//TODO....
+				location.href="http://job.rhcncpa.com/Portal/Resume/ResumeItem?jid=560055480&stepId=0&sId=0&r=/jobdetail/560055480";
 			});
 		}
 	}

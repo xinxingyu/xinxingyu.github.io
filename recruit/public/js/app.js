@@ -165,16 +165,25 @@ $(function(){
 			this.motionObj.pause();
 		},
 		itemAnimation: function(){
-			TweenMax.from('.pen', .5, {delay:.22, scale:.1, x:1200*this.pe, y:-650*this.pe, ease:Linear.easeNone})
-			TweenMax.from('.keybord', .4, {delay:.1, scale:.1, x:900*this.pe, y:-100*this.pe, ease:Linear.easeNone});
-			TweenMax.from('.computer', .5, {delay:.2, scale:.1, x:630*this.pe, y:-500*this.pe, ease:Linear.easeNone});
+			var _this = this;
+
+			TweenMax.from('.pen', .5, {delay:.22, scale:.1, x:1200*this.pe, y:-650*this.pe, ease:Linear.easeNone, onComplete: _this.floatAnimation('.pen')})
+			TweenMax.from('.keybord', .4, {delay:.1, scale:.1, x:900*this.pe, y:-100*this.pe, ease:Linear.easeNone, onComplete: _this.floatAnimation('.keybord')});
+			TweenMax.from('.computer', .5, {delay:.2, scale:.1, x:630*this.pe, y:-500*this.pe, ease:Linear.easeNone, onComplete: _this.floatAnimation('.computer')});
 
 		},
 		item2Animation: function(){
-			TweenMax.from('.book', .8, {delay:1, scale:0, x:-775*this.pe, y:560*this.pe, ease:Linear.easeOut});
+			var _this = this;
+
+			TweenMax.from('.book', .8, {delay:1, scale:0, x:-775*this.pe, y:560*this.pe, ease:Linear.easeOut, onComplete: _this.floatAnimation('.book')});
 			TweenMax.from('.tips1', .5, {delay:1.2, scale:0, alpha: .4, x:-1000*this.pe, y:560*this.pe, ease:Bounce.easeOut, onStart: this.changeTyre()})
 			TweenMax.from('.tips2', .3, {delay:1.4, scale:0, alpha: .4, x:-1500*this.pe, y:100*this.pe, ease:Elastic.easeOut});
 			TweenMax.from('.operate', .5, {delay:1.8, x:1500*this.pe,  ease:Bounce.easeOut});
+		},
+		floatAnimation: function(dom){
+			return function (){
+				TweenMax.to(dom, .2, {y: -5, yoyo: true, repeat: -1, ease:Linear.easeNone})
+			}
 		},
 		computeViews: function(dom, opt){
 			if(opt.top!=undefined){
@@ -210,7 +219,8 @@ $(function(){
 			var _this = this;
 
 			$('.operate').on('click', function(){
-				// location.href="itsyou.html"
+				_this.current++;
+				_this.oSwiper.slideTo(_this.current, 1000, false);
 			})
 			$('.bt-sao').hover(function(){
 				$('.bt-ma').show()
@@ -230,7 +240,7 @@ $(function(){
 			 * 走上人生巅峰，快来报名吧
 			 */
 			$('.bt-go').on('click', function(){
-				//TODO....
+				location.href="http://job.rhcncpa.com/Portal/Resume/ResumeItem?jid=560055480&stepId=0&sId=0&r=/jobdetail/560055480";
 			})
 			$('.bt-reward').on('click', function(){
 				_this.cSwiper.slideTo(1, 1000, false);
@@ -248,6 +258,9 @@ $(function(){
 			$('.guide2').on('click', function(){
 				_this.current--;
 				_this.oSwiper.slideTo(_this.current, 1000, false);
+			})
+			$('.contentbox-container-main .circle2').on('click', function(){
+				location.href = "http://job.rhcncpa.com/ambplan";
 			})
 		}
 	}

@@ -129,6 +129,9 @@ li .content p{
 	height: 104px;
 	background: url(../images/area/button2.png) no-repeat 50% 0;
 }
+.bt-go:hover{
+	background: url(../images/area/button2_hover.png) no-repeat 50% 0!important;
+}
 .bt-return{
 	cursor: pointer;
 	position: fixed;

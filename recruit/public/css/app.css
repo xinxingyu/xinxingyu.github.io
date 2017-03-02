@@ -92,7 +92,17 @@ html,body {
 .ct>img{width: 100%;}
 .car .car_bg{width: 100%;}
 .tips1{z-index: 100;}
-.operate{z-index: 101; cursor: pointer;}
+.operate{
+    z-index: 101;
+    cursor: pointer;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+}
+.operate:hover{
+    /*transform: scale(1);*/
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
 
 
 /**
@@ -298,6 +308,7 @@ html,body {
  	-o-animation: circle 2s infinite; /* Opera */
 }
 .contentbox-container-main .content1 .circle2{
+    cursor: pointer;
  	position: absolute;
  	animation: circle 2s infinite .3s;
  	-moz-animation: circle 2s infinite .3s; /* Firefox */
@@ -376,6 +387,9 @@ html,body {
  	text-decoration: none;
 	text-decoration: underline;
  	color: #7a3931;
+}
+.contentbox-container-main .ct-item a:hover{
+ 	color: red;
 }
 /*.contentbox-container-main .ct-item a:hover{
 }*/
@@ -457,6 +471,9 @@ html,body {
  	margin-left: 75px;
  	background: url(../images/itsyou/itsyou.png) no-repeat 50% 0;
 }
+.contentbox-container-main .contentbox-buttons .bt-itsyou:hover{
+    background: url(../images/itsyou/itsyou_act.png) no-repeat 50% 0!important;
+}
 .itsyou .bt-itsyou{
 	background: url(../images/itsyou/itsyou_act.png) no-repeat 50% 0!important;
 }
@@ -465,6 +482,9 @@ html,body {
  	height: 80px;
  	margin-top: 188px;
  	background: url(../images/itsyou/reward.png) no-repeat 50% 0;
+}
+.contentbox-container-main .contentbox-buttons .bt-reward:hover{
+    background: url(../images/itsyou/reward_act.png) no-repeat 50% 0!important;
 }
 .reward .bt-reward{
  	background: url(../images/itsyou/reward_act.png) no-repeat 50% 0!important;
@@ -475,6 +495,9 @@ html,body {
  	margin-top: 170px;
  	margin-left: 73px;
  	background: url(../images/itsyou/process.png) no-repeat 50% 0;
+}
+.contentbox-container-main .contentbox-buttons .bt-process:hover{
+    background: url(../images/itsyou/process_act.png) no-repeat 50% 0!important;
 }
 .process .bt-process{
  	background: url(../images/itsyou/process_act.png) no-repeat 50% 0!important;
