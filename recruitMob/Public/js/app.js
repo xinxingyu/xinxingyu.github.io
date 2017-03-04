@@ -26,7 +26,16 @@ $(function(){
 			var _this = this,
 				loader = new createjs.LoadQueue(false),
 				manifest = [
-					{src:this.loadingPath+'logo.jpg'}
+					{src:this.loadingPath+'logo.jpg'},
+					{src:this.loadingPath+'guide.png'},
+					{src:this.loadingPath+'p1.jpg'},
+					{src:this.loadingPath+'p3.jpg'},
+					{src:this.loadingPath+'p1_1.png'},
+					{src:this.loadingPath+'p2_3.png'},
+					{src:this.loadingPath+'p3_2.png'},
+					{src:this.loadingPath+'p4_1.png'},
+					{src:this.loadingPath+'p4_5.png'},
+					{src:this.loadingPath+'p6_3.png'}
 				];
 
 			function handleOverallProgress(event){
