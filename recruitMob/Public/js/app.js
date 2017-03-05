@@ -155,6 +155,10 @@ $(function(){
 			$('.page7_6').on('click', function(e){
 				location.href = 'http://mjob.rhcncpa.com/JobAd/ApplyResume?adid=560055480';
 			})
+			$('.page5_8').on('click', function(e){
+				_this.current ++;
+				_this.swiper.slideTo(_this.current, 300, false);
+			})
 		}
 	};
 

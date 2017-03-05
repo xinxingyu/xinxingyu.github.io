@@ -74,7 +74,7 @@ html,body {
 .page .page1{
 	background-image: url("../images/p1.jpg");
 	background-position: center top;
-	background-size: contain;
+	background-size: cover;
 }
 .page1>div{ position: absolute; left: 50%;}
 .page1_1{
@@ -397,15 +397,15 @@ html,body {
 }
 .university{
 	position: relative;
-	margin-top: 228px;
+	margin-top: 176px;
 	overflow: hidden;
 }
 .university p{
-	width: 240px;
+	width: 260px;
 	float: left;
-	margin-left: 110px;
+	margin-left: 100px;
 	margin-bottom: 50px;
-	font-size: 28px;
+	font-size: 32px;
 	color: #333;
 }
 .p6-operate{
@@ -439,7 +439,7 @@ html,body {
 .page .page7{
 	background-color: #23c2f4;
 	background: url(../images/p7.jpg) no-repeat 50% 50%;
-	background-size: contain;
+	background-size: cover;
 }
 .page7_1{
 	position: absolute;
@@ -571,3 +571,12 @@ html,body {
 	to   { -webkit-transform: scale(1); }
 }
 /*向上箭头*/
+
+@media only screen and (max-device-height:550px){
+	.page4_3{
+		margin-top: 150px;
+	}
+	.page4_4 p{
+		margin-top: 23px;
+	}
+}
