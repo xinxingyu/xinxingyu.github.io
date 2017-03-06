@@ -77,6 +77,16 @@ html,body {
 	background-size: cover;
 }
 .page1>div{ position: absolute; left: 50%;}
+.page1_bg{
+    top: 50%;
+    margin-top: -492px;
+    margin-left: -626px;
+}
+.page1_cloud{
+    position: absolute;
+    margin-left: -375px;
+    bottom: 0;
+}
 .page1_1{
 	bottom: 130px;
 	margin: 0 0 0 -375px;
@@ -398,12 +408,14 @@ html,body {
 .university{
 	position: relative;
 	margin-top: 176px;
+	margin-top: 110px;
 	overflow: hidden;
 }
 .university p{
 	width: 260px;
 	float: left;
-	margin-left: 100px;
+	/*margin-left: 100px;*/
+	margin-left: 88px;
 	margin-bottom: 50px;
 	font-size: 32px;
 	color: #333;
