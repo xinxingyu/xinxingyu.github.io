@@ -55,7 +55,7 @@ $(function(){
 				sHeight = sHeight*0.74 + 100;
 			}
 			// $('#swiper3-box').css({height: sHeight+10+'px'})
-			$('#swiper3-box').css({height: $(window).height()})
+			// $('#swiper3-box').css({height: $(window).height()})
 			$('.contentbox-container-main').css({zoom: $(window).height()/950})
 			$('.contentbox-container .c-bg .bg').css({height: $(window).height()})
 			$('.contentbox-container .bg-content').css({height: $(window).height()/950 * 424})
@@ -109,13 +109,14 @@ $(function(){
 				speed: 1000,
 				mousewheelControl: true, //鼠标滚轮控制滑动
 				onSetTransition: function(swiper){
-		            if(swiper.activeIndex==2){
-			            swiper.params.onlyExternal=true;
-			            swiper.disableMousewheelControl();
-		        	}else{
-			            swiper.params.onlyExternal=false;
-			            swiper.enableMousewheelControl();
-			        }
+					console.log(swiper.activeIndex)
+		         //    if(swiper.activeIndex==2){
+			        //     swiper.params.onlyExternal=true;
+			        //     swiper.disableMousewheelControl();
+		        	// }else{
+			        //     swiper.params.onlyExternal=false;
+			        //     swiper.enableMousewheelControl();
+			        // }
 					_this.current = swiper.activeIndex;
 
 					if(swiper.activeIndex==0){
@@ -131,40 +132,43 @@ $(function(){
 		        }
 			})
 			this.cSwiper = new Swiper('#i-c-b1',{
-				// mousewheelControl: true,
+				// pagination: '#i-c-b1',
+		        paginationClickable: true,
+		        speed: 1000,
+				// mousewheelControl: true, //鼠标滚轮控制滑动
 			})
-			this.iSwiper = new Swiper('#i-c1',{
-				scrollbar: '.swiper-scrollbar',
-		        direction: 'vertical',
-		        slidesPerView: 'auto',
-				freeMode: true,
-				freeModeMomentum : false,
-				mousewheelControl: true,
-				mousewheelSensitivity : 0.5,
-				onSetTransition: function(swiper,translate){
-					//translate 一直为0，不可直接用
-					nowTranslate = swiper.translate;
+			// this.iSwiper = new Swiper('#i-c1',{
+			// 	scrollbar: '.swiper-scrollbar',
+		 //        direction: 'vertical',
+		 //        slidesPerView: 'auto',
+			// 	freeMode: true,
+			// 	freeModeMomentum : false,
+			// 	mousewheelControl: true,
+			// 	mousewheelSensitivity : 0.5,
+			// 	onSetTransition: function(swiper,translate){
+			// 		//translate 一直为0，不可直接用
+			// 		nowTranslate = swiper.translate;
 
-					if(typeof(beforeTranslate) == "undefined"){
-						beforeTranslate=0
-					};
-					slideHeight = swiper.slides[0].scrollHeight;
-					swiperHeight = swiper.height;
+			// 		if(typeof(beforeTranslate) == "undefined"){
+			// 			beforeTranslate=0
+			// 		};
+			// 		slideHeight = swiper.slides[0].scrollHeight;
+			// 		swiperHeight = swiper.height;
 
-					if(nowTranslate>-2 && nowTranslate > beforeTranslate){
-						_this.oSwiper.slideTo(1, 1000, false);
-					}
-					if(slideHeight-swiperHeight+nowTranslate<2 && nowTranslate < beforeTranslate){
-						//滚轮最底下
-						// _this.oSwiper.slideTo(2);
-					}
+			// 		if(nowTranslate>-2 && nowTranslate > beforeTranslate){
+			// 			_this.oSwiper.slideTo(1, 1000, false);
+			// 		}
+			// 		if(slideHeight-swiperHeight+nowTranslate<2 && nowTranslate < beforeTranslate){
+			// 			//滚轮最底下
+			// 			// _this.oSwiper.slideTo(2);
+			// 		}
 
-					beforeTranslate=nowTranslate;
-	           	}
-			});
+			// 		beforeTranslate=nowTranslate;
+	  //          	}
+			// });
 		},
 		initAnimation: function(){
-			this.motionObj.add(TweenMax.from('.car', .5, {delay:.1,scale:.1, x:-400*this.pe, y:20*this.pe, ease:Linear.easeNone, onStart: this.changeTyre()}));
+			this.motionObj.add(TweenMax.from('.car', .7, {delay:.1,scale:.1, x:-400*this.pe, y:20*this.pe, ease:Linear.easeNone, onStart: this.changeTyre()}));
 			this.motionObj.add(TweenMax.from('.smoke', .4, {delay:-.2, alpha:0, ease:Linear.easeNone}));
 			this.motionObj.pause();
 		},
@@ -235,13 +239,14 @@ $(function(){
 				$('.bt-ma').hide()
 			})
 			$('.logo').on('click', function(){
-				location.href = 'index.html'
+				location.href = 'http://job.rhcncpa.com/acts'
 			})
 			/**
 			 * 看看历届大使的风采
 			 */
 			$('.bt-look').on('click', function(){
-				location.href="introduce.html"
+				// location.href="introduce.html"
+				window.open('introduce.html')
 			})
 			/**
 			 * 走上人生巅峰，快来报名吧

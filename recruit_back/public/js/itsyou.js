@@ -35,9 +35,6 @@ $(function(){
 			$('.logo').on('click', function(){
 				location.href = 'index.html'
 			})
-			$('.content2').on('click', function(){
-				location.href="area.html"
-			})
 			/**
 			 * 看看历届大使的风采
 			 */

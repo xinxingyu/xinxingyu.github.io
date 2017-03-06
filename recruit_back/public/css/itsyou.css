@@ -1,6 +1,6 @@
 .container{
 	width: 100%;
-	min-width: 1920px;
+	min-width: 1300px;
 	position: relative;
 }
 .c-bg{
@@ -10,110 +10,219 @@
 	left: 0;
 }
 .c-bg .bg1{
-	background: url(../images/itsyou/bg_01.jpg) no-repeat 50% 0;
+	background: url(../images/itsyou/bg_01.jpg) no-repeat center top;
 	width: 100%;
 	height: 300px;
 }
 .c-bg .bg2{
-	background: url(../images/itsyou/bg_02.jpg) no-repeat 50% 0;
+	background: url(../images/itsyou/bg_02.jpg) no-repeat center top;
 	width: 100%;
 	height: 300px;
 }
 .c-bg .bg3{
-	background: url(../images/itsyou/bg_03.jpg) no-repeat 50% 0;
+	background: url(../images/itsyou/bg_03.jpg) no-repeat center top;
 	width: 100%;
 	height: 350px;
 }
 
+/** main pannel **/
+.main{
+	position: relative;
+	width: 1300px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-bottom: 100px;
+}
+.main>div{
+	position: relative;
+    overflow: hidden;
+}
 .logo{
 	z-index: 12;
 	cursor: pointer;
-	position: absolute;
+	position: absolute!important;
 	top: 35px;
-	left: 334px;
+	left: 24px;
 	background: url(../images/itsyou/logo.jpg) no-repeat 50% 0;
 	width: 154px;
 	height: 34px;
 }
 .content1{
-	position: absolute;
-	top: 32px;
-	left: 330px;
+	margin-top: 32px;
+	margin-left: 25px;
 	width: 839px;
 	height: 416px;
 	background: url(../images/itsyou/content1.png) no-repeat 50% 0;
 	z-index: 9;
 }
-.content2{
-	cursor: pointer;
+.content1 .learnMore{
+	width: 472px;
+	height: 44px;
 	position: absolute;
-	top: 358px;
-	left: 422px;
-	width: 1263px;
+	top: 242px;
+	left: 180px;
+}
+.content1 .circle1{
+	opacity: 0;
+	position: absolute;
+	top: 234px;
+	left: 666px;
+	width: 30px;
+	height: 30px;
+	background: url(../images/itsyou/circle1.png) no-repeat 50% 0;
+	animation: circle 2s infinite;
+	-moz-animation: circle 2s infinite; /* Firefox */
+	-webkit-animation: circle 2s infinite; /* Safari and Chrome */
+	-o-animation: circle 2s infinite; /* Opera */
+}
+.content1 .circle2{
+	position: absolute;
+	top: 225px;
+	left: 656px;
+	width: 48px;
+	height: 48px;
+	background: url(../images/itsyou/circle2.png) no-repeat 50% 0;
+	animation: circle 2s infinite .3s;
+	-moz-animation: circle 2s infinite .3s; /* Firefox */
+	-webkit-animation: circle 2s infinite .3s; /* Safari and Chrome */
+	-o-animation: circle 2s infinite .3s; /* Opera */
+}
+.content2{
+	margin-top: -90px;
+	margin-left: 112px;
+	width: 827px;
 	height: 405px;
+	color: #7a3931;
+	font-size: 17px;
 	background: url(../images/itsyou/content2.png) no-repeat 50% 0;
 }
-.bt-look{
-	cursor: pointer;
+.ct-left{
 	position: absolute;
-	top: 770px;
-	left: 370px;
+	top: 82px;
+	left: 160px;
+}
+.ct-right{
+	position: absolute;
+	top: 82px;
+	left: 460px;
+}
+.ct-item{
+	margin-bottom: 5px;
+}
+.ct-item a{
+	text-decoration: none;
+	color: #7a3931;
+}
+.ct-item a:hover{
+	text-decoration: underline;
+}
+.ct-item .ct-item-num{
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	margin-right: 22px;
+	background: #7a3931;
+	border-radius: 50%;
+	vertical-align: top;
+	color: #fdd154;
+	text-align: center;
+	line-height: 24px;
+}
+
+/** operate **/
+.operate{
+	margin-top: -16px;
+}
+.operate .bt-look{
+	display: inline-block;
+	cursor: pointer;
 	width: 460px;
 	height: 80px;
+	margin-left: 120px;
 	background: url(../images/itsyou/button1.png) no-repeat 50% 0;
 }
-.bt-go{
+.operate .bt-go{
+	display: inline-block;
 	cursor: pointer;
-	position: absolute;
-	top: 749px;
-	left: 955px;
 	width: 514px;
 	height: 103px;
+	margin-left: 63px;
 	background: url(../images/itsyou/button2.png) no-repeat 50% 0;
 }
-.bt-itesyou{
+.operate .bt-sao{
+	display: inline-block;
 	cursor: pointer;
-	position: absolute;
-	top: 125px;
-	left: 1458px;
-	width: 145px;
-	height: 80px;
-	background: url(../images/itsyou/itsyou_act.png) no-repeat 50% 0;
-}
-.bt-reward{
-	cursor: pointer;
-	position: absolute;
-	top: 380px;
-	left: 1387px;
-	width: 145px;
-	height: 80px;
-	background: url(../images/itsyou/reward.png) no-repeat 50% 0;
-}
-.bt-process{
-	cursor: pointer;
-	position: absolute;
-	top: 623px;
-	left: 1458px;
-	width: 145px;
-	height: 80px;
-	background: url(../images/itsyou/process.png) no-repeat 50% 0;
-}
-.bt-sao{
-	cursor: pointer;
-	position: absolute;
-	top: 768px;
-	left: 1480px;
 	width: 87px;
 	height: 79px;
+	margin-left: 20px;
 	background: url(../images/itsyou/sao.png) no-repeat 50% 0;
 }
-.bt-ma{
-	cursor: pointer;
+.operate .bt-ma{
 	display: none;
+	cursor: pointer;
 	position: absolute;
-	top: 546px;
-	left: 1418px;
+	top: -203px;
+	right: 0;
 	width: 215px;
 	height: 213px;
 	background: url(../images/itsyou/ma.jpg) no-repeat 50% 0;
+}
+
+
+/** buttons **/
+.buttons{
+	position: absolute!important;
+	top: 0;
+	right: 0;
+	width: 233px;
+}
+.buttons>div{
+	cursor: pointer;
+}
+.buttons .bt-itesyou{
+	width: 145px;
+	height: 80px;
+	margin-top: 125px;
+	margin-left: 75px;
+	background: url(../images/itsyou/itsyou_act.png) no-repeat 50% 0;
+}
+.buttons .bt-reward{
+	width: 145px;
+	height: 80px;
+	margin-top: 188px;
+	background: url(../images/itsyou/reward.png) no-repeat 50% 0;
+}
+.buttons .bt-process{
+	width: 145px;
+	height: 80px;
+	margin-top: 170px;
+	margin-left: 73px;
+	background: url(../images/itsyou/process.png) no-repeat 50% 0;
+}
+
+
+/** animations **/
+@keyframes circle
+{
+	from {opacity: 0;}
+	50% {opacity:1;}
+	to {opacity: 0;}
+}
+
+@-moz-keyframes circle /* Firefox */
+{
+from {top:0px;}
+to {top:200px;}
+}
+
+@-webkit-keyframes circle /* Safari 和 Chrome */
+{
+from {top:0px;}
+to {top:200px;}
+}
+
+@-o-keyframes circle /* Opera */
+{
+from {top:0px;}
+to {top:200px;}
 }
