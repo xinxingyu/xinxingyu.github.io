@@ -12,6 +12,7 @@ $(function(){
 		this.loadingPath = '../Public/images/';
 		this.motionObj = []; //animation object
 		this.swiper = '';
+		this.audio = $('#media')[0];
 		this.current = 0;
 		this.init()
 	}
@@ -48,6 +49,8 @@ $(function(){
 			   $('.main').fadeIn(function(){
 				   _this.initSwiper();
 				   _this.motionObj['page'+1].restart();
+				   $('.musicicon').fadeIn();
+				   _this.playMusic();
 			   });
 			}
 			loader.addEventListener("progress", handleOverallProgress);
@@ -132,6 +135,12 @@ $(function(){
 		        }
 			})
 		},
+		playMusic: function(){
+			this.audio.play()
+		},
+		pauseMusic: function(){
+			this.audio.pause()
+		},
 		bindEvent: function(){
 			var _this = this;
 			var optList = $('.p6-operate .opt-it');
@@ -163,6 +172,15 @@ $(function(){
 			$('.page5_8').on('click', function(e){
 				_this.current ++;
 				_this.swiper.slideTo(_this.current, 300, false);
+			})
+			$('.musicicon ').on('click', function(e){
+				if(!_this.audio.paused){
+					$('.musicicon').css({'background': 'url("'+_this.loadingPath+'musicicon_close.png")'})
+					_this.pauseMusic()
+			   	}else{
+					$('.musicicon').css({'background': 'url("'+_this.loadingPath+'musicicon.png")'})
+					_this.playMusic()
+				}
 			})
 		}
 	};

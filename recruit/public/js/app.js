@@ -41,7 +41,7 @@ $(function(){
 			}
 
 			$('.car').css({width: this.pe*car.width+'px', height: this.pe*car.height+'px', margin: this.pe*car.top+'px'+' 0 0 -'+this.pe*car.left+'px'});
-
+			$('.page1_content').css({height: this.pe*1900+'px'});
 			this.resizePage()
 		},
 		/**

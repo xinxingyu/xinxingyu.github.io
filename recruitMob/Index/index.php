@@ -8,7 +8,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>瑞华校园大使找募季</title>
-	<link rel="stylesheet" type="text/css" href="../Public/css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="../Public/css/main.min.css"/>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 </head>
 <body>
@@ -157,7 +157,7 @@
 				<div class="page7_6"></div>
 				<div class="page7_7">
 					<p>此活动在法律允许范围内</p>
-					<p>最终解释权归瑞华会计师事务所所有</p>
+					<p>最终解释权归瑞华会计师事务所（特殊普通合伙）所有</p>
 				</div>
 	        </div>
 		</div>
@@ -170,7 +170,6 @@
 <script type="text/javascript" src="../Public/js/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="../Public/js/preloadjs-0.6.0.min.js"></script>
 <script type="text/javascript" src="../Public/js/TweenMax.min.js"></script>
-<!-- <script type="text/javascript" src="../Public/js/app.js"></script> -->
 <script>
 	var wxData = {
 		debug: false,
@@ -227,6 +226,6 @@
 		});
 	}
 </script>
-<script type="text/javascript" src="../Public/js/app.js"></script>
+<script type="text/javascript" src="../Public/js/app.min.js"></script>
 </body>
 </html>
