@@ -27,9 +27,9 @@ $(function(){
 			this.initAnimation();
 			this.initLoading();
 			this.bindEvent();
-			$('html').one('touchstart',function(){
-				_this.audio.play();
-			});
+			// $('html').one('touchstart',function(){
+			// 	_this.audio.play();
+			// });
 		},
 		initLoading: function(){
 			var _this = this,
