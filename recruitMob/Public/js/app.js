@@ -137,7 +137,6 @@ $(function(){
 			})
 		},
 		playMusic: function(){
-			alert(this.audio.paused)
 			this.audio.play()
 		},
 		pauseMusic: function(){
