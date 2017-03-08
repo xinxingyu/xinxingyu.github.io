@@ -7,22 +7,14 @@ $(function(){
 	var touchstart = mobile ? "touchstart" : "mousedown";
 	var touchend = mobile ? "touchend" : "mouseup";
 	var touchmove = mobile ? "touchmove" : "mousemove";
-	window.onerror = fnErrorTrap;
 
-	function fnErrorTrap(sMsg,sUrl,sLine){
-		// oErrorLog.innerHTML="<b>An error was thrown and caught.</b><p>";
-		// oErrorLog.innerHTML+="Error: " + sMsg + "<br>";
-		// oErrorLog.innerHTML+="Line: " + sLine + "<br>";
-		// oErrorLog.innerHTML+="URL: " + sUrl + "<br>";
-		alert(sMsg)
-		return false;
-	}
 	var XXY = function(){
 		this.loadingPath = '../Public/images/';
 		this.motionObj = []; //animation object
 		this.swiper = '';
 		this.audio = $('#media')[0];
 		this.current = 0;
+		this._tim = '';
 		this.init()
 	}
 
@@ -54,20 +46,21 @@ $(function(){
 				$('.loadingtxt').text(Math.ceil(event.loaded*100) + '%');
 			}
 			function handleOverallComplete(event){
-			   $('.loading').remove();
-			   $('.main').fadeIn(function(){
-				   _this.initSwiper();
-				   _this.motionObj['page'+1].restart();
-				   $('.musicicon').fadeIn();
-				   _this.playMusic();
-
-					//如何使用
-
-					_this.loadAudio(_this.loadingPath+'bgmusic.mp3', function(){
-						$('#media').attr("src", _this.loadingPath+'bgmusic.mp3');
-						alert(2)
-					})
-			   });
+				$('.loading').remove();
+				$('.main').fadeIn(function(){
+					_this.initSwiper();
+					_this.motionObj['page'+1].restart();
+					$('.musicicon').fadeIn();
+					_this.playMusic();
+					// 定时去播放音乐
+					_this._tim = setInterval(function(){
+						if(_this.audio.paused){
+							_this.playMusic();
+						}else{
+							window.clearInterval(_this._tim);
+						}
+					},100)
+				});
 			}
 			loader.addEventListener("progress", handleOverallProgress);
 			loader.addEventListener("complete", handleOverallComplete);
@@ -157,11 +150,6 @@ $(function(){
 		},
 		pauseMusic: function(){
 			this.audio.pause()
-		},
-		loadAudio: function(src, callback) {
-			var audio = new Audio(src);
-			audio.onloadedmetadata = callback;
-			audio.src = src;
 		},
 		bindEvent: function(){
 			var _this = this;
