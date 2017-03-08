@@ -9,28 +9,27 @@ $(function(){
 	var touchmove = mobile ? "touchmove" : "mousemove";
 
 	var XXY = function(){
-		var _this = this;
-		
 		this.loadingPath = '../Public/images/';
 		this.motionObj = []; //animation object
 		this.swiper = '';
-		// this.audio = $('#media')[0];
-		this.audio = document.getElementById('media');
-		// console.log(this.audio)
+		this.audio = $('#media')[0];
+		// this.audio = document.getElementById('media');
 		this.current = 0;
 		this._tim = '';
 		this.init()
 
-		this.audio.onloadeddata = function(){
-			_this.audio.play()
-		}
 	}
 
 	XXY.prototype = {
 		init: function(){
+			var _this = this;
+
 			this.initAnimation();
 			this.initLoading();
 			this.bindEvent();
+			$('html').one('touchstart',function(){
+				_this.audio.play();
+			});
 		},
 		initLoading: function(){
 			var _this = this,
@@ -59,7 +58,7 @@ $(function(){
 					_this.initSwiper();
 					_this.motionObj['page'+1].restart();
 					$('.musicicon').fadeIn();
-					// _this.playMusic();
+					_this.playMusic();
 
 					// $('#media')[0].play();
 					// 定时去播放音乐
