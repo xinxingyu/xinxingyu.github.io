@@ -51,6 +51,13 @@ $(function(){
 				   _this.motionObj['page'+1].restart();
 				   $('.musicicon').fadeIn();
 				   _this.playMusic();
+
+					//如何使用
+
+					_this.loadAudio(_this.loadingPath+'bgmusic.mp3', function(){
+						$('#media').attr("src", _this.loadingPath+'bgmusic.mp3');
+						alert(2)
+					})
 			   });
 			}
 			loader.addEventListener("progress", handleOverallProgress);
@@ -137,9 +144,15 @@ $(function(){
 		},
 		playMusic: function(){
 			this.audio.play()
+
 		},
 		pauseMusic: function(){
 			this.audio.pause()
+		},
+		loadAudio: function(src, callback) {
+			var audio = new Audio(src);
+			audio.onloadedmetadata = callback;
+			audio.src = src;
 		},
 		bindEvent: function(){
 			var _this = this;
