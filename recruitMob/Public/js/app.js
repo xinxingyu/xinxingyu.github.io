@@ -148,7 +148,8 @@ $(function(){
 			})
 		},
 		playMusic: function(){
-			this.audio.play()
+			// this.audio.play()
+			document.getElementById('media').play()
 		},
 		pauseMusic: function(){
 			this.audio.pause()
@@ -190,7 +191,6 @@ $(function(){
 					$('.musicicon').css({'background': 'url("'+_this.loadingPath+'musicicon_close.png")'})
 					_this.pauseMusic()
 			   	}else{
-			   		alert('click')
 					$('.musicicon').css({'background': 'url("'+_this.loadingPath+'musicicon.png")'})
 					_this.playMusic()
 				}
