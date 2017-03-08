@@ -51,12 +51,12 @@ $(function(){
 					_this.initSwiper();
 					_this.motionObj['page'+1].restart();
 					$('.musicicon').fadeIn();
-					_this.playMusic();
+					// _this.playMusic();
 					// 定时去播放音乐
 					_this._tim = setInterval(function(){
 						if(_this.audio.paused){
-							alert('定时器去播放')
-							_this.playMusic();
+							// _this.playMusic();
+							$(".musicicon").trigger('click')
 						}else{
 							window.clearInterval(_this._tim);
 						}
@@ -146,8 +146,6 @@ $(function(){
 			})
 		},
 		playMusic: function(){
-			alert('播放')
-			alert(this.audio.id)
 			this.audio.play()
 		},
 		pauseMusic: function(){
