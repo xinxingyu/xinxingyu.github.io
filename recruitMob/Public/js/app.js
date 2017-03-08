@@ -28,7 +28,6 @@ $(function(){
 				loader = new createjs.LoadQueue(false),
 				manifest = [
 					{src:this.loadingPath+'logo.jpg'},
-					{src:this.loadingPath+'bgmusic.mp3'},
 					{src:this.loadingPath+'p1_bg.png'},
 					{src:this.loadingPath+'p1_cloud.png'},
 					{src:this.loadingPath+'guide.png'},
