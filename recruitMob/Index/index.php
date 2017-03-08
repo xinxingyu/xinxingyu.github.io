@@ -162,7 +162,9 @@
 	        </div>
 		</div>
 		<div class="guideTop"></div>
+		<audio style="display:none;" id="media" loop src="../Public/images/bgmusic.mp3"></audio>
 	</div>
+	<div class="musicicon musicrotate hide ct"></div>
 </div>
 <script type="text/javascript" src="../Public/js/setviewport.js"></script>
 <script type="text/javascript" src="../Public/js/jweixin-1.0.0.js"></script>
