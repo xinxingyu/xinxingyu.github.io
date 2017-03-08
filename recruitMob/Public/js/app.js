@@ -58,7 +58,7 @@ $(function(){
 					_this.initSwiper();
 					_this.motionObj['page'+1].restart();
 					$('.musicicon').fadeIn();
-					_this.playMusic();
+					// _this.playMusic();
 
 					// $('#media')[0].play();
 					// 定时去播放音乐
@@ -87,9 +87,7 @@ $(function(){
 			this.motionObj['page'+1].add(TweenMax.from('.page1_bg', .3, {delay: .1, scale: .3, x: -600, ease:Linear.easeOut}));
 			// this.motionObj['page'+1].add(TweenMax.from('.page1_cloud', .2, { alpha: 0, ease:Linear.easeOut}));
 			this.motionObj['page'+1].add(TweenMax.from('.page1_1', .5, {delay: .2, alpha: 0.5, x: -750, ease:Bounce.easeOut}));
-			this.motionObj['page'+1].add(TweenMax.from('.page1_2', 0.3, {alpha:0, y: 30, ease:Linear.easeNone,onComplete: function(){
-				$('#media')[0].play();
-			}}));
+			this.motionObj['page'+1].add(TweenMax.from('.page1_2', 0.3, {alpha:0, y: 30, ease:Linear.easeNone}));
 			this.motionObj['page'+1].pause();
 
 			this.motionObj['page'+2].add(TweenMax.from('.page2_4', .8, {delay: .2, alpha: 0, y: 100, ease:Bounce.easeOut}));
