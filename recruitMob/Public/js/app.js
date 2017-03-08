@@ -147,6 +147,7 @@ $(function(){
 		},
 		playMusic: function(){
 			alert('播放')
+			alert(this.audio.id)
 			this.audio.play()
 		},
 		pauseMusic: function(){
