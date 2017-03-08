@@ -12,7 +12,9 @@ $(function(){
 		this.loadingPath = '../Public/images/';
 		this.motionObj = []; //animation object
 		this.swiper = '';
-		this.audio = $('#media')[0];
+		// this.audio = $('#media')[0];
+		this.audio = document.getElementById('media');
+		// console.log(this.audio)
 		this.current = 0;
 		this._tim = '';
 		this.init()
@@ -188,6 +190,7 @@ $(function(){
 					$('.musicicon').css({'background': 'url("'+_this.loadingPath+'musicicon_close.png")'})
 					_this.pauseMusic()
 			   	}else{
+			   		alert('click')
 					$('.musicicon').css({'background': 'url("'+_this.loadingPath+'musicicon.png")'})
 					_this.playMusic()
 				}
