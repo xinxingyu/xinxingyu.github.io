@@ -267,7 +267,7 @@ html,body {
     z-index: 999;
  	overflow: hidden;
  	padding-bottom: 100px;
-    padding-left: 143px;
+    /*padding-left: 143px;*/
 }
 .process .contentbox-container-main{
 	height: 846px;
