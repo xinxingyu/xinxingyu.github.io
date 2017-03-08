@@ -9,6 +9,8 @@ $(function(){
 	var touchmove = mobile ? "touchmove" : "mousemove";
 
 	var XXY = function(){
+		var _this = this;
+		
 		this.loadingPath = '../Public/images/';
 		this.motionObj = []; //animation object
 		this.swiper = '';
@@ -18,6 +20,10 @@ $(function(){
 		this.current = 0;
 		this._tim = '';
 		this.init()
+
+		this.audio.onloadeddata = function(){
+			_this.audio.play()
+		}
 	}
 
 	XXY.prototype = {
@@ -53,8 +59,9 @@ $(function(){
 					_this.initSwiper();
 					_this.motionObj['page'+1].restart();
 					$('.musicicon').fadeIn();
-					_this.playMusic();
-					$('#media')[0].play();
+					// _this.playMusic();
+
+					// $('#media')[0].play();
 					// 定时去播放音乐
 					// _this._tim = setInterval(function(){
 					// 	if(_this.audio.paused){
@@ -83,7 +90,6 @@ $(function(){
 			this.motionObj['page'+1].add(TweenMax.from('.page1_1', .5, {delay: .2, alpha: 0.5, x: -750, ease:Bounce.easeOut}));
 			this.motionObj['page'+1].add(TweenMax.from('.page1_2', 0.3, {alpha:0, y: 30, ease:Linear.easeNone,onComplete: function(){
 				$('#media')[0].play();
-				$(".musicicon").trigger('click')
 			}}));
 			this.motionObj['page'+1].pause();
 
