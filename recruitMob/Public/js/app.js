@@ -60,7 +60,7 @@ $(function(){
 						}else{
 							window.clearInterval(_this._tim);
 						}
-					},100)
+					},800)
 				});
 			}
 			loader.addEventListener("progress", handleOverallProgress);
