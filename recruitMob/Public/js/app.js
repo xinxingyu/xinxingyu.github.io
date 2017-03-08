@@ -58,8 +58,8 @@ $(function(){
 					_this.initSwiper();
 					_this.motionObj['page'+1].restart();
 					$('.musicicon').fadeIn();
-					// _this.playMusic();
-
+					_this.playMusic();
+					
 					// $('#media')[0].play();
 					// 定时去播放音乐
 					// _this._tim = setInterval(function(){
