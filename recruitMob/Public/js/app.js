@@ -136,6 +136,7 @@ $(function(){
 			})
 		},
 		playMusic: function(){
+			alert(this.audio.paused)
 			this.audio.play()
 		},
 		pauseMusic: function(){
@@ -173,7 +174,7 @@ $(function(){
 				_this.current ++;
 				_this.swiper.slideTo(_this.current, 300, false);
 			})
-			$('.musicicon ').on('click', function(e){
+			$('.musicicon').on('click', function(e){
 				if(!_this.audio.paused){
 					$('.musicicon').css({'background': 'url("'+_this.loadingPath+'musicicon_close.png")'})
 					_this.pauseMusic()
