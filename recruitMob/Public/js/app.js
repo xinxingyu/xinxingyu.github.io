@@ -188,7 +188,6 @@ $(function(){
 					$('.musicicon').css({'background': 'url("'+_this.loadingPath+'musicicon_close.png")'})
 					_this.pauseMusic()
 			   	}else{
-			   		alert('点击')
 					$('.musicicon').css({'background': 'url("'+_this.loadingPath+'musicicon.png")'})
 					_this.playMusic()
 				}
