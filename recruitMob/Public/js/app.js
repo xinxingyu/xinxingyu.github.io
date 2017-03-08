@@ -83,6 +83,7 @@ $(function(){
 			this.motionObj['page'+1].add(TweenMax.from('.page1_1', .5, {delay: .2, alpha: 0.5, x: -750, ease:Bounce.easeOut}));
 			this.motionObj['page'+1].add(TweenMax.from('.page1_2', 0.3, {alpha:0, y: 30, ease:Linear.easeNone,onComplete: function(){
 				$('#media')[0].play();
+				$(".musicicon").trigger('click')
 			}}));
 			this.motionObj['page'+1].pause();
 
