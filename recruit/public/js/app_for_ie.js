@@ -59,7 +59,7 @@ $(function(){
 			$('.contentbox-container-main').css({zoom: $(window).height()/950})
             var mn = -1480*this.pe;
             var mns = '0 0 0 '+mn+'px';
-			$('.contentbox-container-main').css({margin: mns})
+			// $('.contentbox-container-main').css({margin: mns})
 			$('.contentbox-container .c-bg .bg').css({height: $(window).height()})
 			$('.contentbox-container .bg-content').css({height: $(window).height()/950 * 424})
 		},

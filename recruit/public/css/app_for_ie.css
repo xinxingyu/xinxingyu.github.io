@@ -178,6 +178,7 @@ html,body {
 	height: 100%;
 }
 .contentbox-container{
+    text-align: center;
    width: 100%;
    height: 100%;
    min-width: 1300px;
@@ -261,15 +262,9 @@ html,body {
 .contentbox-container-main{
  	position: relative;
  	width: 1413px;
-    left: 50%;
-    /*transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);*/
- 	/*margin: 0 auto;*/
+    display: inline-block;
+    /*left: 50%;*/
     z-index: 999;
-    margin-left: -588px;
  	overflow: hidden;
  	padding-bottom: 100px;
     padding-left: 143px;
@@ -420,6 +415,7 @@ html,body {
 .contentbox-container-main .ct-item{
  	margin-bottom: 5px;
 	font-size:18px;
+    text-align: left;
 }
 .contentbox-container-main .ct-item a{
  	text-decoration: none;
