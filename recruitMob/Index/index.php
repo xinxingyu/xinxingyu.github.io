@@ -7,7 +7,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>瑞华校园大使找募季</title>
+	<title>瑞华校园大使招募季</title>
 	<link rel="stylesheet" type="text/css" href="../Public/css/main.min.css"/>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 </head>
@@ -191,8 +191,8 @@
 
 	wx.ready(function () {
 		setupWeixinShare({
-			title: '瑞华校园大使找募季', // 分享标题
-			desc: '瑞华校园大使找募季', // 分享描述
+			title: '瑞华校园大使招募季', // 分享标题
+			desc: '瑞华校园大使招募季', // 分享描述
 			link: 'http://dokeycn.com/wap/Index/index.php', // 分享链接
 			imgUrl: 'http://dokeycn.com/wap/Public/images/result1.png', // 分享图标
 			type: '', // 分享类型,music、video或link，不填默认为link

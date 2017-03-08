@@ -261,7 +261,8 @@ html,body {
 .contentbox-container-main{
  	position: relative;
  	width: 1413px;
- 	margin: 0 auto;
+ 	left: 50%;
+ 	// margin: 0 auto;
  	overflow: hidden;
  	padding-bottom: 100px;
     padding-left: 143px;
