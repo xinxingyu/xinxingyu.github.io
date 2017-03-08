@@ -7,7 +7,16 @@ $(function(){
 	var touchstart = mobile ? "touchstart" : "mousedown";
 	var touchend = mobile ? "touchend" : "mouseup";
 	var touchmove = mobile ? "touchmove" : "mousemove";
+	window.onerror = fnErrorTrap;
 
+	function fnErrorTrap(sMsg,sUrl,sLine){
+		// oErrorLog.innerHTML="<b>An error was thrown and caught.</b><p>";
+		// oErrorLog.innerHTML+="Error: " + sMsg + "<br>";
+		// oErrorLog.innerHTML+="Line: " + sLine + "<br>";
+		// oErrorLog.innerHTML+="URL: " + sUrl + "<br>";
+		alert(sMsg)
+		return false;
+	}
 	var XXY = function(){
 		this.loadingPath = '../Public/images/';
 		this.motionObj = []; //animation object
