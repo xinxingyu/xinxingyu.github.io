@@ -60,7 +60,7 @@ $(function(){
 			// var mn = -1413 * scalesize / 2;
 			var mn = $('.contentbox-container-main').width() * -1 / 2;
             var mns = '0 0 0 '+mn+'px';
-			$('.contentbox-container-main').css({margin: mns})
+			// $('.contentbox-container-main').css({margin: mns})
 			$('.contentbox-container .c-bg .bg').css({height: $(window).height()})
 			$('.contentbox-container .bg-content').css({height: $(window).height()/950 * 424})
 		},
