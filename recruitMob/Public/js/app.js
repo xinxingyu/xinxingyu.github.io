@@ -55,6 +55,7 @@ $(function(){
 					// 定时去播放音乐
 					_this._tim = setInterval(function(){
 						if(_this.audio.paused){
+							alert('定时器去播放')
 							_this.playMusic();
 						}else{
 							window.clearInterval(_this._tim);
@@ -145,8 +146,8 @@ $(function(){
 			})
 		},
 		playMusic: function(){
+			alert('播放')
 			this.audio.play()
-
 		},
 		pauseMusic: function(){
 			this.audio.pause()
@@ -188,6 +189,7 @@ $(function(){
 					$('.musicicon').css({'background': 'url("'+_this.loadingPath+'musicicon_close.png")'})
 					_this.pauseMusic()
 			   	}else{
+			   		alert('点击')
 					$('.musicicon').css({'background': 'url("'+_this.loadingPath+'musicicon.png")'})
 					_this.playMusic()
 				}
