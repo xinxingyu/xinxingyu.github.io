@@ -32,7 +32,28 @@ $(function(){
 			var _this = this,
 				loader = new createjs.LoadQueue(false),
 				manifest = [
-					{src:this.loadingPath+'loadingprocess1.png'}
+					{src:this.loadingPath+'loadingprocess1.png'},
+					{src:this.loadingPath+'loadingprocess2.png'},
+					{src:this.loadingPath+'p1_1.png'},
+					{src:this.loadingPath+'p1_2.png'},
+					{src:this.loadingPath+'p2_1.png'},
+					{src:this.loadingPath+'p2_2.png'},
+					{src:this.loadingPath+'p2_4.png'},
+					{src:this.loadingPath+'p2_5.png'},
+					{src:this.loadingPath+'p3_2.png'},
+					{src:this.loadingPath+'p3_3.png'},
+					{src:this.loadingPath+'p3_5.png'},
+					{src:this.loadingPath+'p4_1.png'},
+					{src:this.loadingPath+'p4_2.png'},
+					{src:this.loadingPath+'p6_3.png'},
+					{src:this.loadingPath+'p6_4.png'},
+					{src:this.loadingPath+'p6_5.png'},
+					{src:this.loadingPath+'p6_6.png'},
+					{src:this.loadingPath+'p1.jpg'},
+					{src:this.loadingPath+'p2.jpg'},
+					{src:this.loadingPath+'p3.jpg'},
+					{src:this.loadingPath+'p4.jpg'},
+					{src:this.loadingPath+'p6.jpg'}
 				];
 
 			function handleOverallProgress(event){
