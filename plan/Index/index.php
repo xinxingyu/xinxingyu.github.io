@@ -8,7 +8,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>瑞华校园大使招募季</title>
+	<title>M运动计划</title>
 	<link rel="stylesheet" type="text/css" href="../Public/css/main.css"/>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<script type="text/javascript" src="../Public/js/setviewport.js"></script>
@@ -158,12 +158,12 @@
 
 	wx.ready(function () {
 		setupWeixinShare({
-			title: '测测你的眼力劲', // 分享标题
-			desc: '测测你的眼力劲,快去测试吧', // 分享描述
+			title: 'M运动计划', // 分享标题
+			desc: 'M运动计划', // 分享描述
 			link: 'http://dokeycn.com/wap/Index/index.php', // 分享链接
 			imgUrl: 'http://dokeycn.com/wap/Public/images/result1.png', // 分享图标
-			type: '', // 分享类型,music、video或link，不填默认为link
-			dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+			type: '',
+			dataUrl: '',
 			success: function () {
 			  // 用户确认分享后执行的回调函数
 			},
@@ -181,8 +181,8 @@
 				desc: options.desc, // 分享描述
 				link: 'http://dokeycn.com/wap/Index/index.php', // 分享链接
 				imgUrl: options.imgUrl, // 分享图标
-				type: '', // 分享类型,music、video或link，不填默认为link
-				dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+				type: '',
+				dataUrl: '',
 				success: function () {
 				  // 用户确认分享后执行的回调函数
 				},
