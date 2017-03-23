@@ -102,6 +102,30 @@
         document.getElementById('media').play();
     }, false);
 </script>
+<script type="text/javascript">
+	/**
+	 * the callback function
+	 * callback handle when click submit button
+	 * @param  {[Object]} submitObj  [the information of user input]
+	 * @param  {[Function]} startAnimation [start perform animation]
+	 * @param  {[Function]} endAnimation   [end animation when ajax complete]
+	 */
+	function submitInformation(submitObj, startAnimation, endAnimation){
+		startAnimation();
+		//eg:
+		// $.ajax({
+		// 	type: 'post', //OR GET
+		// 	url: '...',
+		// 	data: submitObj，
+		// 	success: function(res){
+		// 		endAnimation()
+		// 	}
+		// })
+		setTimeout(function(){
+			endAnimation()
+		}, 3000);
+	}
+</script>
 <script type="text/javascript" src="../Public/js/jweixin.js"></script>
 <script type="text/javascript" src="../Public/js/swiper.min.js"></script>
 <script type="text/javascript" src="../Public/js/jquery.js"></script>

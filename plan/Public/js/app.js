@@ -34,6 +34,8 @@ $(function(){
 				manifest = [
 					{src:this.loadingPath+'loadingprocess1.png'},
 					{src:this.loadingPath+'loadingprocess2.png'},
+					{src:this.loadingPath+'musicicon.png'},
+					{src:this.loadingPath+'musiciconclose.png'},
 					{src:this.loadingPath+'p1_1.png'},
 					{src:this.loadingPath+'p1_2.png'},
 					{src:this.loadingPath+'p2_1.png'},
@@ -207,15 +209,16 @@ $(function(){
 				/**
 				 * validate information
 				 */
-				// if(_this.validate()){
-				// 	//Todo:
-				// }
-				console.log(_this.submitsObj)
-				$('.req-loading').show();
-				setTimeout(function(){
-					$('.req-loading').fadeOut();
-					_this.swiper.slideTo(5, 300, false);
-				}, 3000);
+				if(_this.validate()){
+					//Todo:
+					submitInformation(_this.submitsObj, function(){
+						$('.req-loading').show();
+					}, function(){
+						$('.req-loading').fadeOut();
+						_this.swiper.slideTo(5, 300, false);
+					});
+				}
+
 			})
 			$('.page6_6').on(touchstart, function(e){
 				$('.sharemask').show();
