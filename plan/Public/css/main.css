@@ -347,16 +347,41 @@ html,body {
     left: 0!important;
     background: rgba(255, 255, 255, 0.5);
 }
-.req-loading-icon{
-    position: absolute;
+.req-loading-content{
+	position: absolute;
     top: 50%;
     left: 50%;
+	width: 548px;
+	margin: -99px 0 0 -274px;
+	text-align: center;
+}
+.req-loading-icon{
     width: 83px;
     height: 136px;
-    margin: -68px 0 0 -41px;
+    /*margin: -68px 0 0 -41px;*/
     background: url("../images/loadingprocess1.png") no-repeat;
     /*animation: run .8s infinite;
     -webkit-animation: run .8s infinite*/
+}
+.req-loading-pro{
+	width: 548px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #c9caca;
+}
+.req-loading-pro .reqpro{
+    width: 1%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #50921d;
+}
+
+.req-loading-text{
+	padding: 10px;
+    font-size: 25px;
+    color: #c9caca;
+	box-sizing: border-box;
+	text-align: center;
 }
 /**
  * Page 6

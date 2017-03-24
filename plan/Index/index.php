@@ -4,7 +4,6 @@
 	$signPackage = $jssdk->GetSignPackage();
 ?>
 <!doctype html>
-<!doctype html>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -26,7 +25,7 @@
 	            <div class="page1_0"></div>
 	            <div class="page1_1"></div>
 	            <div class="page1_2"></div>
-	            <div class="page1_3">></div>
+	            <div class="page1_3"></div>
 	        </div>
 			<div class="swiper-slide page2">
 				<div class="page2_0"></div>
@@ -36,7 +35,7 @@
 				<div class="page2_4"></div>
 				<div class="page2_5"></div>
 			</div>
-			<div class="swiper-slide page3">
+			<div class="swiper-slide page3 swiper-no-swiping">
 				<div class="page3_0"></div>
 				<div class="page3_1"></div>
 				<div class="page3_2"></div>
@@ -80,7 +79,11 @@
 				</div>
 				<div class="page5_3"></div>
 				<div class="req-loading hide">
-					<div class="req-loading-icon"></div>
+					<div class="req-loading-content">
+						<div class="req-loading-icon"></div>
+						<div class="req-loading-pro"><p class="reqpro"></p></div>
+						<div class="req-loading-text">0%</div>
+					</div>
 				</div>
 			</div>
 			<div class="swiper-slide page6 swiper-no-swiping">
@@ -99,7 +102,7 @@
 		</div>
 		<div class="guideTop"></div>
 		<div class="sharemask hide"><img src="../Public/images/share.png"></div>
-		<audio style="display:none;" id="media" loop preload="auto" autoplay="autoplay" src="../Public/images/bgmusic.mp3"></audio>
+		<audio style="display:none;" id="media" loop preload="auto" autoplay="autoplay" src="../Public/images/bgm.mp3"></audio>
 	</div>
 	<div class="musicicon musicrotate hide ct"></div>
 </div>
@@ -108,30 +111,7 @@
         document.getElementById('media').play();
     }, false);
 </script>
-<script type="text/javascript">
-	/**
-	 * the callback function
-	 * callback handle when click submit button
-	 * @param  {[Object]} submitObj  [the information of user input]
-	 * @param  {[Function]} startAnimation [start perform animation]
-	 * @param  {[Function]} endAnimation   [end animation when ajax complete]
-	 */
-	function submitInformation(submitObj, startAnimation, endAnimation){
-		startAnimation();
-		//eg:
-		// $.ajax({
-		// 	type: 'post', //OR GET
-		// 	url: '...',
-		// 	data: submitObj，
-		// 	success: function(res){
-		// 		endAnimation()
-		// 	}
-		// })
-		setTimeout(function(){
-			endAnimation()
-		}, 3000);
-	}
-</script>
+<script type="text/javascript" src="../Public/js/other.js"></script>
 <script type="text/javascript" src="../Public/js/jweixin.js"></script>
 <script type="text/javascript" src="../Public/js/swiper.min.js"></script>
 <script type="text/javascript" src="../Public/js/jquery.js"></script>

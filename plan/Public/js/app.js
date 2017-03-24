@@ -16,6 +16,7 @@ $(function(){
 		this.current = 0;
 		this.sinup = '';
 		this.submitsObj = '';
+		this.canSubmit = true; //judge whether or not submit
 		this.timer1 = '';
 		this.timer2 = '';
 
@@ -25,10 +26,16 @@ $(function(){
 	XXY.prototype = {
 		init: function(){
 			var _this = this;
-
+			this.initView();
 			this.initAnimation();
 			this.initLoading();
 			this.bindEvent();
+		},
+		initView: function(){
+			if(totalNumber >= targetNumber){
+				this.canSubmit = false;
+				$('.page3_5').css({'background': 'url("'+this.loadingPath+'p3_5_no.png")'})
+			}
 		},
 		initLoading: function(){
 			var _this = this,
@@ -96,7 +103,7 @@ $(function(){
 
 			this.motionObj['page'+1].add(TweenMax.from('.page1_1', .5, {delay: .1, scale: 0, ease:Bounce.easeOut}));
 			this.motionObj['page'+1].add(TweenMax.from('.page1_2', .3, {x: -600, ease:Linear.easeOut}));
-			this.motionObj['page'+1].add(TweenMax.from('.page1_3', .5, {delay: .2, width: 1,ease:Linear.easeOut}));
+			this.motionObj['page'+1].add(TweenMax.from('.page1_3', .5, {delay: .2, width: 0,ease:Linear.easeOut}));
 			this.motionObj['page'+1].pause();
 
 			this.motionObj['page'+2].add(TweenMax.from('.page2_1', .4, {delay: .1, alpha:0, y: -100, ease:Linear.easeOut, onComplete: function(){
@@ -110,15 +117,15 @@ $(function(){
 			}}));
 			this.motionObj['page'+2].pause();
 
-			this.motionObj['page'+3].add(TweenMax.from('.page3_5', .4, {delay: .5, width: 1,ease:Linear.easeOut}));
+			this.motionObj['page'+3].add(TweenMax.from('.page3_5', .4, {delay: .5, width: 0,ease:Linear.easeOut}));
 			this.motionObj['page'+3].pause();
 
-			this.motionObj['page'+4].add(TweenMax.from('.page4_1', .4, {delay: .5, width: 1,ease:Linear.easeOut}));
-			this.motionObj['page'+4].add(TweenMax.from('.page4_2', .4, {delay: .2, width: 1,ease:Linear.easeOut}));
+			this.motionObj['page'+4].add(TweenMax.from('.page4_1', .4, {delay: .5, width: 0,ease:Linear.easeOut}));
+			this.motionObj['page'+4].add(TweenMax.from('.page4_2', .4, {delay: .2, width: 0,ease:Linear.easeOut}));
 			this.motionObj['page'+4].pause();
 
-			this.motionObj['page'+6].add(TweenMax.from('.page6_1', .4, {delay: .5, width: 1,ease:Linear.easeOut}));
-			this.motionObj['page'+6].add(TweenMax.from('.page6_6_c', .4, {delay: .3, width: 1,ease:Linear.easeOut}));
+			this.motionObj['page'+6].add(TweenMax.from('.page6_1', .4, {delay: .5, width: 0,ease:Linear.easeOut}));
+			this.motionObj['page'+6].add(TweenMax.from('.page6_6_c', .4, {delay: .3, width: 0,ease:Linear.easeOut}));
 			this.motionObj['page'+6].pause();
 		},
 		initSwiper: function(){
@@ -200,7 +207,6 @@ $(function(){
 				alert('请输入正确的年龄！')
 				return false;
 			}else if(!phoneReg.test($('#phone').val())){
-				console.log($('#phone').val())
 				alert('请输入正确的手机号！')
 				return false;
 			}else if(!emailReg.test($('#email').val())){
@@ -217,7 +223,9 @@ $(function(){
 			var _this = this;
 
 			$('.page3_5').on(touchstart, function(e){
-				_this.swiper.slideTo(3, 300, false);
+				if(_this.canSubmit){
+					_this.swiper.slideTo(3, 300, false);
+				}
 			})
 			$('.page4_1').on(touchstart, function(e){
 				_this.sinup = 1;
@@ -238,17 +246,26 @@ $(function(){
 				 * validate information
 				 */
 				if(_this.validate()){
-					//Todo:
-					submitInformation(_this.submitsObj, function(){
-						timer = _this.runAnimation('.req-loading-icon');
-						$('.req-loading').show();
-					}, function(){
-						$('.req-loading').fadeOut();
-						clearInterval(timer)
-						_this.swiper.slideTo(5, 300, false);
-					});
+					submitInformation(_this.submitsObj,
+						function(){
+							timer = _this.runAnimation('.req-loading-icon');
+							$('.req-loading').show();
+						},
+						function(process){
+							$('.req-loading-text').text(process + '%');
+							$('.reqpro').css({'width': process + '%'});
+							$('.req-loading-icon').css({'transform': 'translate3d('+process/100*465+'px,0,0)', '-webkit-transform': 'translate3d('+process/100*465+'px,0,0)'});
+						},
+						function(){
+							$('.req-loading').fadeOut();
+							clearInterval(timer)
+							_this.swiper.slideTo(5, 300, false);
+						}
+					);
+					//fill information to page 6
+					$('.page6_2 .username').text(_this.submitsObj.name);
+					$('.page6_2 .companyname').text(_this.submitsObj.company);
 				}
-
 			})
 			$('.page6_6').on(touchstart, function(e){
 				$('.sharemask').show();
