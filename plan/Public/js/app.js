@@ -43,6 +43,9 @@ $(function(){
 				manifest = [
 					{src:this.loadingPath+'loadingprocess1.png'},
 					{src:this.loadingPath+'loadingprocess2.png'},
+					{src:this.loadingPath+'loadingprocess3.png'},
+					{src:this.loadingPath+'loadingprocess4.png'},
+					{src:this.loadingPath+'loadingprocess5.png'},
 					{src:this.loadingPath+'musicicon.png'},
 					{src:this.loadingPath+'musiciconclose.png'},
 					{src:this.loadingPath+'p1_1.png'},
@@ -154,9 +157,9 @@ $(function(){
 
 			return setInterval(function(){
 				i++;
-				if(i>2){ i = 1; }
+				if(i>5){ i = 1; }
 				$(dom).css({'background': 'url("'+_this.loadingPath+'loadingprocess'+i+'.png") no-repeat'})
-			},200)
+			},150)
 		},
 		shakeAnimation: function(dom){
 			TweenMax.to(dom, .1, {delay: .2, x: -2, yoyo:true, ease:Linear.easeOut});
