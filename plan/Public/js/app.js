@@ -222,6 +222,9 @@ $(function(){
 		bindEvent: function(){
 			var _this = this;
 
+			$('.page1_3').on(touchstart, function(e){
+				_this.swiper.slideTo(1, 300, false);
+			})
 			$('.page3_5').on(touchstart, function(e){
 				if(_this.canSubmit){
 					_this.swiper.slideTo(3, 300, false);

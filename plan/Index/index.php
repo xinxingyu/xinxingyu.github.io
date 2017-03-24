@@ -152,27 +152,7 @@
 			}
 		});
 	});
-	function setShareFn(options){
-		wx.config(wxData);
-
-		wx.ready(function () {
-			setupWeixinShare({
-				title: '测测你的眼力劲', // 分享标题
-				desc: options.desc, // 分享描述
-				link: 'http://dokeycn.com/wap/Index/index.php', // 分享链接
-				imgUrl: options.imgUrl, // 分享图标
-				type: '',
-				dataUrl: '',
-				success: function () {
-				  // 用户确认分享后执行的回调函数
-				},
-				cancel: function () {
-				  // 用户取消分享后执行的回调函数
-				}
-			});
-		});
-	}
 </script>
-<script type="text/javascript" src="../Public/js/app.js"></script>
+<script type="text/javascript" src="../Public/js/app.min.js"></script>
 </body>
 </html>
