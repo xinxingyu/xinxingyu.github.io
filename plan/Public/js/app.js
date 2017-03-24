@@ -162,14 +162,10 @@ $(function(){
 			},150)
 		},
 		shakeAnimation: function(dom){
-			TweenMax.to(dom, .1, {delay: .2, x: -2, yoyo:true, ease:Linear.easeOut});
-			TweenMax.to(dom, .1, {delay: .3, x: 2, yoyo:true, ease:Linear.easeOut});
-			TweenMax.to(dom, .1, {delay: .4, y: 2, yoyo:true, ease:Linear.easeOut});
-			TweenMax.to(dom, .1, {delay: .5, y: -2, yoyo:true, ease:Linear.easeOut});
-			TweenMax.to(dom, .1, {delay: .6, x: -2, yoyo:true, ease:Linear.easeOut});
-			TweenMax.to(dom, .1, {delay: .7, x: 2, yoyo:true, ease:Linear.easeOut});
-			TweenMax.to(dom, .1, {delay: .8, y: 2, yoyo:true, ease:Linear.easeOut});
-			TweenMax.to(dom, .1, {delay: .9, y: -2, yoyo:true, ease:Linear.easeOut});
+			TweenMax.to(dom, .1, {delay: .2, rotation:6, ease:Linear.easeOut});
+			TweenMax.to(dom, .1, {delay: .3, rotation:0, ease:Linear.easeOut});
+			TweenMax.to(dom, .1, {delay: .4, rotation:6, ease:Linear.easeOut});
+			TweenMax.to(dom, .1, {delay: .5, rotation:0, ease:Linear.easeOut});
 		},
 		playMusic: function(){
 			this.audio.play()
