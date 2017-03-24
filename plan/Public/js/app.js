@@ -16,6 +16,8 @@ $(function(){
 		this.current = 0;
 		this.sinup = '';
 		this.submitsObj = '';
+		this.timer1 = '';
+		this.timer2 = '';
 
 		this.init()
 	}
@@ -58,6 +60,9 @@ $(function(){
 					{src:this.loadingPath+'p6.jpg'}
 				];
 
+			//initLoadingAnimation
+			var timer = this.runAnimation('.loadingicon');
+
 			function handleOverallProgress(event){
 				var process = Math.ceil(event.loaded*100);
 
@@ -67,6 +72,9 @@ $(function(){
 			}
 			function handleOverallComplete(event){
 				$('.loading').remove();
+				//clear the loading interval
+				clearInterval(timer);
+
 				$('.main').fadeIn(function(){
 					_this.initSwiper();
 					_this.motionObj['page'+1].restart();
@@ -92,12 +100,10 @@ $(function(){
 			this.motionObj['page'+1].pause();
 
 			this.motionObj['page'+2].add(TweenMax.from('.page2_1', .4, {delay: .1, alpha:0, y: -100, ease:Linear.easeOut, onComplete: function(){
-				TweenMax.to('.page2_1', .1, {delay: .2, x: -5, yoyo:true, ease:Linear.easeOut});
-				TweenMax.to('.page2_1', .1, {delay: .3, x: 5, yoyo:true, ease:Linear.easeOut});
+				_this.shakeAnimation('.page2_1');
 			}}));
-			this.motionObj['page'+2].add(TweenMax.from('.page2_2', .5, {delay: -.1, alpha:0, y: -100, ease:Linear.easeOut, onComplete: function(){
-				TweenMax.to('.page2_2', .1, {delay: .2,x: -5, yoyo:true, ease:Linear.easeOut});
-				TweenMax.to('.page2_2', .1, {delay: .3, x: 5, yoyo:true, ease:Linear.easeOut});
+			this.motionObj['page'+2].add(TweenMax.from('.page2_2', .5, {delay: .1, alpha:0, y: -100, ease:Linear.easeOut, onComplete: function(){
+				_this.shakeAnimation('.page2_2');
 			}}));
 			this.motionObj['page'+2].add(TweenMax.from('.page2_3', .5, {delay: .3, alpha:0, y: -200, ease:Linear.easeNone,onComplete:function(){
 				TweenMax.fromTo('.page2_3', .5, {rotation:8, yoyo:true, repeat:-1, ease:Linear.easeOut}, {rotation:-8,yoyo:true, repeat:-1, ease:Linear.easeOut});
@@ -134,6 +140,26 @@ $(function(){
 					}
 		        }
 			})
+		},
+		runAnimation: function(dom){
+			var i = 1,
+				_this = this;
+
+			return setInterval(function(){
+				i++;
+				if(i>2){ i = 1; }
+				$(dom).css({'background': 'url("'+_this.loadingPath+'loadingprocess'+i+'.png") no-repeat'})
+			},200)
+		},
+		shakeAnimation: function(dom){
+			TweenMax.to(dom, .1, {delay: .2, x: -2, yoyo:true, ease:Linear.easeOut});
+			TweenMax.to(dom, .1, {delay: .3, x: 2, yoyo:true, ease:Linear.easeOut});
+			TweenMax.to(dom, .1, {delay: .4, y: 2, yoyo:true, ease:Linear.easeOut});
+			TweenMax.to(dom, .1, {delay: .5, y: -2, yoyo:true, ease:Linear.easeOut});
+			TweenMax.to(dom, .1, {delay: .6, x: -2, yoyo:true, ease:Linear.easeOut});
+			TweenMax.to(dom, .1, {delay: .7, x: 2, yoyo:true, ease:Linear.easeOut});
+			TweenMax.to(dom, .1, {delay: .8, y: 2, yoyo:true, ease:Linear.easeOut});
+			TweenMax.to(dom, .1, {delay: .9, y: -2, yoyo:true, ease:Linear.easeOut});
 		},
 		playMusic: function(){
 			this.audio.play()
@@ -205,6 +231,8 @@ $(function(){
 			 * sign up, submit your information to server
 			 */
 			$('.page5_3').on(touchstart, function(e){
+				var timer;
+
 				_this.getFormItemValue()
 				/**
 				 * validate information
@@ -212,9 +240,11 @@ $(function(){
 				if(_this.validate()){
 					//Todo:
 					submitInformation(_this.submitsObj, function(){
+						timer = _this.runAnimation('.req-loading-icon');
 						$('.req-loading').show();
 					}, function(){
 						$('.req-loading').fadeOut();
+						clearInterval(timer)
 						_this.swiper.slideTo(5, 300, false);
 					});
 				}

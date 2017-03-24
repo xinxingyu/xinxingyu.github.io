@@ -36,8 +36,8 @@ html,body {
 	width: 83px;
 	height: 136px;
 	background: url("../images/loadingprocess1.png") no-repeat;
-    animation: run .8s infinite;
-    -webkit-animation: run .8s infinite
+    /*animation: run .8s infinite;
+    -webkit-animation: run .8s infinite*/
 }
 .loadingprocess{
     width: 548px;
@@ -355,8 +355,8 @@ html,body {
     height: 136px;
     margin: -68px 0 0 -41px;
     background: url("../images/loadingprocess1.png") no-repeat;
-    animation: run .8s infinite;
-    -webkit-animation: run .8s infinite
+    /*animation: run .8s infinite;
+    -webkit-animation: run .8s infinite*/
 }
 /**
  * Page 6
