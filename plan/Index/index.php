@@ -13,6 +13,13 @@
 	<script type="text/javascript" src="../Public/js/setviewport.js"></script>
 </head>
 <body>
+<div class="preload" style="width:0px;height:0px;visibility: hidden;">
+	<img src="../Public/images/loadingprocess1.png">
+	<img src="../Public/images/loadingprocess2.png">
+	<img src="../Public/images/loadingprocess3.png">
+	<img src="../Public/images/loadingprocess4.png">
+	<img src="../Public/images/loadingprocess5.png">
+</div>
 <div id="wrapper" class="wrapper">
 	<div class="loading">
 	    <div class="loadingicon"></div>

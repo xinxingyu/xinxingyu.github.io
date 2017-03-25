@@ -6,6 +6,7 @@ var totalNumber = 0;
  * 总人数上限
  */
 var targetNumber = 500;
+var loadingPath = '../Public/images/';
 
 getTotalNumber();
 

@@ -9,7 +9,7 @@ $(function(){
 	var touchmove = mobile ? "touchmove" : "mousemove";
 
 	var XXY = function(){
-		this.loadingPath = '../Public/images/';
+		this.loadingPath = loadingPath || '../Public/images/';
 		this.motionObj = []; //animation object
 		this.swiper = '';
 		this.audio = $('#media')[0];
@@ -220,7 +220,13 @@ $(function(){
 		},
 		bindEvent: function(){
 			var _this = this;
-
+			$('#name, #sex ,#age, #phone, #email, #company').bind('focus',function(){
+	            $('.page5_3').addClass('active');
+	            //或者$('#viewport').height($(window).height()+'px');
+	        }).bind('blur',function(){
+				$('.page5_3').removeClass('active');
+	            //或者$('#viewport').height('auto');
+	        });
 			$('.page1_3').on(touchstart, function(e){
 				_this.swiper.slideTo(1, 300, false);
 			})
