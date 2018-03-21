@@ -360,11 +360,13 @@ $(function () {
             },
             operateMusic: function () {
                 if (!this.bgAudio.paused) {
-                    // $('.musicicon').css({ 'background': 'url("' + this.loadingPath + 'musicicon_close.png")' })
-                    this.bgAudio.play()
-                } else {
-                    // $('.musicicon').css({ 'background': 'url("' + this.loadingPath + 'musicicon.png")' })
+                    $('.musicicon').css({ 'background': 'url("' + this.loadingPath + 'musicicon_close.png")' })
+                    console.log(1)
                     this.bgAudio.pause()
+                } else {
+                    console.log(2)
+                    $('.musicicon').css({ 'background': 'url("' + this.loadingPath + 'musicicon.png")' })
+                    this.bgAudio.play()
                 }
             },
             handleResults() {
