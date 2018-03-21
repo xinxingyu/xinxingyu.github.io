@@ -22,6 +22,22 @@ html,body {
 .hopacity {
     opacity: 0;
 }
+.preload-img1:after{
+    content: "";
+    background-image: url("../img/loading1.png");
+}
+.preload-img2:after{
+    content: "";
+    background-image: url("../img/loading2.png");
+}
+.preload-img1:after{
+    content: "";
+    background-image: url("../img/loading3.png");
+}
+.preload-img2:after{
+    content: "";
+    background-image: url("../img/loading4.png");
+}
 
 .wrapper {
     width: 100%;
@@ -49,7 +65,7 @@ html,body {
     height: 238px;
     margin: 0 auto;
     margin-bottom: 20px;
-    background-image: url("../img/loading3.png");
+    background-image: url("../img/loading1.png");
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center center;

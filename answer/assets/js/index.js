@@ -211,8 +211,6 @@ $(function () {
                         }));
                     that.motionObj['qst' + i].pause();
                 }
-
-                console.log(that.motionObj)
             },
             initSwiper() {
                 this.mySwiper = new Swiper('.swiper-container', {
@@ -246,6 +244,7 @@ $(function () {
                 setTimeout(function () {
                     $('.main').find('.p2_1').hide();
                     $('.main').find('.p2_2').show();
+
                     setTimeout(function () {
                         setTimeout(function () {
                             $('.main').find('.p2_2').fadeOut();
@@ -255,6 +254,7 @@ $(function () {
                         that.motionObj['page2'].restart();
                         that.dropAudio.play();
                     }, 1000)
+
                 }, 15000)
                 // that.startAudio.onended = function () {
                 //     //ended of play start audio
