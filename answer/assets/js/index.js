@@ -105,7 +105,11 @@ $(function () {
                     src: this.loadingPath + 'bg2.jpg',
                     src: this.loadingPath + 'bg3.jpg',
                     src: this.loadingPath + 'p2_1.png',
-                    src: this.loadingPath + 'p2_1.png',
+                    src: this.loadingPath + 'p2_2.png',
+                    src: this.loadingPath + 'wave.gif',
+                    src: this.loadingPath + 'wave.png',
+                    src: this.loadingPath + 'icon_error.png',
+                    src: this.loadingPath + 'icon_right.png',
                     src: this.loadingPath + 'p4_frame.jpg',
                     src: this.loadingPath + 'voicebg1.png',
                     src: this.loadingPath + 'voicebg2.png'
