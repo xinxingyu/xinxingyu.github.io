@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>安利海外研讨会</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/swiper-4.1.6.min.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+</head>
+<body>
+    <div id="wrapper" class="wrapper">
+        <div class="loading-wrapper">
+            <div class="loading">
+                <div class="loadingicon"></div>
+                <div class="loadingtxt">
+                    <div class="progress">
+                        <div class="inner"></div>
+                    </div>
+                    <p class="num">0%</p>
+                </div>
+            </div>
+        </div>
+        <div class="main hide">
+            <div class="page" id="page">
+                <div class="page1">
+                    <div class="girl"></div>
+                </div>
+                <div class="page2">
+                    <div class="p2_1"></div>
+                    <div class="p2_2 hide"></div>
+                    <div class="talk"></div>
+                    <div class="face"></div>
+                    <div class="rules"></div>
+                    <div class="receive" @click="starAnswer"></div>
+                </div>
+                <div class="page3 swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" :class="'qst'+(index+1)" v-for="(item, index) in questions" v-bind:key="index">
+                            <div class="index">{{index+1}}</div>
+                            <div class="type">
+                                <img :src="'../assets/img/question_type_'+item.type+'.png'">
+                            </div>
+                            <div class="voice" @click="playAudio(index)">
+                                <div class="wave" v-if="!item.isQuestionAudio"></div>
+                                <div class="wave2" v-else="item.isQuestionAudio"></div>
+                                <div class="voice-tip">{{item.voiceTime}}"</div>
+                            </div>
+                            <div class="info" :class="'info_'+item.type">
+                                <img :src="'../assets/img/question_'+item.type+'_'+item.info+'.png'">
+                            </div>
+                            <div class="question" v-if="item.type=='dialect'">Q : {{item.question}}</div>
+                            <div class="answer hide">
+                                <div v-for="(ans, ansIndex) in item.answer" class="answer-item">
+                
+                                    <div class="content" @click="choice(ans, ansIndex, item, index)">
+                                        <p class="key">{{ans.key}}</p>
+                                        <p class="value">{{ans.value}}</p>
+                                    </div>
+                                    <p class="right" v-if="item.isChoiced && ans.right && ans.choiced!=0"></p>
+                                    <p class="error" v-if="item.isChoiced && !ans.right && ans.choiced!=0"></p>
+                                    <p class="line" v-if="ans.choiced==2"></p>
+                                    <!-- <p class="error" v-if="item.isChoiced && ans.right"></p> -->
+                                </div>
+                            </div>
+                            <div class="rightAnswer hide" v-if="item.type!='dialect'" @click="playAnswerAudio(index)">
+                                <div class="wave" v-if="!item.isAnswerAudio"></div>
+                                <div class="wave2" v-else="item.isAnswerAudio"></div>
+                                <p class="text">听听小朋友的答案</p>
+                            </div>
+                            <div class="persion">—— ——{{item.persion}}</div>
+                            <div class="next" v-if="index!==4" @click="nextQuestion(index)"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page4">
+                    <div class="frame">
+                        <img class="tip" :src="'../assets/img/p4_tip_'+scoreInfo.index+'.png'">
+                        <p class="result"><em>{{scoreInfo.value}}</em></p>
+                        <img class="info" :src="'../assets/img/p4_info_'+scoreInfo.index+'.png'">
+                    </div>
+                    <div class="icon">
+                        <img :src="'../assets/img/p4_icon'+scoreInfo.index+'.png'">
+                    </div>
+                    <div class="replay" @click="replayGame"></div>
+                    <div class="share"></div>
+                </div>
+            </div>
+            <div class="musicicon musicrotate hide ct" @click="operateMusic"></div>
+            <audio class="hide" id="bgAudio" src="../assets/media/bg1.mp3"></audio>
+            <audio class="hide" id="startAudio" src="../assets/media/start.mp3"></audio>
+            <audio class="hide" id="dropAudio" src="../assets/media/drop.mp3"></audio>
+            <audio class="hide" id="questionAudio" src=""></audio>
+            <audio class="hide" id="answerAudio" src=""></audio>
+        </div>
+    </div>
+    <script type="text/javascript" src="../assets/js/setviewport.js"></script>
+    <script type="text/javascript" src="../assets/js/jq.js"></script>
+    <script type="text/javascript" src="../assets/js/preload.min.js"></script>
+    <script type="text/javascript" src="../assets/js/vue.min.js"></script>
+    <script type="text/javascript" src="../assets/js/twmx.js"></script>
+    <script type="text/javascript" src="../assets/js/swiper-4.1.6.min.js"></script>
+    <script type="text/javascript" src="../assets/js/questions.js"></script>
+    <script type="text/javascript" src="../assets/js/index.js"></script>
+</body>
+</html>
