@@ -101,8 +101,14 @@ $(function () {
                     src: this.loadingPath + 'loading2.png',
                     src: this.loadingPath + 'loading3.png',
                     src: this.loadingPath + 'loading4.png',
+                    src: this.loadingPath + 'bg11.jpg',
                     src: this.loadingPath + 'bg2.jpg',
+                    src: this.loadingPath + 'bg3.jpg',
                     src: this.loadingPath + 'p2_1.png',
+                    src: this.loadingPath + 'p2_1.png',
+                    src: this.loadingPath + 'p4_frame.jpg',
+                    src: this.loadingPath + 'voicebg1.png',
+                    src: this.loadingPath + 'voicebg2.png'
                     // src: this.mediaPath + 'start.mp3',
                 }];
 
@@ -240,17 +246,26 @@ $(function () {
                 setTimeout(function () {
                     $('.main').find('.p2_1').hide();
                     $('.main').find('.p2_2').show();
-                }, 15000)
-                that.startAudio.onended = function () {
-                    //ended of play start audio
                     setTimeout(function () {
-                        $('.main').find('.p2_2').fadeOut();
-                        $('.main').find('.talk').fadeOut();
-                        $('.main').find('.face').fadeOut();
-                    }, 800)
-                    that.motionObj['page2'].restart();
-                    that.dropAudio.play();
-                };
+                        setTimeout(function () {
+                            $('.main').find('.p2_2').fadeOut();
+                            $('.main').find('.talk').fadeOut();
+                            $('.main').find('.face').fadeOut();
+                        }, 800)
+                        that.motionObj['page2'].restart();
+                        that.dropAudio.play();
+                    }, 1000)
+                }, 15000)
+                // that.startAudio.onended = function () {
+                //     //ended of play start audio
+                //     setTimeout(function () {
+                //         $('.main').find('.p2_2').fadeOut();
+                //         $('.main').find('.talk').fadeOut();
+                //         $('.main').find('.face').fadeOut();
+                //     }, 800)
+                //     that.motionObj['page2'].restart();
+                //     that.dropAudio.play();
+                // };
             },
             starAnswer() {
                 var qsType = this.questions[0].type;
