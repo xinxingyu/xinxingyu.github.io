@@ -22,7 +22,7 @@ html,body {
 .hopacity {
     opacity: 0;
 }
-.preload-img1:after{
+/* .preload-img1:after{
     content: "";
     background-image: url("../img/loading1.png");
 }
@@ -37,8 +37,12 @@ html,body {
 .preload-img2:after{
     content: "";
     background-image: url("../img/loading4.png");
+} */
+.preloading {
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
-
 .wrapper {
     width: 100%;
     height: 100%;
