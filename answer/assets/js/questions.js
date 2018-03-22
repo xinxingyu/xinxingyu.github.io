@@ -166,7 +166,7 @@ var Questions = {
                 right: true
             }, {
                 key: 'B',
-                value: '云本身就是空气的另一种表现形态',
+                value: '云本身就是空气的另一种<br>表现形态',
                 right: false
             }]
         },

@@ -10,9 +10,9 @@
 </head>
 <body>
     <div class="preloading">
-        <img src="../assets/img/loading2.png" alt="">
-        <img src="../assets/img/loading3.png" alt="">
-        <img src="../assets/img/loading4.png" alt="">
+        <img src="../assets/img/move1.png" alt="">
+        <img src="../assets/img/move2.png" alt="">
+        <img src="../assets/img/move3.png" alt="">
     </div>
     <div id="wrapper" class="wrapper">
         <div class="loading-wrapper">
@@ -29,6 +29,7 @@
         <div class="main hide">
             <div class="page" id="page">
                 <div class="page1">
+                    <img class="bg" src="../assets/img/bg1.jpg" alt="">
                     <div class="girl"></div>
                 </div>
                 <div class="page2">
@@ -55,12 +56,13 @@
                                 <img :src="'../assets/img/question_'+item.type+'_'+item.info+'.png'">
                             </div>
                             <div class="question" v-if="item.type=='dialect'">Q : {{item.question}}</div>
-                            <div class="answer hide">
+                            <div class="answer">
                                 <div v-for="(ans, ansIndex) in item.answer" class="answer-item">
-                
+
                                     <div class="content" @click="choice(ans, ansIndex, item, index)">
                                         <p class="key">{{ans.key}}</p>
-                                        <p class="value">{{ans.value}}</p>
+                                        <!-- <p class="value">{{ans.value}}</p> -->
+                                        <p class="value" v-html="ans.value">{{ans.value}}</p>
                                     </div>
                                     <p class="right" v-if="item.isChoiced && ans.right && ans.choiced!=0"></p>
                                     <p class="error" v-if="item.isChoiced && !ans.right && ans.choiced!=0"></p>
@@ -84,15 +86,19 @@
                         <p class="result"><em>{{scoreInfo.value}}</em></p>
                         <img class="info" :src="'../assets/img/p4_info_'+scoreInfo.index+'.png'">
                     </div>
-                    <div class="icon">
+                    <div class="icon" :class="'icon'+scoreInfo.index">
                         <img :src="'../assets/img/p4_icon'+scoreInfo.index+'.png'">
                     </div>
+                    <div class="ribbon" :class="'ribbon'+scoreInfo.index"></div>
                     <div class="replay" @click="replayGame"></div>
-                    <div class="share"></div>
+                    <div class="share" @click="share"></div>
                 </div>
             </div>
             <div class="musicicon musicrotate hide ct" @click="operateMusic"></div>
-            <audio class="hide" id="bgAudio" src="../assets/media/bg1.mp3"></audio>
+            <div class="sharemask hide" @click="hideShare">
+                <img src="../assets/img/share.png">
+            </div>
+            <audio class="hide" id="bgAudio" loop src="../assets/media/bg1.mp3"></audio>
             <audio class="hide" id="startAudio" src="../assets/media/start.mp3"></audio>
             <audio class="hide" id="dropAudio" src="../assets/media/drop.mp3"></audio>
             <audio class="hide" id="questionAudio" src=""></audio>
