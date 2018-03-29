@@ -109,9 +109,6 @@ $(function () {
             },
             methods: {
                 init() {
-                    setTimeout(function(){
-                        console.log(a)
-                    }, 1000)
                     //阻止屏幕滑动
                     $('html, body').on(touchmove, function (e) {
                         e.preventDefault()
