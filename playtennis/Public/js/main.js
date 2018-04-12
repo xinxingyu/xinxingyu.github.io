@@ -27,34 +27,34 @@ $(function(){
 
     var nickname;
 
-    if(isWeiXin()){
+    // if(isWeiXin()){
 
-        // var headimgurl = getQueryString('headimgurl'); //头像不用的话就注释掉
-        nickname = getQueryString('nickname');
+    //     // var headimgurl = getQueryString('headimgurl'); //头像不用的话就注释掉
+    //     nickname = getQueryString('nickname');
 
-        if(nickname == '' || nickname == null)
-        {
-            var tempsss='?vid=name';  //  这句话当时是为了传个值过去，我程序没动  你也随便传个值过去就行了  写死也无所谓
-            //if(uid) tempsss = "?vid="+uid;
-            /************************************************
-             *特别需要注意的是
-             * url 后的第一个地址是接口地址，你不用动  我写好了
-             * encodeURI里的地址，是你当前页面的地址，
-             **************************************************/
-            var url = "http://api.hecoe.com/wx/getwxuserinfo.php?referer=" + encodeURI("http://dd252.hecoe.com/chinaopen/index.html"+tempsss);
-            location.href = url;
-        }
-        else
-        {
-            //这里就是已经获取到头像和昵称了，进行下一步操作就行了
-        }
+    //     if(nickname == '' || nickname == null)
+    //     {
+    //         var tempsss='?vid=name';  //  这句话当时是为了传个值过去，我程序没动  你也随便传个值过去就行了  写死也无所谓
+    //         //if(uid) tempsss = "?vid="+uid;
+    //         /************************************************
+    //          *特别需要注意的是
+    //          * url 后的第一个地址是接口地址，你不用动  我写好了
+    //          * encodeURI里的地址，是你当前页面的地址，
+    //          **************************************************/
+    //         var url = "http://api.hecoe.com/wx/getwxuserinfo.php?referer=" + encodeURI("http://dd252.hecoe.com/chinaopen/index.html"+tempsss);
+    //         location.href = url;
+    //     }
+    //     else
+    //     {
+    //         //这里就是已经获取到头像和昵称了，进行下一步操作就行了
+    //     }
 
-    }
-    else
-    {
+    // }
+    // else
+    // {
         //非微信打开 直接赋值
         nickname = '滴滴用户';
-    }
+    // }
 
     //改用户的微信昵称
     $('.page5_2').text(nickname+'一球KO！');
