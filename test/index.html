@@ -15,14 +15,17 @@
     <script>
         $(function () {
             if (isWeiXin()) {
+                alert('微信中')
                 if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+                    alert('have WeixinJSBridgeReady')
                     WeixinJSBridge.invoke('getNetworkType', {}, function (e) { 
                         main(); 
                     }, false);
                 } else {
+                    alert('no WeixinJSBridgeReady')
                     document.addEventListener("WeixinJSBridgeReady", function () {
                         WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
-                            alert('微信中')
+                            alert(1)
                             main()
                         });
                     }, false);
