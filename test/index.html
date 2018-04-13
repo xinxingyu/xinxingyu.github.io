@@ -21,6 +21,7 @@
                 } else {
                     document.addEventListener("WeixinJSBridgeReady", function () {
                         WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
+                            alert('微信中')
                             main()
                         });
                     }, false);
@@ -41,7 +42,9 @@
 
             function main() {
                 this.bgAudio = $('#bgAudio')[0];
-                this.bgAudio.load();
+                this.bgAudio.load(function() {
+                    alert(1)
+                });
                 this.bgAudio.play();
             }
         })
