@@ -13,7 +13,7 @@ $(function () {
 
     var a = document.querySelector("#bgAudio")
 
-    if (isWeiXin()) {
+    if (isWeiXin() && isApp() == 0) {
         if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
             WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
                 // main();
@@ -26,6 +26,7 @@ $(function () {
             }, false);
         }
     } else {
+        alert('not ios app!')
         main();
     }
     
@@ -37,7 +38,16 @@ $(function () {
             return false;
         }
     }
-    
+    function isApp() {
+        if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+            return 0;
+        } else if (/(Android)/i.test(navigator.userAgent)) {
+            return 1;
+        } else {
+            return 2;
+        };
+    }
+
     // Listen for orientation changes
     window.addEventListener("orientationchange", function () {
         // Announce the new orientation number
