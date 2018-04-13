@@ -37,7 +37,7 @@ var Questions = {
             type: 'dialect',
             info: 3,
             question: '歌谣里“打罗罗”是什么意思？',
-            persion: '青海省 沈央金卓玛 5岁',
+            persion: '青海省 沈央金 5岁',
             onlyQuestionAudio: true,
             voiceTime: 20,
             answer: [{
@@ -72,7 +72,7 @@ var Questions = {
             type: 'knowledge',
             info: 1,
             question: '为什么世界上要有树？',
-            persion: '甘肃省 夏子怡 7岁',
+            persion: '甘肃省 夏子宜 7岁',
             onlyQuestionAudio: false,
             voiceTime: 2,
             answer: [{
@@ -157,7 +157,7 @@ var Questions = {
             type: 'knowledge',
             info: 6,
             question: '天空为什么这么蓝啊？',
-            persion: '湖南省 龙雪芳 4岁',
+            persion: '湖南省 龙雪方 4岁',
             onlyQuestionAudio: false,
             voiceTime: 2,
             answer: [{
@@ -174,7 +174,7 @@ var Questions = {
             type: 'knowledge',
             info: 7,
             question: '青蛙为什么要生活在水里？',
-            persion: '青海省 沈央金卓玛 5岁',
+            persion: '青海省 沈央金 5岁',
             onlyQuestionAudio: false,
             voiceTime: 3,
             answer: [{
@@ -260,7 +260,7 @@ var Questions = {
             type: 'interest',
             info: 5,
             question: '兔子为什么要吃萝卜？',
-            persion: '山西省 刘慧 4岁',
+            persion: '山西省 刘汇 4岁',
             onlyQuestionAudio: false,
             voiceTime: 2,
             answer: [{

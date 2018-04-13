@@ -2,20 +2,33 @@ window.onerror = function(msg, url, line, col, error) {
     alert(msg)
     console.log(msg)
 }
+// window.onload = function(){ 
+//     alert(1); 
+// } 
 $(function () {
     var mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
     var touchstart = mobile ? "touchstart" : "mousedown";
     var touchend = mobile ? "touchend" : "mouseup";
     var touchmove = mobile ? "touchmove" : "mousemove";
-    
+
+    var a = document.querySelector("#bgAudio")
+
     if (isWeiXin()) {
-        document.addEventListener("WeixinJSBridgeReady", function () {
-            main();
-        }, false);
+        if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+            WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
+                // main();
+            }, false);
+        } else {
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
+                    main()
+                });
+            }, false);
+        }
     } else {
         main();
     }
-
+    
     function isWeiXin() {
         var ua = window.navigator.userAgent.toLowerCase();
         if (ua.match(/MicroMessenger/i) == 'micromessenger') {
@@ -24,6 +37,15 @@ $(function () {
             return false;
         }
     }
+    
+    // Listen for orientation changes
+    window.addEventListener("orientationchange", function () {
+        // Announce the new orientation number
+        if (window.orientation == 0) {
+            alert('竖屏观看模式！')
+        } else {
+        }
+    }, false);
 
     function main() {
         function initQuestionsAndResults() {
@@ -124,6 +146,15 @@ $(function () {
                     this.result1Audio = $('#result1')[0];
                     this.result2Audio = $('#result2')[0];
                     this.result3Audio = $('#result3')[0];
+
+                    this.bgAudio.load();
+                    this.startAudio.load();
+                    this.bellAudio.load();
+                    this.rulesAudio.load();
+                    this.questionBgAudio.load();
+                    this.result1Audio.load();
+                    this.result2Audio.load();
+                    this.result3Audio.load();
 
                     this.initLoading();
                     this.initAnimation();
@@ -357,6 +388,7 @@ $(function () {
                         x: -120,
                         y: -72,
                         onStart: function() {
+                            that.bgAudio.pause();
                             that.bellAudio.play();
                         },
                         onComplete: function () {
@@ -384,8 +416,14 @@ $(function () {
                 startPage2() {
                     var that = this;
 
-                    $('.page1').fadeOut(800);
-                    that.startAudio.play();
+                    $('.page1').fadeOut(800, function() {
+                        if (!that.startAudio.src) {
+                            that.startAudio.src = that.mediaPath+"start.mp3"
+                        }
+                        that.startAudio.play();
+                    });
+
+                    // that.startAudio.play();
                     //你敢挑战吗，动画
                     setTimeout(function () {
                         $('.main').find('.p2_1').fadeOut();
@@ -503,7 +541,7 @@ $(function () {
 
                         //if only hvae question audio
                         if (this.questions[index + 1].onlyQuestionAudio) {
-                            this.initQuestionAudio('questionAudio', qsType + qsInfo + '.mp3')
+                            this.initQuestionAudio('questionAudio', qsType + qsInfo + '_qst.mp3')
                         } else {
                             this.initQuestionAudio('questionAudio', qsType + qsInfo + '_qst.mp3')
                             this.initQuestionAudio('answerAudio', qsType + qsInfo + '_as.mp3')
