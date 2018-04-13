@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test Audio Autoplay</title>
+</head>
+
+<body>
+    <audio class="hide" id="bgAudio" src="./assets/media/bg1.mp3"></audio>
+    <script type="text/javascript" src="./assets/js/jq.js"></script>
+    <script>
+        $(function () {
+            if (isWeiXin()) {
+                if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+                    WeixinJSBridge.invoke('getNetworkType', {}, function (e) { 
+                        main(); 
+                    }, false);
+                } else {
+                    document.addEventListener("WeixinJSBridgeReady", function () {
+                        WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
+                            main()
+                        });
+                    }, false);
+                }
+            } else {
+                main();
+            }
+
+            function isWeiXin() {
+                var ua = window.navigator.userAgent.toLowerCase();
+                if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+                    return
+                    true;
+                } else {
+                    return false;
+                }
+            }
+
+            function main() {
+                this.bgAudio = $('#bgAudio')[0];
+                this.bgAudio.load();
+                this.bgAudio.play();
+            }
+        })
+    </script>
+</body>
+
+</html>
