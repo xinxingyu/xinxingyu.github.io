@@ -1,0 +1,106 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    font-family: 'Source Sans Pro';
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -60px 0 0 -125px;
+    text-align: center;
+    /*color: rgb(237, 85, 101);*/
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+}
+a {
+    color: #fff;
+    text-decoration: #fff;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.nav {
+    font-size: 20px;
+    color: #fff;
+}
+.nav li {
+    display: inline-block;
+    vertical-align: top;
+}
+.nav li a {
+    display: inline-block;
+    padding: 10px;
+    height: 32px;
+    width: 60px;
+    text-align: center;
+    
+    color: rgba(255, 255, 255, 1);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.nav_a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255, 255, 255, 0.5);
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+    -webkit-transform: scale(0.1, 1);
+    transform: scale(0.1, 1);
+}
+
+.nav_a:hover::before {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+.nav_a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.nav_a:hover::after {
+    opacity: 0;
+    -webkit-transform: scale(0.1, 1);
+    transform: scale(0.1, 1);
+}
