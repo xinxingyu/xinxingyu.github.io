@@ -1,0 +1,107 @@
+@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td,section,canvas {
+    padding: 0;
+    margin: 0;
+}
+li{ list-style: none;}
+
+html,body {
+    font-size: 24px;
+    line-height: 32px;
+    color: #000;
+    font-family: 'Microsoft YaHei', Arial;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: #ebebeb;
+    -webkit-touch-callout:none; /* 禁用长触弹出的下载图片菜单 */
+    -webkit-user-select:none; /* 禁用长触选择文字等功能 */
+}
+
+/*公共样式*/
+.hide{ display: none;}
+.radioBox { border-radius: 8px;-webkit-border-radius: 8px; }
+.scaleMation { animation: scaleTip 2s infinite; -webkit-animation: scaleTip 2s infinite; }
+/*公共样式*/
+
+.main{ width: 100%; height: 100%;position: relative; overflow: hidden;}
+.page{ width: 100%; height: 100%;  position: relative; }
+.page>div{ position: absolute; width: 100%; height: 100%; background-repeat: no-repeat; background-position: center center;}
+
+.page .enterpage{  overflow: hidden;background-image: url("../images/enterpage.jpg") }
+
+.page .longpage{ background-color: #ebebeb; }
+.longpage>div{ position: relative; }
+.groupinfo{ width:480px;background-color: #cecece;margin:20px 0 20px 78px;}
+.cont{ padding:20px; }
+
+.longpage .di{position: fixed;bottom: 0;left: 50%; margin: 0 0 0 -320px;height: 86px;}
+.massge { position: relative;float: left;width:640px;margin-left: 20px; }
+.massge>div{position: absolute;}
+.massge .headimg>img{ width:70px;height:70px;margin-top: 6px; }
+.massge .mname{ font-size:22px;color:#737373;left:90px; }
+.massge .mcontent{ margin: 37px 0 0 90px; }
+.mcontent .mcla{padding: 10px;border: 1px solid #dadada;max-width: 400px;left:20px;background-color: white;margin-left: 13px;}
+.mcontent .jb{position: absolute;top:11px;}
+.massge .voice{ margin: 37px 0 0 90px;}
+.massge .time{ margin: 71px 0 0 309px; color: #848484; font-size: 20px;}
+.massge .point{ margin: 39px 0 0 310px; background: #eb4d4b; width: 13px; height: 13px; border-radius:50%;}
+
+.massge .redpick{ left:90px;top:40px; }
+#sanlianfa img{width: 34px; height: 34px; margin: 0 0 0 6px;}
+
+/*马化腾红包提示*/
+#msg3 .circle{position: absolute; margin: 122px 0 0 363px; animation: shan 1.2s infinite; -webkit-animation: shan 1.2s infinite;}
+#msg3 .hand{position: absolute; margin: 136px 0 0 359px;}
+/*滴滴CEO*/
+#msg9 .circle{position: absolute; margin: 122px 0 0 363px; animation: shan 1.2s infinite; -webkit-animation: shan 1.2s infinite;}
+#msg9 .hand{position: absolute; margin: 136px 0 0 359px;}
+
+#msg8 .msgimg{position: absolute; margin: 0 0 0 8px; width: 34px; height: 34px;}
+/*红包派完*/
+#hongbao .circle{position: absolute; margin: -346px 0 0 -236px; animation: shan 1.2s infinite; -webkit-animation: shan 1.2s infinite;}
+#hongbao .hand{position: absolute; margin: -330px 0 0 -240px;}
+
+/*大家手气*/
+#hbnull .circle{position: absolute; margin: 48px 0 0 34px; animation: shan 1.2s infinite; -webkit-animation: shan 1.2s infinite;}
+#hbnull .hand{position: absolute; margin: 64px 0 0 30px;}
+
+/*投票*/
+.toupiao { width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url("../images/pp.jpg") no-repeat center center }
+.toupiao>img{ position: absolute;left:50%;top:50%;margin:-520px 0 0 -320px;}
+/*.toupiao>div{left:50%;top:50%;position: absolute; width: 224px; height: 301px;}*/
+.toupiao>div{left:50%;top:50%;position: absolute;}
+/*.toupiao #btn1{margin: -410px 0 0 -255px; }*/
+/*.toupiao #btn2{margin: -410px 0 0 30px; }*/
+/*.toupiao #btn3{margin: -90px 0 0 -255px; }*/
+/*.toupiao #btn4{margin: -90px 0 0 30px; }*/
+.tp1{margin: -519px 0 0 -320px; z-index: 10}
+.tp2{margin: -519px 0 0 -34px; z-index: 10}
+.tp3{margin: -250px 0 0 -320px; z-index: 10}
+.tp4{margin: -217px 0 0 -34px; z-index: 100}
+.pt1{margin: 49px 0 0 -293px; z-index: 100}
+.pt2{margin: 110px 0 0 -123px; z-index: 100}
+.pt3{margin: 282px 0 0 -146px; z-index: 100}
+.blood{margin: -299px 0 0 -320px; }
+
+.resule1 {z-index: 200; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url("../images/res1.jpg") no-repeat center center }
+.resule2 {z-index: 200; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url("../images/res2.jpg") no-repeat center center }
+.resule3 {z-index: 200; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url("../images/res3.jpg") no-repeat center center }
+.resule4 {z-index: 200; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url("../images/res4.jpg") no-repeat center center }
+
+
+@keyframes scaleTip {
+    0% { transform: scale(1);opacity: 1 }
+    100% { transform: scale(1.5);opacity: 0 }
+}
+@-webkit-keyframes scaleTip {
+    0% { -webkit-transform: scale(1);opacity: 1 }
+    100% { -webkit-transform: scale(1);opacity: 0}
+}
+@keyframes shan {
+    50% { transform: scale(1.2); }
+}
+@-webkit-keyframes shan {
+    50% { -webkit-transform: scale(1.2);}
+}

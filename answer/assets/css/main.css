@@ -603,8 +603,8 @@ img {
 .sharemask img {
     display: block;
     position: absolute;
-    right: 97px;
-    top: 128px;
+    right: 54px;
+    top: 57px;
 }
 
 .tips {
@@ -638,15 +638,23 @@ img {
     background: transparent;
     text-align: center;
 }
-/* .mask {
+.mask {
+    display: none;
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: red;
+    background-color: #f5fff6;
     top: 0;
     left: 0;
-    z-index: 999;
-} */
+    z-index: 9999;
+}
+.mask p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
 /* compat */
 @media screen and (max-height: 945px) {
     /* .loading-wrapper {
@@ -673,7 +681,7 @@ img {
         bottom: 113px;
     }
 }
-/* @media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) {
     .mask{
         display: none!important;
     }
@@ -682,4 +690,4 @@ img {
     .mask {
         display: block !important;
     }
-} */
+}

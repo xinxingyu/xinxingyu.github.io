@@ -1,0 +1,214 @@
+@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td,section,canvas {
+    padding: 0;
+    margin: 0;
+}
+li{ list-style: none;}
+
+html,body {
+    font-size: 22px;
+    color: #000;
+    font-family: 'Microsoft YaHei', Arial;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: rgb(240,240,240);
+    -webkit-touch-callout:none; /* 禁用长触弹出的下载图片菜单 */
+    -webkit-user-select:none; /* 禁用长触选择文字等功能 */
+}
+
+.hide{ display: none;}
+
+/*.loading{ position: absolute; top: 50%; left: 50%; margin:-62px 0 0 -50px; width: 100px;}*/
+/*.loadingicon{ background: url("../images/loading.png") no-repeat; width: 99px; height: 62px; margin-bottom: 15px;}*/
+/*.loadingtxt{ font-size: 24px; color: #000000; text-align: center;}*/
+.loading{width: 100%; height: 100%;background-image: url("../images/p0.jpg");  background-position: center center;}
+.loading>div{ position: absolute; top: 50%; left: 50%;}
+.loadingicon{ margin: -75px 0 0 -30px; background: url("../images/loading.png") no-repeat; width: 65px; height: 64px;}
+.loadingtxt{ margin: 10px 0 0 -70px; letter-spacing:2px; font-size: 24px; color: rgb(80,111,133); text-align: center;}
+
+.main{ width: 100%; height: 100%;position: relative; overflow: hidden;}
+.page{ width: 100%; height: 100%;  position: relative; }
+.page>div{ position: relative; overflow: hidden; width: 100%; height: 100%; background-repeat: no-repeat; background-position: center center;}
+
+.page .page1{background-image: url("../images/p1.jpg");  background-position: center center;}
+.page1>div{ position: absolute; top: 50%; left: 50%;}
+.page1_0{ left:22px !important;top:20px !important;}
+.page1_1{ margin: 327px 0 0 -164px}
+.page1_2{ margin: -348px 0 0 -242px}
+.page1_3{ margin: -267px 0 0 -156px}
+
+
+.page .page2{background-image: url("../images/p2.jpg");  background-position: center center;}
+.page2>.HT{width: 3200px; height: 100%; left: 0px; position: relative;}
+.page2 .tu{ width:640px; height:100%; position:relative; float: left; }
+.HT>.tu>div{ position: absolute; top: 50%; left: 50%; }
+.page2_1_1{ margin: -364px 0 0 -258px;}
+.page2_1_2{ margin: -364px 0 0 -320px;}
+.page2_1_3{ margin: -364px 0 0 -258px;}
+.page2_1_4{ margin: -364px 0 0 -258px;}
+.page2_1_5{ margin: -364px 0 0 -258px;}
+.page2_2{ margin: 384px 0 0 -163px;  position: absolute; top: 50%; left: 50%;}
+.page2_left{ margin: -13px 0 0 -270px;  position: absolute; top: 50%; left: 50%; width: 100px; height: 100px;}
+.page2_right{ margin: -13px 0 0 243px;  position: absolute; top: 50%; left: 50%; width: 100px; height: 100px;}
+
+
+.page .page3{background-image: url("../images/p3.jpg");  background-position: center center;}
+.page3>div{ position: absolute; top: 50%; left: 50%;}
+.page3_1{
+    width:320px;
+    color: #FFFFFF;
+    font-size: 30px;
+    text-align: center ;
+    margin: -450px 0 0 -160px;
+}
+.page3_2{
+    width: 148px;
+    font-size: 93.5px;
+    color: rgb(72,210,255);
+    text-align: center;
+    margin: -406px 0 0 -137px;
+    font-weight:700;
+}
+.page3_3{ margin: -343px 0 0 -105px}
+.page3_4{ margin: -168px 0 0 -126px}
+.page3_5{ margin: -503px 0 0 -320px; transform: scale(0.5); -webkit-transform: scale(0.5); opacity: 0;}
+.page3_6{ margin: 311px 0 0 -26px; -webkit-animation: phoneshake 1s infinite linear; animation: phoneshake 1s infinite linear; transform-origin: bottom center;-webkit-transform-origin: bottom center;}
+.page3_7{ margin: 417px 0 0 -93px;}
+.ss{-webkit-animation: ss .4s infinite linear; animation: ss .4s infinite linear;}
+.qs{-webkit-animation: qs .3s infinite linear; animation: qs .3s infinite linear;}
+@keyframes ss {
+    50% { transform: scale(1.2);}
+}
+@-webkit-keyframes ss {
+    50% { -webkit-transform: scale(1.2);}
+}
+
+@keyframes qs {
+    25% { transform: translate(-2px,-2px);}
+    50% { transform: translate(2px,-2px);}
+    75% { transform: translate(-2px,2px);}
+    100% { transform: translate(0,0);}
+}
+@-webkit-keyframes qs {
+    25% { -webkit-transform: translate(-2px,-2px);}
+    50% { -webkit-transform: translate(2px,-2px);}
+    75% { -webkit-transform: translate(-2px,2px);}
+    100% { -webkit-transform: translate(0,0);}
+}
+
+@keyframes phoneshake {
+    0% { transform: rotate(0deg)}
+    25% { transform: rotate(20deg)}
+    40% { transform: rotate(-20deg)}
+    100% { transform: rotate(0deg)}
+}
+@-webkit-keyframes phoneshake {
+    0% { -webkit-transform: rotate(0deg)}
+    25% { -webkit-transform: rotate(20deg)}
+    40% { -webkit-transform: rotate(-20deg)}
+    100% { -webkit-transform: rotate(0deg)}
+}
+
+
+
+.page .page4{background-image: url("../images/p4_fail_bg1.jpg");  background-position: center center;}
+.page4>div{ position: absolute; top: 50%; left: 50%;}
+.page4_1{ margin: -434px 0 0 -172px; background: url("../images/p4_success_1.png") no-repeat;width: 343px;height: 69px;}
+.page4_2{ margin: -332px 0 0 -138px; background: url("../images/p4_success_2.png") no-repeat;width: 278px;height: 32px;}
+.page4_2 p{
+    margin: -31px 0 0 -29px;
+    font-size: 65px;
+    color: rgb(72,210,255);
+    text-align: center;
+    font-weight:700;
+}
+.page4_3{
+    width: 360px;
+    margin: -285px 0 0 -180px;
+    font-size: 24px;
+    color: #FFFFFF;
+    text-align: center;
+}
+.page4_4{ margin: 175px 0 0 -260px; background: url("../images/p4_success_4.png") no-repeat;width: 518px;height: 70px;}
+.page4_5{ margin: 276px 0 0 -260px;}
+.page4_6{ margin: -170px 0 0 -164px}
+
+
+/*.page .page5{background-image: url("../images/p4_success_bg1.jpg");  background-position: center center;}*/
+/*.page5>div{ }*/
+#wrapper{ overflow: hidden;width:100%;height:100%;position: absolute;left:0;top:0;}
+#wrapper>div{width: 100%;top:0;left:0;position: absolute;}
+#wrapper>div>div{ position: relative; top: 0; left: 50%;}
+
+.page5_1{
+    margin: 40px 0 0 -290px;
+    font-size: 43px;
+    width: 640px;
+    text-align: left;
+}
+.page5_2{
+    margin: 0 0 0 -290px;
+    font-size: 43px;
+    width: 400px;
+    text-align: left;
+}
+.page5_3{ margin: 0 0 0 -320px}
+.page5_4{ margin: 20px 0 0 -291px; background: url("../images/p5_4_1.jpg") no-repeat; width: 579px;height: 300px;}
+.page5_5{ margin: 20px 0 0 -286px;font-size: 30px;color:#454648;width:580px;}
+.page5_5>p{font-size: 30px; color:#454648; width:580px;margin: 20px auto;}
+.page5_6{ margin: 20px 0 0 -291px;}
+.page5_7{ margin: 388px 0 0 -296px;position: absolute; top: 50%; left: 50%;}
+.page5_8{ margin: 388px 0 0 0;position: absolute; top: 50%; left: 50%;}
+
+
+.page .page6{background-image: url("../images/p6.jpg");  background-position: center center;}
+.page6>div{ position: absolute; top: 50%; left: 50%;}
+.page6_1{ margin: -418px 0 0 -190px;}
+.page6_2_1{ margin: -328px 0 0 -245px;}
+.page6_2_2{ margin: -188px 0 0 -245px;}
+.page6_2_3{ margin: -48px 0 0 -245px;}
+
+
+
+.page .page7{background-image: url("../images/p6.jpg");  background-position: center center;}
+.page7>div{ position: absolute; top: 50%; left: 50%;}
+.page7_1{ margin: -418px 0 0 -215px;}
+.page7_2{ margin: -328px 0 0 -175px;}
+.page7_3{ margin: -237px 0 0 -245px;background: url("../images/p7_3.png") no-repeat; width: 491px;height: 60px;}
+.page7_4{ margin: -148px 0 0 -245px;background: url("../images/p7_3.png") no-repeat; width: 491px;height: 60px;}
+.page7_5{ margin: -60px 0 0 -245px;}
+.page7 input{
+    color: #FFFFFF;
+    font-size: 30px;
+    text-align: center;
+    width: 480px;
+    height: 58px;
+    margin: 1px 0 0 2px;
+    background: none;
+    border: none;
+    outline: medium;
+}
+
+.opage5_7{ margin: 388px 0 0 -296px;position: absolute; top: 50%; left: 50%;}
+
+/*分享浮层*/
+.sharemask{ width: 100%; height: 100%; background: rgba(0,0,0,0.7); position: absolute; left: 0; top: 0;}
+.sharemask img{ display: block; position: absolute; right: 35px; top: 5px;}
+/*分享浮层*/
+
+/*音乐按钮*/
+.musicicon{ background: url("../images/musicicon.png") no-repeat; width: 42px; height: 43px; position: absolute; top: 20px; right: 20px;}
+/*按钮旋转*/
+.musicrotate{-webkit-animation: xuanzhuan 5s infinite linear; animation: xuanzhuan 5s infinite linear;}
+@keyframes xuanzhuan {
+    0% { transform: rotate(0deg)}
+    100% { transform: rotate(360deg)}
+}
+@-webkit-keyframes xuanzhuan {
+    0% { -webkit-transform: rotate(0deg)}
+    100% { -webkit-transform: rotate(360deg)}
+}
+/*按钮旋转*/
+
