@@ -47,6 +47,10 @@ $(function(){
                     {src:this.loadingPath+'ap1.jpg'},
                     {src:this.loadingPath+'ap3.jpg'},
                     {src:this.loadingPath+'ap4.jpg'},
+                    {src:this.loadingPath+'p1_1.png'},
+                    {src:this.loadingPath+'p1_2.gif'},
+                    {src:this.loadingPath+'p1_3.png'},
+                    {src:this.loadingPath+'p1_4.png'},
                     {src:this.loadingPath+'p2_bg1.png'},
                     {src:this.loadingPath+'p2_bg1.png'},
                     {src:this.loadingPath+'p2_1.png'},
@@ -160,8 +164,8 @@ $(function(){
                 ),
                 TweenMax.from(
                     '.introduce1_3',
-                    0.6,
-                    { alpha: 0, y: 100, ease: Linear.easeInOut }
+                    0.4,
+                    { alpha: 0, y: 100, ease: Linear.easeOut }
                 )
             ]);
             this.motionObj['introduce'].pause();
