@@ -53,6 +53,20 @@ $(function(){
                     {src:this.loadingPath+'introduce1_bg.png'},
                     {src:this.loadingPath+'ap1_3.png'},
                     {src:this.loadingPath+'p3_3.png'},
+                    {src:this.loadingPath+'sign_1.png'},
+                    {src:this.loadingPath+'sign_2.png'},
+                    {src:this.loadingPath+'opt1.png'},
+                    {src:this.loadingPath+'opt2.png'},
+                    {src:this.loadingPath+'opt3.png'},
+                    {src:this.loadingPath+'opt4.png'},
+                    {src:this.loadingPath+'opt5.png'},
+                    {src:this.loadingPath+'opt6.png'},
+                    {src:this.loadingPath+'opt1_active.png'},
+                    {src:this.loadingPath+'opt2_active.png'},
+                    {src:this.loadingPath+'opt3_active.png'},
+                    {src:this.loadingPath+'opt4_active.png'},
+                    {src:this.loadingPath+'opt5_active.png'},
+                    {src:this.loadingPath+'opt6_active.png'}
                 ];
 
             function handleOverallProgress(event){
@@ -149,13 +163,13 @@ $(function(){
             this.motionObj['sign1'] = new TimelineMax();
             this.motionObj['sign2'] = new TimelineMax();
             this.motionObj['sign1'].add([
-                TweenMax.from('.sign1_1', 0.7, {
+                TweenMax.from('.sign1_1', 0.5, {
                     delay: .2,
                     alpha: 0,
                     x: 200,
                     ease: Linear.easeOut
                 }),
-                TweenMax.from('.sign1_2', 0.7, {
+                TweenMax.from('.sign1_2', 0.5, {
                     delay: .2,
                     alpha: 0,
                     x: -200,
