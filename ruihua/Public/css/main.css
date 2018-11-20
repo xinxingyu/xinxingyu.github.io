@@ -442,6 +442,12 @@ html,body {
     margin: 84px 0 0 -181px;
 	background: url(../images/ap4_3.png) no-repeat 50% 50%;
 }
+.actpage4_4{
+	width: 748px;
+    height: 706px;
+    margin: -570px 0 0 -375px;
+	background: url(../images/ap4_4.png) no-repeat 50% 50%;
+}
 
 /* introduce swiper */
 .introduce {
