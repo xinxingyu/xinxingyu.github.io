@@ -5,7 +5,12 @@ form,fieldset,input,textarea,p,blockquote,th,td,section,canvas {
     margin: 0;
 }
 li{ list-style: none;}
-
+a,img,button,input,textarea,div{
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select:none;
+}
 html,body {
     font-size: 22px;
     color: #000;
