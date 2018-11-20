@@ -390,6 +390,7 @@ $(function(){
             $('.sign1_1').on('click', function(e) {
                 _this.signCurrent++;
                 _this.signSwiper.slideTo(_this.signCurrent, 300, false);
+                _this.motionObj['sign2'].restart();
             });
 
             $('.page3_3').on('click', function(e) {
