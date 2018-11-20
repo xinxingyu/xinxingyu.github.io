@@ -13,11 +13,15 @@ $(function(){
         this.motionObj = []; //animation object
         this.swiper = '';
         this.activitySwiper = '';
+        this.signSwiper = '';
+        this.introduceSwiper = '';
         this.audio = $('#media')[0];
         this.height = $(window).height();
         // this.audio = document.getElementById('media');
         this.current = 0;
         this.activityCurrent = 0;
+        this.signCurrent = 0;
+        this.introduceCurrent = 0;
         this._tim = '';
         this.init()
 
@@ -38,10 +42,17 @@ $(function(){
                     {src:this.loadingPath+'logo.png'},
                     {src:this.loadingPath+'guide.png'},
                     {src:this.loadingPath+'p1.jpg'},
-                    {src:this.loadingPath+'ap1.jpg'},
+                    {src:this.loadingPath+'p3.jpg'},
                     {src:this.loadingPath+'p4.jpg'},
+                    {src:this.loadingPath+'ap1.jpg'},
+                    {src:this.loadingPath+'ap3.jpg'},
+                    {src:this.loadingPath+'ap4.jpg'},
                     {src:this.loadingPath+'p2_bg1.png'},
                     {src:this.loadingPath+'p2_bg2.png'},
+                    {src:this.loadingPath+'p2_2.png'},
+                    {src:this.loadingPath+'introduce1_bg.png'},
+                    {src:this.loadingPath+'ap1_3.png'},
+                    {src:this.loadingPath+'p3_3.png'},
                 ];
 
             function handleOverallProgress(event){
@@ -112,6 +123,62 @@ $(function(){
             this.motionObj['actpage' + 4].add(TweenMax.from('.actpage4_2', .5, { alpha: 0, y: 50, x: 200, ease: Bounce.easeOut }));
             this.motionObj['actpage' + 4].add(TweenMax.from('.actpage4_3', .5, { alpha: 0, y: 50, x: 200, ease: Bounce.easeOut }));
             this.motionObj['actpage' + 4].pause();
+
+            // introduce animation
+            this.motionObj['introduce'] = new TimelineMax();
+            this.motionObj['introduce'].add([
+                TweenMax.from(
+                    '.introduce1_1',
+                    0.5,
+                    { alpha: 0, x: -200, ease: Bounce.easeOut }
+                ),
+                TweenMax.from(
+                    '.introduce1_2',
+                    0.8,
+                    { alpha: 0, ease: Linear.easeInOut }
+                ),
+                TweenMax.from(
+                    '.introduce1_3',
+                    0.6,
+                    { alpha: 0, y: 100, ease: Linear.easeInOut }
+                )
+            ]);
+            this.motionObj['introduce'].pause();
+
+            // sign animation
+            this.motionObj['sign1'] = new TimelineMax();
+            this.motionObj['sign2'] = new TimelineMax();
+            this.motionObj['sign1'].add([
+                TweenMax.from('.sign1_1', 0.7, {
+                    delay: .2,
+                    alpha: 0,
+                    x: 200,
+                    ease: Linear.easeOut
+                }),
+                TweenMax.from('.sign1_2', 0.7, {
+                    delay: .2,
+                    alpha: 0,
+                    x: -200,
+                    ease: Linear.easeInOut
+                })
+            ]);
+            this.motionObj['sign1'].pause();
+            this.motionObj['sign2'].add([
+                TweenMax.from('.university_1', 0.5, {
+                    delay: .3,
+                    alpha: 0,
+                    x: 200,
+                    ease: Bounce.easeOut
+                }),
+                TweenMax.from('.university_2', 0.7, {
+                    delay: .2,
+                    alpha: 0,
+                    x: -200,
+                    ease: Linear.easeInOut
+                })
+            ]);
+            this.motionObj['sign1'].pause();
+
         },
         initSwiper: function(){
             var _this = this;
@@ -167,9 +234,78 @@ $(function(){
               }
             });
         },
+        initIntroduceSwiper: function() {
+            var _this = this;
+            $('.guideTop4').show();
+
+            this.introduceSwiper = new Swiper('#introduce', {
+                direction: 'vertical',
+                // speed: 800,
+                onSetTransition: function (swiper) {
+                    var index = swiper.activeIndex + 1;
+                    if (_this.introduceCurrent != swiper.activeIndex) {
+                        // _this.motionObj['actpage' + index].restart();
+                    }
+                    _this.introduceCurrent = swiper.activeIndex;
+                },
+                onTouchEnd: function (swiper) {
+                    TR = swiper.translate;
+                    if (TR > 0) {
+                        swiper.setWrapperTranslate(TR);
+                        $('.guideTop4').hide();
+                        $('#introduce').fadeOut(function () {
+                            // reverse activity animation
+                            _this.motionObj['introduce'].reverse();
+                        });
+                    } else if (TR < 0) {
+                        $('#introduce').fadeOut(function () {
+                            _this.motionObj['introduce'].reverse();
+                        });
+                    }
+                }
+            });
+        },
+        initSignSwiper: function() {
+            var _this = this;
+            $('.guideTop3').show();
+
+            this.signSwiper = new Swiper('#sign', {
+                direction: 'vertical',
+                // speed: 800,
+                onSetTransition: function (swiper) {
+                    var index = swiper.activeIndex + 1;
+                    if (_this.signCurrent != swiper.activeIndex) {
+                      _this.motionObj['sign' + index].restart();
+                    }
+                    _this.signCurrent = swiper.activeIndex;
+                },
+                onTouchEnd: function (swiper) {
+                    TR = swiper.translate;
+                    if (TR > 0) {
+                        swiper.setWrapperTranslate(TR);
+                        $('.guideTop3').hide();
+                        $('#sign').fadeOut(function () {
+                            // reverse activity animation
+                            _this.reverseSignAnimation();
+                        });
+                    } else if (TR < _this.height * -1) {
+                        // _this.swiper.slideTo(2, 0, false);
+                        $('#sign').fadeOut(function () {
+                            swiper.slideTo(0, 0, false);
+                            _this.reverseSignAnimation();
+                        });
+                    }
+                }
+            });
+        },
         reverseActivityAnimation: function() {
             for (var i = 0; i < 4; i++) {
                 this.motionObj['actpage' + (i + 1)].reverse()
+            }
+        },
+        reverseSignAnimation: function() {
+            for (var i = 0; i < 2; i++) {
+                this.motionObj['sign' + (i + 1)].reverse()
             }
         },
         playMusic: function(){
@@ -191,13 +327,29 @@ $(function(){
                     _this.motionObj['actpage' + 1].restart();
                 });
             });
+            // start sigin swiper
+            $('.page2_4').on('click', function (e) {
+                $('#sign').fadeIn(function() {
+                    _this.initSignSwiper();
+                    _this.motionObj['sign' + 1].restart();
+                });
+            });
 
+            // start introduce swiper
             $('.page2_3').on('click', function(e) {
-                $('.university').fadeIn();
+                $('#introduce').fadeIn(function() {
+                    _this.initIntroduceSwiper();
+                    _this.motionObj['introduce'].restart();
+                });
             });
             
+            $('.sign1_1').on('click', function(e) {
+                _this.signCurrent++;
+                _this.signSwiper.slideTo(_this.signCurrent, 300, false);
+            });
+
             $('.page3_3').on('click', function(e) {
-                window.location = 'http://mjob.rhcncpa.com/#/jobdetail?id=560168460&jc=3';
+                location.href = 'http://mjob.rhcncpa.com/#/jobdetail?id=560168460&jc=3';
             });
 
             $('.university-operate .opt-it').on('click', function(e){
@@ -221,13 +373,7 @@ $(function(){
                 TweenMax.from('.university_3 .uit'+id, .3, {alpha: 0, y: 100, ease: Linear.easeNone})
             });
 
-            $('.page7_6').on('click', function(e){
-                location.href = 'http://mjob.rhcncpa.com/JobAd/ApplyResume?adid=560055480';
-            })
-            $('.page5_8').on('click', function(e){
-                _this.current ++;
-                _this.swiper.slideTo(_this.current, 300, false);
-            })
+          
             $('.musicicon').on('click', function(e){
                 if(!_this.audio.paused){
                     $('.musicicon').css({'background': 'url("'+_this.loadingPath+'musicicon_close.png")'})

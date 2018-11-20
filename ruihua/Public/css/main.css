@@ -406,13 +406,106 @@ html,body {
     margin: 84px 0 0 -181px;
 	background: url(../images/ap4_3.png) no-repeat 50% 50%;
 }
+
+/* introduce swiper */
+.introduce {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+	overflow: hidden;
+}
+/**
+ * introduce 1
+ */
+.page .introduce1{
+	background: url(../images/introduce.jpg) no-repeat 50% 100%;
+	background-size: cover;
+}
+.introduce1_bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 750px;
+    height: 856px;
+    background: url(../images/introduce1_bg.png) no-repeat 50% 100%;
+}
+.introduce1_1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 238px;
+    height: 61px;
+    margin: -378px 0 0 -299px;
+    background: url(../images/introduce1_1.png) no-repeat 50% 100%;
+}
+.introduce1_2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 750px;
+    margin: -270px 0 0 -375px;
+    padding: 0 80px;
+    box-sizing: border-box;
+}
+.introduce1_2 p{
+    font-size: 30px;
+    line-height: 43px;
+    margin-bottom: 20px;
+    text-indent: 61px;
+}
+.introduce1_3 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 312px;
+    height: 311px;
+    margin-left: -278px;
+    background: url(../images/introduce1_3.png) no-repeat 50% 100%;
+}
+
+
+/* sign swiper */
+.sign {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+	overflow: hidden;
+}
+
+/**
+ * sign 1
+ */
+.page .sign1{
+	background: url(../images/sign.jpg) no-repeat 50% 100%;
+	background-size: cover;
+}
+.sign1>div{position: absolute; left: 50%; top: 50%;}
+
+.sign1_1 {
+    width: 654px;
+    height: 426px;
+    margin: -420px 0 0 -320px;
+    background: url(../images/sign_1.png) no-repeat 50% 50%;
+}
+
+.sign1_2 {
+    width: 637px;
+    height: 439px;
+    margin: 53px 0 0 -309px;
+    background: url(../images/sign_2.png) no-repeat 50% 50%;
+}
+
 /**
  * university
  */
 .university{
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     height: 100%;
     background-color: #97e5fa;
@@ -445,7 +538,6 @@ html,body {
 	left: 0;
     padding-left: 75px;
     margin-top: -190px;
-	/* height: 975px; */
     z-index: 9;
 }
 .page6_4{
@@ -463,10 +555,6 @@ html,body {
 	overflow: hidden; */
 }
 .university-item p{
-	/* width: 260px;
-	float: left;
-	margin-left: 88px;
-	margin-bottom: 50px; */
     font-size: 33px;
     line-height: 63px;
 	color: #333;
@@ -533,7 +621,6 @@ html,body {
 	background-size: 100% auto;
 }
 
-
 /**
  * common style
  */
@@ -560,7 +647,15 @@ html,body {
 }
 
 /*音乐按钮*/
-.musicicon{ background: url("../images/musicicon.png") no-repeat; width: 64px; height: 60px; position: absolute; top: 20px; right: 20px;}
+.musicicon{ 
+    background: url("../images/musicicon.png") no-repeat;
+    width: 64px;
+    height: 60px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 99;
+}
 /*按钮旋转*/
 .musicrotate{-webkit-animation: xuanzhuan 5s infinite linear; animation: xuanzhuan 5s infinite linear;}
 @keyframes xuanzhuan {
@@ -574,7 +669,7 @@ html,body {
 /*按钮旋转*/
 
 /*向上箭头*/
-.guideTop, .guideTop2{
+.guideTop, .guideTop2, .guideTop3, .guideTop4{
     width: 117px;
     height: 63px;
     background: url(../images/guide.png) no-repeat;
