@@ -91,8 +91,8 @@ $(function(){
                     {src:this.loadingPath+'opt3_active.png'},
                     {src:this.loadingPath+'opt4_active.png'},
                     {src:this.loadingPath+'opt5_active.png'},
-                    {src:this.loadingPath+'opt6_active.png'}
-                    // {src:this.loadingPath+'ap4_4.png'}
+                    {src:this.loadingPath+'opt6_active.png'},
+                    {src:this.loadingPath+'ap4_4.png'}
                 ];
 
             function handleOverallProgress(event){
@@ -161,7 +161,7 @@ $(function(){
             this.motionObj['actpage' + 3].add(TweenMax.from('.actpage3_3', .5, { alpha: 0, y: -50, x: 200, ease: Bounce.easeOut }));
             this.motionObj['actpage' + 3].pause();
 
-            // this.motionObj['actpage' + 4].add(TweenMax.to('.actpage4_4', .5, { delay: .2, scale: 1.1, ease: Linear.easeInOut }));
+            this.motionObj['actpage' + 4].add(TweenMax.to('.actpage4_4', .5, { delay: .2, scale: 1.1, ease: Linear.easeInOut }));
             this.motionObj['actpage' + 4].add(TweenMax.from('.actpage4_1', .5, { delay: .2, alpha: 0, y: -50, x: -200, ease: Bounce.easeOut }));
             this.motionObj['actpage' + 4].add(TweenMax.from('.actpage4_2', .5, { alpha: 0, y: 50, x: 200, ease: Bounce.easeOut }));
             this.motionObj['actpage' + 4].add(TweenMax.from('.actpage4_3', .5, { alpha: 0, y: 50, x: 200, ease: Bounce.easeOut }));
