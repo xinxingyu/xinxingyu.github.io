@@ -401,12 +401,16 @@ html,body {
 	background: url(../images/ap3_3.png) no-repeat 50% 50%;
 }
 .actpage3_4{
-    margin: -728px 0 0 -375px;
+    /* margin: -728px 0 0 -375px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 750px;
+    height: 1333px;
+    margin: -731px 0 0 -375px;
+	background: url(../images/ap3_4.gif) no-repeat 50% 50%;
 }
-.actpage3_4>img{
-    display: inline-block;
-	width: 750px;
-}
+
 /**
  * actpage 3
  */
@@ -676,6 +680,26 @@ html,body {
 }
 .nmr {
     margin-right: 0;
+}
+
+.caidai {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 750px;
+    height: 1333px;
+    margin: -731px 0 0 -375px;
+	background: url(../images/caidai.gif) no-repeat 50% 50%;
+}
+
+.shanguang {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 750px;
+    height: 1333px;
+    margin: -731px 0 0 -375px;
+	background: url(../images/shanguang.gif) no-repeat 50% 50%;
 }
 
 /*音乐按钮*/
