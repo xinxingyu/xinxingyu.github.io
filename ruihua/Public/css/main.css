@@ -480,7 +480,8 @@ html,body {
     width: 100%;
     height: 100%;
     z-index: 1;
-	overflow: hidden;
+    overflow: hidden;
+    background-color: #fff;
 }
 
 /**
@@ -683,7 +684,7 @@ html,body {
     left: 50%;
     margin-left: -58.5px;
     animation: guideTop 1.5s infinite;
-    -webkit-animation: guideTop 1.5s infinite
+    -webkit-animation: guideTop 1.5s infinite;
 }
 @keyframes guideTop {
     0% {
@@ -717,13 +718,17 @@ html,body {
         opacity: 0
     }
 }
-@keyframes breath {
+.breath {
+    animation: breathAnimation 1s infinite ease-in-out;
+    -webkit-animation: breathAnimation 1s infinite ease-in-out;
+}
+@keyframes breathAnimation {
     from { transform: scale(1); }
-    50%  { transform: scale(0.8);}
+    50%  { transform: scale(0.9);}
     to   { transform: scale(1); }
 }
 
-@-webkit-keyframes breath {
+@-webkit-keyframes breathAnimation {
 	from { -webkit-transform: scale(1); }
 	50%  { -webkit-transform: scale(0.8);}
 	to   { -webkit-transform: scale(1); }
