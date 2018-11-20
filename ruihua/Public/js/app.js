@@ -61,10 +61,17 @@ $(function(){
                     {src:this.loadingPath+'introduce1_1.png'},
                     {src:this.loadingPath+'introduce1_3.png'},
                     {src:this.loadingPath+'introduce1_bg.png'},
+                    {src:this.loadingPath+'ap1_1.png'},
+                    {src:this.loadingPath+'ap1_2.png'},
                     {src:this.loadingPath+'ap1_3.png'},
                     {src:this.loadingPath+'ap1_4.gif'},
                     {src:this.loadingPath+'p3_3.png'},
+                    {src:this.loadingPath+'p4_3.png'},
+                    {src:this.loadingPath+'p4_4.png'},
                     {src:this.loadingPath+'ap3_4.gif'},
+                    {src:this.loadingPath+'ap4_1.png'},
+                    {src:this.loadingPath+'ap4_2.png'},
+                    {src:this.loadingPath+'ap4_3.png'},
                     {src:this.loadingPath+'sign.jpg'},
                     {src:this.loadingPath+'sign_1.png'},
                     {src:this.loadingPath+'sign_2.png'},
@@ -201,7 +208,7 @@ $(function(){
                     delay: .3,
                     alpha: 0,
                     x: 200,
-                    ease: Bounce.easeOut
+                    ease: Linear.easeOut
                 }),
                 TweenMax.from('.university_2', 0.7, {
                     delay: .2,

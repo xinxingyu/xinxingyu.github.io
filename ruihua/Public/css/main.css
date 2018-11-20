@@ -135,8 +135,9 @@ html,body {
 .page1_2{
     top: 50%;
     width: 750px;
-    height: 1028px;
-    margin: -720px 0 0 -630px;
+    /* height: 1028px; */
+    height: 1333px;
+    margin: -920px 0 0 -630px;
     background: url(../images/p1_2.gif) no-repeat 50% 50%;
     background-size: 100% auto;
 }
