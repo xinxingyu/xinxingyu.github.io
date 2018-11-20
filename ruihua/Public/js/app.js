@@ -217,7 +217,7 @@ $(function(){
                     ease: Linear.easeInOut
                 })
             ]);
-            this.motionObj['sign1'].pause();
+            this.motionObj['sign2'].pause();
 
         },
         initSwiper: function(){
