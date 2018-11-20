@@ -100,7 +100,9 @@ $(function(){
                 this.motionObj["page"+(i+1)] = new TimelineMax();
             }
 
-            this.motionObj['page' + 1].add(TweenMax.from('.page1_1', .5, { delay: .2, alpha: 0.5, y: -120, ease: Bounce.easeOut}));
+            this.motionObj['page' + 1].add(TweenMax.from('.page1_1', .5, { delay: .2, alpha: 0, y: -120, ease: Bounce.easeOut}));
+            this.motionObj['page' + 1].add(TweenMax.from('.page1_3', .5, {alpha: 0, x: 80, ease: Linear.easeInOut}));
+            this.motionObj['page' + 1].add(TweenMax.from('.page1_4', .5, { alpha: 0, y: 100, ease: Linear.easeOut}));
             this.motionObj['page'+1].pause();
 
             this.motionObj['page' + 2].add([
@@ -133,10 +135,8 @@ $(function(){
             this.motionObj['actpage' + 2].add(TweenMax.from('.actpage2_4', .5, {alpha: 0, y: -50, x: 200, ease: Bounce.easeOut }));
             this.motionObj['actpage' + 2].pause();
 
-            this.motionObj['actpage' + 3].add([
-                TweenMax.from('.actpage3_1', .5, { delay: .2, alpha: 0, y: 50, x: -200, ease: Bounce.easeOut}),
-                TweenMax.from('.actpage3_2', .5, { delay: .2, alpha: 0, y: -50, x: 200, ease: Bounce.easeOut })
-            ]);
+            this.motionObj['actpage' + 3].add(TweenMax.from('.actpage3_1', .6, { delay: .2, alpha: 0, y: 50, x: -200, ease: Bounce.easeOut }));
+            this.motionObj['actpage' + 3].add(TweenMax.from('.actpage3_2', .6, {alpha: 0, y: -50, x: 200, ease: Bounce.easeOut }));
             this.motionObj['actpage' + 3].add(TweenMax.from('.actpage3_3', .5, { alpha: 0, y: -50, x: 200, ease: Bounce.easeOut }));
             this.motionObj['actpage' + 3].pause();
 

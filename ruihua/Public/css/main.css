@@ -120,17 +120,39 @@ html,body {
 .page .page1{
 	background-image: url("../images/p1.jpg");
 	background-position: center center;
-	background-size: cover;
+    background-size: cover;
+    background-color: #402181;
 }
 .page1>div{ position: absolute; left: 50%;}
 
 .page1_1{
-	top: 90px;
-	margin: 0 0 0 -316px;
+    top: 90px;
+    width: 665px;
+    height: 132px;
+    margin: 0 0 0 -332px;
+    background: url(../images/p1_1.png) no-repeat 50% 50%;
 }
 .page1_2{
-	bottom: 80px;
-	margin: 0 0 0 -193px;
+    top: 50%;
+    width: 750px;
+    height: 1028px;
+    margin: -720px 0 0 -630px;
+    background: url(../images/p1_2.gif) no-repeat 50% 50%;
+    background-size: 100% auto;
+}
+.page1_3{
+    top: 50%;
+    width: 658px;
+    height: 708px;
+    margin: -356px 0 0 -290px;
+    background: url(../images/p1_3.png) no-repeat 50% 50%;
+}
+.page1_4{
+    top: 50%;
+    width: 711px;
+    height: 171px;
+    margin: 258px 0 0 -360px;
+    background: url(../images/p1_4.png) no-repeat 50% 50%;
 }
 
 /**
@@ -211,9 +233,13 @@ html,body {
 }
 .page3_bg{
     position: absolute;
-    top: 0;
-	left: 0;
-	width: 100%;
+    top: 50%;
+	left: 50%;
+    width: 750px;
+    height: 1333px;
+    margin: -730px 0 0 -375px;
+    background: url(../images/p3_4.gif) no-repeat 50% 50%;
+	background-size: cover;
 }
 .page3_1{
 	position: absolute;
