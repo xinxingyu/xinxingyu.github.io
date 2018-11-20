@@ -52,9 +52,12 @@ $(function(){
                     {src:this.loadingPath+'p1_3.png'},
                     {src:this.loadingPath+'p1_4.png'},
                     {src:this.loadingPath+'p2_bg1.png'},
-                    {src:this.loadingPath+'p2_bg1.png'},
+                    {src:this.loadingPath+'p2_bg2.png'},
                     {src:this.loadingPath+'p2_1.png'},
                     {src:this.loadingPath+'p2_2.png'},
+                    {src:this.loadingPath+'p2_3.png'},
+                    {src:this.loadingPath+'p2_4.png'},
+                    {src:this.loadingPath+'p2_5.png'},
                     {src:this.loadingPath+'introduce1_1.png'},
                     {src:this.loadingPath+'introduce1_3.png'},
                     {src:this.loadingPath+'introduce1_bg.png'},
@@ -118,7 +121,9 @@ $(function(){
 
             this.motionObj['page' + 3].add(TweenMax.from('.page3_1', .3, { delay: .2, alpha: 0, x: 100, ease:Linear.easeNone}));
             this.motionObj['page'+3].add(TweenMax.from('.page3_2', .3, {alpha:0, x: 100, ease:Linear.easeNone}));
-            this.motionObj['page' + 3].add(TweenMax.from('.page3_3', .3, { alpha: 0, y: 100, ease: Bounce.easeOut}));
+            this.motionObj['page' + 3].add(TweenMax.from('.page3_3', .3, { alpha: 0, y: 100, ease: Bounce.easeOut, onComplete:function(){
+                $('.page3_3').addClass('breath')
+            }}));
             this.motionObj['page'+3].pause();
 
             // activeity swiper anmation
@@ -222,6 +227,10 @@ $(function(){
                         $('.guideTop').hide()
                     }else{
                         $('.guideTop').show()
+                    }
+
+                    if(index == 2) {
+                        $('.page3_3').removeClass('breath');
                     }
                 }
             })
